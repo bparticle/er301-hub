@@ -2,12 +2,14 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">
-        ER301-hub
-      </h1>
+      <h1 class="title">OD ER-301 hub</h1>
+      <p>
+        Orthogonal Devices ER-301 sound computer community packages, presets and
+        bespoke units
+      </p>
       <div class="links">
         <a
-          href="https://nuxtjs.org/"
+          href="https://github.com/bparticle/er301-hub/wiki"
           target="_blank"
           rel="noopener noreferrer"
           class="button--green"
@@ -15,7 +17,7 @@
           Documentation
         </a>
         <a
-          href="https://github.com/nuxt/nuxt.js"
+          href="https://github.com/bparticle/er301-hub"
           target="_blank"
           rel="noopener noreferrer"
           class="button--grey"
@@ -37,21 +39,13 @@ export default {}
   min-height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
   text-align: center;
+  margin-top: 5rem;
 }
 
 .title {
-  font-family:
-    'Quicksand',
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
+  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: 100px;

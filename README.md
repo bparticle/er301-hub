@@ -1,20 +1,3 @@
-# ER301-hub
+# ER-301 community hub
 
-## Build Setup
-
-```bash
-# install dependencies
-$ npm install
-
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+this site is a proof of concept, or rather a testing environment for our quest to find a way to easily share code, patches, presets and packages for the ER-301 sound computer. The discussion is here [Package management, distribution, organization - V0.6](https://forum.orthogonaldevices.com/t/package-management-distribution-organization-v0-6/5280?u=bparticle)
