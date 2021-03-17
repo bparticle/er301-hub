@@ -10,8 +10,14 @@ compatibility:
 files: 
   - lojik-0.1.1.pkg
 units:
-  - Trig
   - Turing
+  - Register
+  - Latch
+  - DLatch
+  - Trig
+  - And
+  - Or
+  - Not
 categories:
   - Experimental
   - Logic
