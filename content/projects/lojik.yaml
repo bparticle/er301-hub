@@ -1,0 +1,18 @@
+title: Lojik
+description: A bunch of logical operators as well as some excellent new sequencer primitives
+compatibility: { v05: false, v06: true }
+author: tomf
+contact: OD forum @tomf
+latest version: v0.1.1
+compatibility:
+  v05: false
+  v06: true
+files: 
+  - lojik-0.1.1.pkg
+units:
+  - Trig
+  - Turing
+categories:
+  - Experimental
+  - Logic
+  - Sequencer

@@ -18,8 +18,26 @@
                 {{ contrib.title }}
               </nuxt-link>
             </td>
-            <td></td>
-            <td></td>
+            <td>
+              <div
+                class="status-light"
+                :class="
+                  contrib.compatibility.v05
+                    ? 'status-light--yes'
+                    : 'status-light--no'
+                "
+              ></div>
+            </td>
+            <td>
+              <div
+                class="status-light"
+                :class="
+                  contrib.compatibility.v06
+                    ? 'status-light--yes'
+                    : 'status-light--no'
+                "
+              ></div>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -31,9 +49,8 @@
 export default {
   async asyncData({ $content, params }) {
     const contribs = await $content('projects', params.slug)
-      .sortBy('createdAt', 'asc')
+      .sortBy('title', 'asc')
       .fetch()
-
     return {
       contribs,
     }
@@ -42,19 +59,23 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-bottom: 0;
-  border-bottom: 1px solid;
+.status-light {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-left: 10px;
 
-  .index & {
-    padding-bottom: 2rem;
+  &--no {
+    background-color: #ed1c24;
   }
+  &--yes {
+    background-color: green;
+  }
+}
+
+.content table td,
+.content table th {
+  vertical-align: middle;
 }
 
 .title {

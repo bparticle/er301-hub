@@ -1,0 +1,37 @@
+title: Accents
+description: An essential bunch of wonderful units
+author: Joe
+contact: via O|D Forums @Joe
+latest version: v0.6.02
+compatibility:
+  v05: true
+  v06: true
+files:
+  - Accents-0.6.02.pkg
+units:
+  - Linear Sampling VCA
+  - Ladder BPF
+  - Ring Modulator
+  - Aliasing Pulse
+  - Compare
+  - Clocked Random Gate
+  - Motion Sensor
+  - Weighted Coin Toss
+  - Pingable Scaled Random
+  - Maths
+  - Logics
+documentation: https://forum.orthogonaldevices.com/t/accents-v0-6-x/5263
+categories:
+  - Essentials
+  - Delays
+  - Filtering
+  - Modulation
+  - Oscillators
+  - Mapping
+  - Timing
+  - Experimental
+  - Synthesizers
+  - Audio
+youtube:
+  - btHXa_Kcoo4
+  - PXkZ_79gG0M

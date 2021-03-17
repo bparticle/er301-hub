@@ -29,6 +29,34 @@ export default {
 </script>
 
 <style lang="scss">
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.5s;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+.section {
+    padding: 2rem 1.5rem;
+} 
+
+.header {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid;
+
+  .index & {
+    padding-bottom: 2rem;
+  }
+}
+
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
