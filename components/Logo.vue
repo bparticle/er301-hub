@@ -129,209 +129,209 @@
 		C163.4,255.2,165,256.9,167.1,256.9z"
       />
       <g>
-        <defs>
-          <rect id="SVGID_1_" x="331.2" y="18.5" width="184.7" height="362.2" />
-        </defs>
-        <clipPath id="SVGID_2_">
-          <use xlink:href="#SVGID_1_" style="overflow: visible" />
-        </clipPath>
-        <g class="st6">
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="32.7" r="13.6" />
-              <circle class="st8" cx="395.1" cy="32.7" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <ellipse class="st7" cx="444.8" cy="32.8" rx="13.6" ry="13.7" />
-              <ellipse class="st8" cx="444.8" cy="32.8" rx="7.4" ry="7.5" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="32.7" r="13.6" />
-              <circle class="st8" cx="494.6" cy="32.7" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="87.7" r="13.6" />
-              <circle class="st8" cx="395.1" cy="87.7" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="87.7" r="13.6" />
-              <circle class="st8" cx="444.8" cy="87.7" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="87.7" r="13.6" />
-              <circle class="st8" cx="494.6" cy="87.7" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="142.6" r="13.6" />
-              <circle class="st8" cx="395.1" cy="142.6" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="142.6" r="13.6" />
-              <circle class="st8" cx="444.8" cy="142.6" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="142.6" r="13.6" />
-              <circle class="st8" cx="494.6" cy="142.6" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="197.5" r="13.6" />
-              <circle class="st8" cx="395.1" cy="197.5" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="197.5" r="13.6" />
-              <circle class="st8" cx="444.8" cy="197.5" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="197.5" r="13.6" />
-              <circle class="st8" cx="494.6" cy="197.5" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="345.4" cy="252.4" r="13.6" />
-              <circle class="st8" cx="345.4" cy="252.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="252.4" r="13.6" />
-              <circle class="st8" cx="395.1" cy="252.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="252.4" r="13.6" />
-              <circle class="st8" cx="444.8" cy="252.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="252.4" r="13.6" />
-              <circle class="st8" cx="494.6" cy="252.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="345.4" cy="307.4" r="13.6" />
-              <circle class="st8" cx="345.4" cy="307.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="307.4" r="13.6" />
-              <circle class="st8" cx="395.1" cy="307.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="307.4" r="13.6" />
-              <circle class="st8" cx="444.8" cy="307.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="307.4" r="13.6" />
-              <circle class="st8" cx="494.6" cy="307.4" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="345.4" cy="362.3" r="13.6" />
-              <circle class="st8" cx="345.4" cy="362.3" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="395.1" cy="362.3" r="13.6" />
-              <circle class="st8" cx="395.1" cy="362.3" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="444.8" cy="362.3" r="13.6" />
-              <circle class="st8" cx="444.8" cy="362.3" r="7.4" />
-            </g>
-          </g>
-          <g>
-            <g>
-              <circle class="st7" cx="494.6" cy="362.3" r="13.6" />
-              <circle class="st8" cx="494.6" cy="362.3" r="7.4" />
-            </g>
-          </g>
-        </g>
-      </g>
-      <g>
         <polyline
-          class="st7"
+          class="st6"
           points="163.3,214.6 188.7,234.6 214.1,214.6 239.5,234.6 264.9,214.6 290.3,234.6 		"
         />
       </g>
-      <rect x="263.3" y="33.6" class="st7" width="10" height="54" />
-      <line class="st7" x1="263.3" y1="46.6" x2="273.3" y2="46.6" />
+      <rect x="263.3" y="33.6" class="st6" width="10" height="54" />
+      <line class="st6" x1="263.3" y1="46.6" x2="273.3" y2="46.6" />
       <g>
-        <circle class="st9" cx="105.3" cy="60.6" r="16" />
-        <circle class="st10" cx="105.3" cy="60.6" r="10.7" />
-        <circle class="st10" cx="105.3" cy="60.6" r="6.5" />
+        <circle class="st7" cx="105.3" cy="60.6" r="16" />
+        <circle class="st8" cx="105.3" cy="60.6" r="10.7" />
+        <circle class="st8" cx="105.3" cy="60.6" r="6.5" />
       </g>
       <g>
-        <circle class="st9" cx="222.3" cy="60.6" r="16" />
-        <circle class="st10" cx="222.3" cy="60.6" r="10.7" />
-        <circle class="st10" cx="222.3" cy="60.6" r="6.5" />
+        <circle class="st7" cx="222.3" cy="60.6" r="16" />
+        <circle class="st8" cx="222.3" cy="60.6" r="10.7" />
+        <circle class="st8" cx="222.3" cy="60.6" r="6.5" />
       </g>
       <g>
-        <circle class="st9" cx="57.3" cy="60.6" r="16" />
-        <circle class="st10" cx="57.3" cy="60.6" r="10.7" />
-        <circle class="st10" cx="57.3" cy="60.6" r="6.5" />
+        <circle class="st7" cx="57.3" cy="60.6" r="16" />
+        <circle class="st8" cx="57.3" cy="60.6" r="10.7" />
+        <circle class="st8" cx="57.3" cy="60.6" r="6.5" />
       </g>
       <g>
-        <line class="st11" x1="145.3" y1="85.6" x2="145.3" y2="35.6" />
-        <line class="st10" x1="142.3" y1="36.6" x2="148.3" y2="36.6" />
-        <line class="st10" x1="142.3" y1="84.6" x2="148.3" y2="84.6" />
-        <line class="st12" x1="142.3" y1="58.6" x2="148.3" y2="58.6" />
+        <line class="st9" x1="145.3" y1="85.6" x2="145.3" y2="35.6" />
+        <line class="st8" x1="142.3" y1="36.6" x2="148.3" y2="36.6" />
+        <line class="st8" x1="142.3" y1="84.6" x2="148.3" y2="84.6" />
+        <line class="st10" x1="142.3" y1="58.6" x2="148.3" y2="58.6" />
       </g>
       <g>
-        <line class="st11" x1="163.3" y1="85.6" x2="163.3" y2="35.6" />
-        <line class="st10" x1="160.3" y1="36.6" x2="166.3" y2="36.6" />
-        <line class="st10" x1="160.3" y1="84.6" x2="166.3" y2="84.6" />
-        <line class="st12" x1="160.3" y1="70.6" x2="166.3" y2="70.6" />
+        <line class="st9" x1="163.3" y1="85.6" x2="163.3" y2="35.6" />
+        <line class="st8" x1="160.3" y1="36.6" x2="166.3" y2="36.6" />
+        <line class="st8" x1="160.3" y1="84.6" x2="166.3" y2="84.6" />
+        <line class="st10" x1="160.3" y1="70.6" x2="166.3" y2="70.6" />
       </g>
       <g>
-        <line class="st11" x1="181.3" y1="85.6" x2="181.3" y2="35.6" />
-        <line class="st10" x1="178.3" y1="36.6" x2="184.3" y2="36.6" />
-        <line class="st10" x1="178.3" y1="84.6" x2="184.3" y2="84.6" />
-        <line class="st12" x1="178.3" y1="51.6" x2="184.3" y2="51.6" />
+        <line class="st9" x1="181.3" y1="85.6" x2="181.3" y2="35.6" />
+        <line class="st8" x1="178.3" y1="36.6" x2="184.3" y2="36.6" />
+        <line class="st8" x1="178.3" y1="84.6" x2="184.3" y2="84.6" />
+        <line class="st10" x1="178.3" y1="51.6" x2="184.3" y2="51.6" />
       </g>
+      <g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="32.7" r="13.6" />
+            <circle class="st11" cx="395.1" cy="32.7" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <ellipse class="st6" cx="444.8" cy="32.8" rx="13.6" ry="13.7" />
+            <ellipse class="st11" cx="444.8" cy="32.8" rx="7.4" ry="7.5" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="32.7" r="13.6" />
+            <circle class="st11" cx="494.6" cy="32.7" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="87.7" r="13.6" />
+            <circle class="st11" cx="395.1" cy="87.7" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="87.7" r="13.6" />
+            <circle class="st11" cx="444.8" cy="87.7" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="87.7" r="13.6" />
+            <circle class="st11" cx="494.6" cy="87.7" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="142.6" r="13.6" />
+            <circle class="st11" cx="395.1" cy="142.6" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="142.6" r="13.6" />
+            <circle class="st11" cx="444.8" cy="142.6" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="142.6" r="13.6" />
+            <circle class="st11" cx="494.6" cy="142.6" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="197.5" r="13.6" />
+            <circle class="st11" cx="395.1" cy="197.5" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="197.5" r="13.6" />
+            <circle class="st11" cx="444.8" cy="197.5" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="197.5" r="13.6" />
+            <circle class="st11" cx="494.6" cy="197.5" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="345.4" cy="252.4" r="13.6" />
+            <circle class="st11" cx="345.4" cy="252.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="252.4" r="13.6" />
+            <circle class="st11" cx="395.1" cy="252.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="252.4" r="13.6" />
+            <circle class="st11" cx="444.8" cy="252.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="252.4" r="13.6" />
+            <circle class="st11" cx="494.6" cy="252.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="345.4" cy="307.4" r="13.6" />
+            <circle class="st11" cx="345.4" cy="307.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="307.4" r="13.6" />
+            <circle class="st11" cx="395.1" cy="307.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="307.4" r="13.6" />
+            <circle class="st11" cx="444.8" cy="307.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="307.4" r="13.6" />
+            <circle class="st11" cx="494.6" cy="307.4" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="345.4" cy="362.3" r="13.6" />
+            <circle class="st11" cx="345.4" cy="362.3" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="395.1" cy="362.3" r="13.6" />
+            <circle class="st11" cx="395.1" cy="362.3" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="444.8" cy="362.3" r="13.6" />
+            <circle class="st11" cx="444.8" cy="362.3" r="7.4" />
+          </g>
+        </g>
+        <g>
+          <g>
+            <circle class="st6" cx="494.6" cy="362.3" r="13.6" />
+            <circle class="st11" cx="494.6" cy="362.3" r="7.4" />
+          </g>
+        </g>
+      </g>
+      <rect x="77.3" y="342.6" class="st12" width="6" height="34" />
+      <circle class="st3" cx="96" cy="367.9" r="6" />
+      <circle class="st2" cx="96" cy="350.9" r="6" />
     </g>
   </svg>
 </template>
 
-<style>
+<style lang="scss">
 .er301hub-logo {
+  max-width: 150px;
   animation: 1.5s appear;
   margin: auto;
-  max-width: 300px;
+  transition: all 0.3s;
+
+  .index & {
+    max-width: 300px;
+  }
 }
 
 @keyframes appear {
@@ -339,7 +339,6 @@
     opacity: 0;
   }
 }
-
 .st0 {
   fill: none;
   stroke: #000000;
@@ -362,40 +361,43 @@
   fill: #cccccc;
 }
 .st6 {
-  clip-path: url(#SVGID_2_);
-}
-.st7 {
   fill: none;
   stroke: #000000;
   stroke-width: 2.5;
   stroke-miterlimit: 10;
 }
-.st8 {
-  fill: #4d4d4d;
-}
-.st9 {
+.st7 {
   fill: none;
   stroke: #000000;
   stroke-width: 3.0476;
   stroke-miterlimit: 10;
 }
-.st10 {
+.st8 {
   fill: none;
   stroke: #000000;
   stroke-width: 2;
   stroke-miterlimit: 10;
 }
-.st11 {
+.st9 {
   fill: none;
   stroke: #000000;
   stroke-width: 2.1822;
   stroke-miterlimit: 10;
 }
-.st12 {
+.st10 {
   fill: none;
   stroke: #000000;
   stroke-width: 3.266;
   stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.st11 {
+  fill: #4d4d4d;
+}
+.st12 {
+  fill: none;
+  stroke: #333333;
+  stroke-width: 3;
   stroke-miterlimit: 10;
 }
 </style>

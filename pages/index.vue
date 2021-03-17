@@ -1,46 +1,60 @@
 <template>
-  <div class="container">
-    <div>
-      <Logo />
-      <h1 class="title">OD ER-301 hub</h1>
-      <p>
-        Orthogonal Devices ER-301 sound computer community packages, presets and
-        bespoke units
-      </p>
-      <div class="links">
-        <a
-          href="https://github.com/bparticle/er301-hub/wiki"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/bparticle/er301-hub"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="container is-fluid home">
+    <main class="content">
+      <table class="contribs table">
+        <thead>
+          <tr>
+            <td>Project title</td>
+            <td>V0.5</td>
+            <td>V0.6</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="contrib" v-for="contrib of contribs" :key="contrib">
+            <td>
+              <nuxt-link
+                :to="{ name: 'projects-slug', params: { slug: contrib.slug } }"
+              >
+                {{ contrib.title }}
+              </nuxt-link>
+            </td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, params }) {
+    const contribs = await $content('projects', params.slug)
+      .sortBy('createdAt', 'asc')
+      .fetch()
+
+    return {
+      contribs,
+    }
+  },
+}
 </script>
 
-<style>
-.container {
+<style lang="scss">
+.header {
   margin: 0 auto;
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid;
+
+  .index & {
+    padding-bottom: 2rem;
+  }
 }
 
 .title {
@@ -48,9 +62,13 @@ export default {}
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 100px;
+  font-size: 40px;
   color: #35495e;
   letter-spacing: 1px;
+
+  .index & {
+    font-size: 55px;
+  }
 }
 
 .subtitle {
