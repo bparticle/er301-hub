@@ -44,8 +44,11 @@ export default {
   ],
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
+  content: {
+    fullTextSearchFields: ['title', 'description', 'author'],
+    nestedProperties: ['projects.slug'],
+    liveEdit: false
+  },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     postcss: {

@@ -11,17 +11,37 @@ files:
   - Accents-0.6.02.pkg
   - Accents-0.5.04.zip
 units:
-  - Linear Sampling VCA
-  - Ladder BPF
-  - Ring Modulator
+  - AB Switch
   - Aliasing Pulse
-  - Compare
+  - Amie
+  - Carousel Clock Divider
   - Clocked Random Gate
-  - Motion Sensor
-  - Weighted Coin Toss
-  - Pingable Scaled Random
-  - Maths
+  - Compare
+  - Ensemble
+  - Flanger
+  - Ladder BPF
+  - Ladder BPF2
+  - Linear Sampling VCA
   - Logics
+  - Maths
+  - Motion Sensor
+  - Octave CV Shifter
+  - Phaser
+  - Pingable Scaled Random
+  - Ring Modulator
+  - Rotary Speaker Simulator
+  - Scorpio Vocoder
+  - Timed Gate
+  - Voltage Bank
+  - Voltage Bank 2
+  - Voltage Bank 4
+  - Voltage vault (only v0.6)
+  - Weighted Coin Toss
+  - Xfade
+  - Xo
+  - Xoxo
+  - Xoxoxo
+  - Xxxxxx
 documentation: https://forum.orthogonaldevices.com/t/accents-v0-6-x/5263
 categories:
   - Essentials

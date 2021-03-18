@@ -31,7 +31,7 @@ export default {
 <style lang="scss">
 .fade-enter-active,
 .fade-leave-active {
-  transition: all 0.5s;
+  transition: all 0.5s 0.25s;
 }
 .fade-enter,
 .fade-leave-active {
@@ -40,8 +40,8 @@ export default {
 }
 
 .section {
-    padding: 2rem 1.5rem;
-} 
+  padding: 2rem 1.5rem;
+}
 
 .header {
   margin: 0 auto;

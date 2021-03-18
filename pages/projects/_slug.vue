@@ -78,7 +78,7 @@ export default {
 .project {
   &__title {
     font-size: 3rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
 
   &__author {

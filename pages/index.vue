@@ -1,7 +1,33 @@
 <template>
   <div class="container is-fluid home">
     <main class="content">
-      <table class="contribs table">
+      <div>
+        <div class="tile is-parent">
+          <div class="tile is-child is-4">
+            <label class="label">Search projects</label>
+            <input
+              class="input"
+              v-model="textQuery"
+              type="search"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <div class="search-project__results">
+          <ul class="search-project__list" v-if="searchProjects.length">
+            <li v-for="article of searchProjects" :key="article.slug">
+              <nuxt-link
+                :to="{
+                  name: 'projects-slug',
+                  params: { slug: article.slug },
+                }"
+                >{{ article.title }}</nuxt-link
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <table class="projects table">
         <thead>
           <tr>
             <td>Project title</td>
@@ -11,7 +37,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="contrib" v-for="contrib of contribs" :key="contrib">
+          <tr class="contrib" v-for="contrib of projects" :key="contrib">
             <td>
               <nuxt-link
                 :to="{ name: 'projects-slug', params: { slug: contrib.slug } }"
@@ -20,7 +46,7 @@
               </nuxt-link>
             </td>
             <td>
-                {{ contrib.author }}
+              {{ contrib.author }}
             </td>
             <td>
               <div
@@ -51,18 +77,44 @@
 
 <script>
 export default {
+  data() {
+    return {
+      textQuery: '',
+      searchProjects: [],
+    }
+  },
   async asyncData({ $content, params }) {
-    const contribs = await $content('projects', params.slug)
+    const projects = await $content('projects', params.slug)
       .sortBy('title', 'asc')
       .fetch()
     return {
-      contribs,
+      projects,
     }
+  },
+  watch: {
+    async textQuery(textQuery) {
+      if (!textQuery) {
+        this.searchProjects = []
+        return
+      }
+
+      this.searchProjects = await this.$content('projects')
+        .only(['title', 'slug'])
+        .sortBy('createdAt', 'asc')
+        .limit(12)
+        .search(textQuery)
+        .fetch()
+    },
   },
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.search-project {
+  &__result {
+    transition: max-height 0.3s;
+  }
+}
 .status-light {
   width: 12px;
   height: 12px;
