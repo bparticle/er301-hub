@@ -8,8 +8,19 @@
             <div class="tile is-child">
               <section class="section introduction">
                 <h1 class="project__title">{{ project.title }}</h1>
-                <p class="author">by {{ project.author }}</p>
-                <div class="tags">
+                <span class="project__author"
+                  >by
+                  <a
+                    target="_blank"
+                    :href="project.contact"
+                    class="project__author-name"
+                    >{{ project.author }}</a
+                  ></span
+                >
+                <a :href="project.link" class="project__link" target="_blank">{{
+                  project.link
+                }}</a>
+                <div class="project__tags tags">
                   <span
                     v-for="cat in project.categories"
                     :key="cat"
@@ -36,6 +47,7 @@
               <section class="section download">
                 <h2 class="subtitle">Downloads</h2>
                 <a
+                  class="download__link"
                   v-for="file in project.files"
                   :key="file"
                   :href="'/packages/' + file"
@@ -66,7 +78,36 @@ export default {
 .project {
   &__title {
     font-size: 3rem;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &__author {
+    display: block;
+    margin-bottom: 0.5rem;
+
+    &-name {
+      border-radius: 3px;
+      padding: 3px 0.5rem;
+      color: white;
+      background: darkgray;
+      transition: background 0.2s;
+
+      &:hover,
+      &:focus {
+        background-color: #333;
+      }
+    }
+  }
+
+  &__link {
+    margin-bottom: 1rem;
+    display: block;
+  }
+}
+
+.download {
+  &__link {
+    display: block;
   }
 }
 </style>

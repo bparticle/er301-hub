@@ -5,6 +5,7 @@
         <thead>
           <tr>
             <td>Project title</td>
+            <td>Author</td>
             <td>V0.5</td>
             <td>V0.6</td>
           </tr>
@@ -17,6 +18,9 @@
               >
                 {{ contrib.title }}
               </nuxt-link>
+            </td>
+            <td>
+                {{ contrib.author }}
             </td>
             <td>
               <div

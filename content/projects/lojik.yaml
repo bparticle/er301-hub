@@ -1,8 +1,9 @@
 title: Lojik
 description: A bunch of logical operators as well as some excellent new sequencer primitives
-compatibility: { v05: false, v06: true }
 author: tomf
-contact: OD forum @tomf
+compatibility: { v05: false, v06: true }
+contact: https://forum.orthogonaldevices.com/u/tomf/summary
+link: https://github.com/tmfset/er-301-custom-units
 latest version: v0.1.1
 compatibility:
   v05: false
