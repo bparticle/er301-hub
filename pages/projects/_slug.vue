@@ -35,7 +35,7 @@
               <section class="section units">
                 <h2 class="subtitle">Units</h2>
                 <ul class="unit-list">
-                  <li class="unit" v-for="unit in project.units" :key="unit">
+                  <li class="unit" v-for="unit in orderedUnits" :key="unit">
                     {{ unit }}
                   </li>
                 </ul>
@@ -70,6 +70,11 @@ export default {
     const project = await $content('projects', params.slug).fetch()
 
     return { project }
+  },
+  computed: {
+    orderedUnits: function () {
+      return this.project.units.sort()
+    },
   },
 }
 </script>
