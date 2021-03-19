@@ -24,8 +24,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '~/plugins/vueMoment.js'
-    // '~/plugins/lodash.js'
+    '~/plugins/vueMoment.js',
+    '~/plugins/lodash.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
