@@ -15,13 +15,13 @@
         </div>
         <div class="search-project__results">
           <ul class="search-project__list" v-if="searchProjects.length">
-            <li v-for="article of searchProjects" :key="article.slug">
+            <li v-for="project of searchProjects" :key="project.slug">
               <nuxt-link
                 :to="{
                   name: 'projects-slug',
-                  params: { slug: article.slug },
+                  params: { slug: project.slug },
                 }"
-                >{{ article.title }}</nuxt-link
+                >{{ project.title }}</nuxt-link
               >
             </li>
           </ul>
@@ -152,11 +152,9 @@ export default {
   },
   methods: {
     addCat: function (cat) {
-      console.log(this.cats)
       cat.active = true
     },
     disableCat: function (cat) {
-      console.log(this.cats)
       cat.active = false
     },
   },
@@ -168,7 +166,6 @@ export default {
         for (let i = 0; i < activeCats.length; i++) {
           testArr.push(project.categories.includes(activeCats[i].category))
         }
-        console.log(testArr)
         return testArr.every((test) => test === true)
       }
       var filtered = this.projects.filter(filterProjects)
