@@ -13,32 +13,6 @@
             />
           </div>
         </div>
-        <div class="tile is-parent">
-          <div class="field is-grouped is-grouped-multiline">
-            <div
-              class="control"
-              v-for="category in cats"
-              :key="category.tagName"
-            >
-              <div class="tags has-addons">
-                <a
-                  class="tag"
-                  :class="{
-                    'is-link': category.active,
-                    'is-light': !category.active,
-                  }"
-                  @click="addCat(category)"
-                  >{{ category.tagName }}</a
-                >
-                <a
-                  v-if="category.active"
-                  class="tag is-delete"
-                  @click="disableCat(category)"
-                ></a>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="search-project__results">
           <ul class="search-project__list" v-if="searchProjects.length">
             <li v-for="article of searchProjects" :key="article.slug">
@@ -52,6 +26,32 @@
             </li>
           </ul>
         </div>
+        <div class="tile is-parent">
+          <div class="field is-grouped is-grouped-multiline">
+            <div
+              class="control"
+              v-for="category in cats"
+              :key="category.category"
+            >
+              <div class="tags has-addons">
+                <a
+                  class="tag"
+                  :class="{
+                    'is-link': category.active,
+                    'is-light': !category.active,
+                  }"
+                  @click="addCat(category)"
+                  >{{ category.category }}</a
+                >
+                <a
+                  v-if="category.active"
+                  class="tag is-delete"
+                  @click="disableCat(category)"
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <table class="projects table">
         <thead>
@@ -64,25 +64,29 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="contrib" v-for="contrib of projects" :key="contrib">
+          <tr
+            class="contrib"
+            v-for="project of filteredProjects"
+            :key="project"
+          >
             <td>
               <nuxt-link
-                :to="{ name: 'projects-slug', params: { slug: contrib.slug } }"
+                :to="{ name: 'projects-slug', params: { slug: project.slug } }"
               >
-                {{ contrib.title }}
+                {{ project.title }}
               </nuxt-link>
             </td>
             <td>
-              {{ contrib.author }}
+              {{ project.author }}
             </td>
             <td>
-              {{ contrib['latest version'] }}
+              {{ project['latest version'] }}
             </td>
             <td>
               <div
                 class="status-light"
                 :class="
-                  contrib.compatibility.v05
+                  project.compatibility.v05
                     ? 'status-light--yes'
                     : 'status-light--no'
                 "
@@ -92,7 +96,7 @@
               <div
                 class="status-light"
                 :class="
-                  contrib.compatibility.v06
+                  project.compatibility.v06
                     ? 'status-light--yes'
                     : 'status-light--no'
                 "
@@ -136,7 +140,7 @@ export default {
 
     for (let k = 0; k < uniqueCats.length; k++) {
       cats.push({
-        tagName: uniqueCats[k],
+        category: uniqueCats[k],
         active: false,
       })
     }
@@ -148,22 +152,27 @@ export default {
   },
   methods: {
     addCat: function (cat) {
+      console.log(this.cats)
       cat.active = true
-
-      function filterProjects(project) {
-        return project.categories.includes(cat.tagName)
-      }
-
-      var filtered = this.projects.filter(filterProjects)
-      this.projects = filtered
     },
     disableCat: function (cat) {
+      console.log(this.cats)
       cat.active = false
     },
   },
   computed: {
-    categories: function () {
-      return null
+    filteredProjects: function () {
+      const activeCats = this.cats.filter((cat) => cat.active === true)
+      function filterProjects(project) {
+        let testArr = []
+        for (let i = 0; i < activeCats.length; i++) {
+          testArr.push(project.categories.includes(activeCats[i].category))
+        }
+        console.log(testArr)
+        return testArr.every((test) => test === true)
+      }
+      var filtered = this.projects.filter(filterProjects)
+      return [...filtered]
     },
   },
   watch: {
