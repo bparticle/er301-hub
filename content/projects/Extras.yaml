@@ -11,6 +11,6 @@ compatibility:
 files: 
   - Extras.zip
 units:
-  - Punchcard 8
+  - Punchcard
 categories:
   - Sequencer
