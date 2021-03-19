@@ -1,0 +1,23 @@
+title: Bparticle
+description: I need to check if these units are still supported by the current firmware, but they should normally be fine.
+author: bparticle
+compatibility: { v05: false, v06: true }
+contact: https://forum.orthogonaldevices.com/u/bparticle/summary
+link: https://bparticle.github.io/bparticle/
+latest version: v0.1.0
+compatibility:
+  v05: true
+  v06: false
+files: 
+  - bparticle.zip
+units:
+  - Itchy
+  - Binaural Beats
+  - Punchcard 8
+  - Straight Shooter
+  - Tilt Cove
+  - Tricycle
+  - Wave Fader Suite
+categories:
+  - Experimental
+  - Effect
