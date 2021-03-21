@@ -83,9 +83,11 @@
             <td>
               {{ project.units.length }}
             </td>
-            <td class="projects-table__author">
-              <avatar :userName="project.author" />
-              {{ project.author }}
+            <td>
+              <div class="projects-table__author">
+                <avatar :userName="project.author" />
+                {{ project.author }}
+              </div>
             </td>
             <td>
               {{ project['latest version'] }}
