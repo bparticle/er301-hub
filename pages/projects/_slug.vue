@@ -8,15 +8,18 @@
             <div class="tile is-child">
               <section class="section introduction">
                 <h1 class="project__title">{{ project.title }}</h1>
-                <span class="project__author"
-                  >by
+                <div class="project__author">
                   <a
+                    class="project__author-link"
                     target="_blank"
                     :href="project.contact"
-                    class="project__author-name"
-                    >{{ project.author }}</a
-                  ></span
-                >
+                  >
+                    <avatar :userName="project.author" />
+                    <span class="project__author-name">{{
+                      project.author
+                    }}</span>
+                  </a>
+                </div>
                 <a :href="project.link" class="project__link" target="_blank">{{
                   project.link
                 }}</a>
@@ -75,6 +78,13 @@ export default {
     orderedUnits: function () {
       return this.project.units.sort()
     },
+    avatar: function () {
+      return (
+        'https://forum.orthogonaldevices.com/user_avatar/forum.orthogonaldevices.com/' +
+        this.project.author +
+        '/50/3702_2.png'
+      )
+    },
   },
 }
 </script>
@@ -87,20 +97,14 @@ export default {
   }
 
   &__author {
-    display: block;
-    margin-bottom: 0.5rem;
+    &-link {
+      display: flex;
+      margin-bottom: 0.5rem;
+    }
 
-    &-name {
-      border-radius: 3px;
-      padding: 3px 0.5rem;
-      color: white;
-      background: darkgray;
-      transition: background 0.2s;
-
-      &:hover,
-      &:focus {
-        background-color: #333;
-      }
+    &-avatar {
+      max-width: 25px;
+      border-radius: 5px;
     }
   }
 

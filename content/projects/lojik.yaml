@@ -5,10 +5,7 @@ compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/tomf/summary
 link: https://github.com/tmfset/er-301-custom-units
 latest version: v0.2.0
-compatibility:
-  v05: false
-  v06: true
-files: 
+files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
 units:

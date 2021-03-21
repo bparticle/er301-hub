@@ -7,15 +7,18 @@
             <label class="label">Search projects</label>
             <input
               class="input"
-              v-model="textQuery"
+              v-model="filterValue"
               type="search"
               autocomplete="off"
             />
           </div>
         </div>
         <div class="search-project__results">
-          <ul class="search-project__list" v-if="searchProjects.length">
-            <li v-for="project of searchProjects" :key="project.slug">
+          <ul
+            class="search-project__list"
+            v-if="searchProject.length != projects.length"
+          >
+            <li v-for="project of searchProject" :key="project.slug">
               <nuxt-link
                 :to="{
                   name: 'projects-slug',
@@ -57,6 +60,7 @@
         <thead>
           <tr>
             <td>Project title</td>
+            <td># units</td>
             <td>Author</td>
             <td>Latest version</td>
             <td>V0.5 (stable)</td>
@@ -77,6 +81,10 @@
               </nuxt-link>
             </td>
             <td>
+              {{ project.units.length }}
+            </td>
+            <td class="projects-table__author">
+              <avatar :userName="project.author" />
               {{ project.author }}
             </td>
             <td>
@@ -111,11 +119,15 @@
 </template>
 
 <script>
+import Avatar from '@/components/Avatar.vue'
+
 export default {
+  components: {
+    Avatar,
+  },
   data() {
     return {
-      textQuery: '',
-      searchProjects: [],
+      filterValue: '',
       searchCats: [],
     }
   },
@@ -171,26 +183,37 @@ export default {
       var filtered = this.projects.filter(filterProjects)
       return [...filtered]
     },
-  },
-  watch: {
-    async textQuery(textQuery) {
-      if (!textQuery) {
-        this.searchProjects = []
-        return
-      }
+    searchProject: function () {
+      let result = this.projects
+      if (!this.filterValue) return result
 
-      this.searchProjects = await this.$content('projects')
-        .only(['title', 'slug'])
-        .sortBy('createdAt', 'asc')
-        .limit(12)
-        .search(textQuery)
-        .fetch()
+      const filterValue = this.filterValue.toLowerCase()
+
+      const filter = (project) => {
+        return (
+          project.units.some((unit) =>
+            unit.toLowerCase().includes(filterValue)
+          ) ||
+          project.categories.some((unit) =>
+            unit.toLowerCase().includes(filterValue)
+          ) ||
+          project.title.toLowerCase().includes(filterValue) ||
+          project.author.toLowerCase().includes(filterValue) ||
+          project.description.toLowerCase().includes(filterValue)
+        )
+      }
+      return result.filter(filter)
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.projects-table {
+  &__author {
+    display: flex;
+  }
+}
 .search-project {
   &__result {
     transition: max-height 0.3s;

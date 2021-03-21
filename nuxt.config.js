@@ -1,3 +1,9 @@
+const yaml = require('js-yaml')
+
+const yamlToJSON = (file, options) => {
+  return yaml.load(file, { options, json: true })
+}
+
 export default {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
@@ -49,7 +55,8 @@ export default {
   content: {
     fullTextSearchFields: ['title', 'description', 'author', 'slug'],
     nestedProperties: ['projects.slug'],
-    liveEdit: false
+    liveEdit: false,
+    apiPrefix: 'content-api',
   },
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
