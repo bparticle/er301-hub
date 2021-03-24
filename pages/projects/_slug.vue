@@ -6,7 +6,7 @@
         <div class="tile is-ancestor">
           <div class="tile is-parent">
             <div class="tile is-child">
-              <section class="section introduction">
+              <section class="section introduction m-4 has-background-light">
                 <h1 class="project__title">{{ project.title }}</h1>
                 <div class="project__author">
                   <a
@@ -23,25 +23,24 @@
                 <a :href="project.link" class="project__link" target="_blank">{{
                   project.link
                 }}</a>
-                <div class="project__tags tags">
-                  <span
-                    v-for="cat in project.categories"
-                    :key="cat"
-                    class="tag is-light"
-                    >{{ cat }}</span
-                  >
-                </div>
                 <p class="description">
                   {{ project.description }}
                 </p>
               </section>
-              <section class="section units">
+              <section class="section units pt-0">
                 <h2 class="subtitle">Units</h2>
-                <ul class="unit-list">
-                  <li class="unit" v-for="unit in orderedUnits" :key="unit">
+                <div class="unit-list tags pb-2">
+                  <span
+                    class="unit tag is-light"
+                    v-for="unit in orderedUnits"
+                    :key="unit"
+                  >
                     {{ unit }}
-                  </li>
-                </ul>
+                  </span>
+                </div>
+              </section>
+              <section class="content section pt-2">
+                <nuxt-content :document="project" />
               </section>
             </div>
           </div>
@@ -117,6 +116,38 @@ export default {
 .download {
   &__link {
     display: block;
+  }
+}
+
+.unit-list {
+  border-bottom: 2px solid #f5f5f5;
+}
+
+// Remove weird padding on markdown heading
+span.icon.icon-link {
+  display: none;
+}
+
+// Responsive video embed
+.section.videos {
+  > div {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &:after {
+      display: block;
+      content: '';
+      padding-top: 56.25%;
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 </style>
