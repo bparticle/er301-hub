@@ -4,11 +4,13 @@ author: tomf
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/tomf/summary
 link: https://github.com/tmfset/er-301-custom-units
-latest version: v0.2.0
+latest version: v0.4.0
 files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
+  - lojik-0.4.0.pkg
 units:
+  - Seq
   - Turing
   - Register
   - Latch
@@ -18,6 +20,7 @@ units:
   - Or
   - Not
   - Pick
+  - Wait
 categories:
   - Experimental
   - Logic
