@@ -7,7 +7,7 @@ link: https://github.com/bparticle/Extras
 latest version: v0.1.0
 compatibility:
   v05: true
-  v06: true
+  v06: false
 files: 
   - Extras.zip
 units:
