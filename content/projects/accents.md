@@ -5,7 +5,7 @@ author: Joe
 contact: https://forum.orthogonaldevices.com/u/joe/summary
 link: https://github.com/SuperNiCd
 latest version: v0.6.02
-compatibility: { v05: false, v06: true }
+compatibility: { v05: true, v06: true }
 files:
   - Accents-0.6.02.pkg
   - Accents-0.5.04.zip
