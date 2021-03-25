@@ -9,53 +9,44 @@ compatibility: { v05: true, v06: true }
 files:
   - Accents-0.6.02.pkg
   - Accents-0.5.04.zip
-units:
-  - AB Switch
-  - Aliasing Pulse
-  - Amie
-  - Carousel Clock Divider
-  - Clocked Random Gate
-  - Compare
-  - Ensemble
-  - Flanger
-  - Ladder BPF
-  - Ladder BPF2
-  - Linear Sampling VCA
-  - Logics
-  - Maths
-  - Motion Sensor
-  - Octave CV Shifter
-  - Phaser
-  - Pingable Scaled Random
-  - Ring Modulator
-  - Rotary Speaker Simulator
-  - Scorpio Vocoder
-  - Timed Gate
-  - Voltage Bank
-  - Voltage Bank 2
-  - Voltage Bank 4
-  - Voltage vault (only v0.6)
-  - Weighted Coin Toss
-  - Xfade
-  - Xo
-  - Xoxo
-  - Xoxoxo
-  - Xxxxxx
 documentation: https://forum.orthogonaldevices.com/t/accents-v0-6-x/5263
-categories:
-  - Essentials
-  - Delays
-  - Filtering
-  - Modulation
-  - Oscillators
-  - Mapping
-  - Timing
-  - Experimental
-  - Synthesizers
-  - Audio
 youtube:
   - btHXa_Kcoo4
   - PXkZ_79gG0M
+units:
+  - { name: AB Switch, category: Experimental }
+  - { name: Aliasing Pulse, category: Oscillators }
+  - { name: Amie, category: Synthesizers }
+  - { name: Carousel Clock Divider, category: Timing }
+  - { name: Clocked Random Gate, category: Mapping and Control }
+  - { name: Compare, category: Mapping and Control }
+  - { name: Ensemble, category: Audio Effects }
+  - { name: Flanger, category: Audio Effects }
+  - { name: Ladder BPF, category: Filtering }
+  - { name: Ladder BPF2, category: Experimental }
+  - { name: Linear Sampling VCA, category: Essentials }
+  - { name: Logics, category: Mapping and Control }
+  - { name: Maths, category: Mapping and Control }
+  - { name: Motion Sensor, category: Mapping and Control }
+  - { name: Octave CV Shifter, category: Mapping and Control }
+  - { name: Phaser, category: Audio Effects }
+  - { name: Pingable Scaled Random, category: Essentials }
+  - { name: Pingable Scaled Random, category: Mapping and Control }
+  - { name: Ring Modulator, category: Modulation }
+  - { name: Rotary Speaker Simulator, category: Audio Effects }
+  - { name: Scorpio Vocoder, category: Filtering }
+  - { name: Timed Gate, category: Timing }
+  - { name: Voltage Bank 2, category: Mapping and Control }
+  - { name: Voltage Bank 4, category: Mapping and Control }
+  - { name: Voltage Bank, category: Mapping and Control }
+  - { name: Voltage vault (only v0.6), category: Mapping and Control }
+  - { name: Voltage vault, category: Mapping }
+  - { name: Weighted Coin Toss, category: Mapping and Control }
+  - { name: Xfade, category: Essentials }
+  - { name: Xo, category: Synthesizers }
+  - { name: Xoxo, category: Synthesizers }
+  - { name: Xoxoxo, category: Synthesizers }
+  - { name: Xxxxxx, category: Synthesizers }
 ---
 
 ### AB switch

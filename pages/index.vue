@@ -143,8 +143,8 @@ export default {
     var cats = []
     for (let i = 0; i < projects.length; i++) {
       const proj = projects[i]
-      for (let j = 0; j < proj.categories.length; j++) {
-        const cat = proj.categories[j]
+      for (let j = 0; j < proj.units.length; j++) {
+        const cat = proj.units[j].category
         uniqueCats.push(cat)
       }
     }
@@ -177,8 +177,11 @@ export default {
       const activeCats = this.cats.filter((cat) => cat.active === true)
       function filterProjects(project) {
         let testArr = []
+        const projectCats = [
+          ...new Set(project.units.map((unit) => unit.category)),
+        ]
         for (let i = 0; i < activeCats.length; i++) {
-          testArr.push(project.categories.includes(activeCats[i].category))
+          testArr.push(projectCats.includes(activeCats[i].category))
         }
         return testArr.every((test) => test === true)
       }
@@ -194,7 +197,7 @@ export default {
       const filter = (project) => {
         return (
           project.units.some((unit) =>
-            unit.toLowerCase().includes(filterValue)
+            unit.name.toLowerCase().includes(filterValue)
           ) ||
           project.categories.some((unit) =>
             unit.toLowerCase().includes(filterValue)

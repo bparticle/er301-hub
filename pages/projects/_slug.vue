@@ -32,10 +32,10 @@
                 <div class="unit-list tags pb-2">
                   <span
                     class="unit tag is-light"
-                    v-for="unit in orderedUnits"
-                    :key="unit"
+                    v-for="unit in units"
+                    :key="unit.name"
                   >
-                    {{ unit }}
+                    {{ unit.name }}
                   </span>
                 </div>
               </section>
@@ -74,7 +74,7 @@ export default {
     return { project }
   },
   computed: {
-    orderedUnits: function () {
+    units: function () {
       return this.project.units.sort()
     },
     avatar: function () {
