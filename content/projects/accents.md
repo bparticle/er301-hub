@@ -30,7 +30,6 @@ units:
   - { name: Motion Sensor, category: Mapping and Control }
   - { name: Octave CV Shifter, category: Mapping and Control }
   - { name: Phaser, category: Audio Effects }
-  - { name: Pingable Scaled Random, category: Essentials }
   - { name: Pingable Scaled Random, category: Mapping and Control }
   - { name: Ring Modulator, category: Modulation }
   - { name: Rotary Speaker Simulator, category: Audio Effects }

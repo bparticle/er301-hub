@@ -33,17 +33,18 @@
           <div class="field is-grouped is-grouped-multiline">
             <div
               class="control"
-              v-for="category in cats"
-              :key="category.category"
+              v-for="(category, index) in cats"
+              :key="category.category + index + category.color"
             >
               <div class="tags has-addons">
                 <a
                   class="tag"
-                  :class="{
-                    'is-link': category.active,
-                    'is-light': !category.active,
-                  }"
-                  @click="addCat(category)"
+                  v-bind:style="[
+                    category.active
+                      ? { backgroundColor: category.color }
+                      : { backgroundColor: category.colorSelected },
+                  ]"
+                  @click="enableCat(category)"
                   >{{ category.category }}</a
                 >
                 <a
@@ -70,8 +71,8 @@
         <tbody>
           <tr
             class="contrib"
-            v-for="project of filteredProjects"
-            :key="project"
+            v-for="(project, index) of filteredProjects"
+            :key="project + index + project.author"
           >
             <td>
               <nuxt-link
@@ -133,46 +134,29 @@ export default {
       searchCats: [],
     }
   },
-  async asyncData({ $content, params }) {
+  async asyncData({ $content, params, store }) {
     const projects = await $content('projects', params.slug)
       .sortBy('title', 'asc')
       .fetch()
 
-    // Get unique categories
-    var uniqueCats = []
-    var cats = []
-    for (let i = 0; i < projects.length; i++) {
-      const proj = projects[i]
-      for (let j = 0; j < proj.units.length; j++) {
-        const cat = proj.units[j].category
-        uniqueCats.push(cat)
-      }
-    }
-    uniqueCats = _.sortBy(
-      uniqueCats.filter((e, i) => uniqueCats.indexOf(e) === i)
-    )
-
-    for (let k = 0; k < uniqueCats.length; k++) {
-      cats.push({
-        category: uniqueCats[k],
-        active: false,
-      })
-    }
+    store.commit('addUniqueCats', projects)
 
     return {
       projects,
-      cats,
     }
   },
   methods: {
-    addCat: function (cat) {
-      cat.active = true
+    enableCat: function (cat) {
+      this.$store.commit('enableCat', cat)
     },
     disableCat: function (cat) {
-      cat.active = false
+      this.$store.commit('disableCat', cat)
     },
   },
   computed: {
+    cats: function () {
+      return this.$store.state.cats
+    },
     filteredProjects: function () {
       const activeCats = this.cats.filter((cat) => cat.active === true)
       function filterProjects(project) {

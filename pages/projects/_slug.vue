@@ -27,6 +27,27 @@
                   {{ project.description }}
                 </p>
               </section>
+              <section class="section cats pt-0">
+                <div class="field is-grouped is-grouped-multiline">
+                  <div
+                    class="control"
+                    v-for="(category, index) in cats"
+                    :key="category.category + index"
+                  >
+                    <div class="tags has-addons">
+                      <span
+                        class="tag"
+                        v-bind:style="[
+                          category.active
+                            ? { backgroundColor: category.color }
+                            : { backgroundColor: category.colorSelected },
+                        ]"
+                        >{{ category.category }}</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </section>
               <section class="section units pt-0">
                 <h2 class="subtitle">Units</h2>
                 <div class="unit-list tags pb-2">
@@ -50,8 +71,8 @@
                 <h2 class="subtitle">Downloads</h2>
                 <a
                   class="download__link"
-                  v-for="file in project.files"
-                  :key="file"
+                  v-for="(file, index) in project.files"
+                  :key="file + index"
                   :href="'/packages/' + file"
                   download
                 >
@@ -68,12 +89,55 @@
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
+  async asyncData({ $content, params, store }) {
     const project = await $content('projects', params.slug).fetch()
 
-    return { project }
+    // Get unique categories
+    var uniqueCats = []
+    var projectCats = []
+    for (let i = 0; i < project.units.length; i++) {
+      const cat = project.units[i].category
+      uniqueCats.push(cat)
+    }
+    uniqueCats = _.sortBy(
+      uniqueCats.filter((e, i) => uniqueCats.indexOf(e) === i)
+    )
+
+    for (let k = 0; k < uniqueCats.length; k++) {
+      projectCats.push({
+        category: uniqueCats[k],
+        active: false,
+        color: store.state.pastels[k],
+        colorSelected: 'whitesmoke',
+      })
+    }
+
+    return { project, projectCats }
+  },
+  methods: {
+    enableCat: function (cat) {
+      this.$store.commit('enableCat', cat)
+    },
+    disableCat: function (cat) {
+      this.$store.commit('disableCat', cat)
+    },
   },
   computed: {
+    cats() {
+      const cats = this.$store.state.cats
+      if (cats.length === 0) {
+        return this.projectCats
+      } else {
+        return cats.filter((cat) =>
+          this.projectCats
+            .map((projCat) => projCat.category)
+            .includes(cat.category)
+        )
+      }
+    },
+    pastels() {
+      return this.$store.state.pastels
+    },
     units: function () {
       return this.project.units.sort()
     },

@@ -9,7 +9,7 @@ compatibility: { v05: true, v06: false }
 files:
   - Extras.zip
 units:
-  - { name: Punchcard, category: Sequencer }
+  - { name: Punchcard, category: Sequencers }
 ---
 
 This is actually Joe's bespoke version of a sequencer preset I hacked together. To install it you need to unzip the archive and drop the Extras folder in the /libs folder
