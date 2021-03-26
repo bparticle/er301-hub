@@ -37,7 +37,7 @@ export const mutations = {
           category: uniqueCats[k],
           active: false,
           color: state.pastels[k],
-          colorSelected: 'whitesmoke',
+          colorPassive: 'whitesmoke',
         })
       }
 

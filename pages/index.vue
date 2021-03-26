@@ -42,7 +42,7 @@
                   v-bind:style="[
                     category.active
                       ? { backgroundColor: category.color }
-                      : { backgroundColor: category.colorSelected },
+                      : { backgroundColor: category.colorPassive },
                   ]"
                   @click="enableCat(category)"
                   >{{ category.category }}</a
@@ -179,13 +179,14 @@ export default {
       const filterValue = this.filterValue.toLowerCase()
 
       const filter = (project) => {
+        console.log(project)
         return (
-          project.units.some((unit) =>
-            unit.name.toLowerCase().includes(filterValue)
-          ) ||
-          project.categories.some((unit) =>
-            unit.toLowerCase().includes(filterValue)
-          ) ||
+          project.units
+            .map((unit) => unit.name)
+            .some((unit) => unit.toLowerCase().includes(filterValue)) ||
+          project.units
+            .map((unit) => unit.category)
+            .some((unit) => unit.toLowerCase().includes(filterValue)) ||
           project.title.toLowerCase().includes(filterValue) ||
           project.author.toLowerCase().includes(filterValue) ||
           project.description.toLowerCase().includes(filterValue)

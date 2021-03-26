@@ -27,34 +27,36 @@
                   {{ project.description }}
                 </p>
               </section>
-              <section class="section cats pt-0">
-                <div class="field is-grouped is-grouped-multiline">
-                  <div
-                    class="control"
-                    v-for="(category, index) in cats"
-                    :key="category.category + index"
-                  >
-                    <div class="tags has-addons">
-                      <span
-                        class="tag"
-                        v-bind:style="[
-                          category.active
-                            ? { backgroundColor: category.color }
-                            : { backgroundColor: category.colorSelected },
-                        ]"
-                        >{{ category.category }}</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </section>
               <section class="section units pt-0">
                 <h2 class="subtitle">Units</h2>
+
+                <div class="tags">
+                  <span
+                    v-for="(category, index) in cats"
+                    :key="category.category + index"
+                    class="tag is-white"
+                    ><span
+                      class="tag__dot"
+                      v-bind:class="{ 'tag__dot--active': category.active }"
+                      v-bind:style="[
+                        category.active
+                          ? { backgroundColor: category.color }
+                          : { backgroundColor: 'whitesmoke' },
+                      ]"
+                    ></span
+                    >{{ category.category }}</span
+                  >
+                </div>
                 <div class="unit-list tags pb-2">
                   <span
                     class="unit tag is-light"
                     v-for="unit in units"
                     :key="unit.name"
+                    v-bind:style="[
+                      unit.active
+                        ? { backgroundColor: unit.color }
+                        : { backgroundColor: unit.colorPassive },
+                    ]"
                   >
                     {{ unit.name }}
                   </span>
@@ -108,7 +110,7 @@ export default {
         category: uniqueCats[k],
         active: false,
         color: store.state.pastels[k],
-        colorSelected: 'whitesmoke',
+        colorPassive: 'whitesmoke',
       })
     }
 
@@ -139,6 +141,24 @@ export default {
       return this.$store.state.pastels
     },
     units: function () {
+      const cats = this.$store.state.cats
+      if (cats.length != 0) {
+        for (let i = 0; i < this.project.units.length; i++) {
+          const unit = this.project.units[i]
+          const cat = this.$store.state.cats.filter(
+            (cat) => cat.category === unit.category
+          )[0]
+          unit.color = cat.color
+          unit.active = cat.active
+        }
+      } else {
+        for (let i = 0; i < this.project.units.length; i++) {
+          console.log(unit)
+          const unit = this.project.units[i]
+          unit.color = ''
+          unit.active = false
+        }
+      }
       return this.project.units.sort()
     },
     avatar: function () {
@@ -174,6 +194,23 @@ export default {
   &__link {
     margin-bottom: 1rem;
     display: block;
+  }
+}
+
+.tags {
+  margin-left: -0.75em;
+  margin-right: -0.75em;
+  border-bottom: 2px solid #f5f5f5;
+}
+
+.tag {
+  &__dot {
+    &--active {
+      width: 15px;
+      height: 15px;
+      border-radius: 3px;
+      margin: 0 0.5rem 0 0;
+    }
   }
 }
 
