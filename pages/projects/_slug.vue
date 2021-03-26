@@ -198,12 +198,13 @@ export default {
 }
 
 .tags {
-  margin-left: -0.75em;
-  margin-right: -0.75em;
   border-bottom: 2px solid #f5f5f5;
 }
 
 .tag {
+  &.is-white {
+    padding: 0;
+  }
   &__dot {
     &--active {
       width: 15px;
