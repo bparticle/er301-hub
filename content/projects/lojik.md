@@ -11,8 +11,8 @@ files:
   - lojik-0.2.0.pkg
   - lojik-0.4.0.pkg
 units:
-  - { name: And, category: Gates, docs: external }
-  - { name: DLatch, category: Gates, docs: true }
+  - { name: And, category: Gates, docs: true }
+  - { name: DLatch, category: Gates }
   - { name: Latch, category: Gates }
   - { name: Not, category: Gates }
   - { name: Or, category: Gates }
@@ -27,17 +27,6 @@ units:
 Hello all let me introduce Lojik! A collection of bespoke units for the latest v0.6 firmware, using the amazing, newly available, DSP layer. This collection includes a bunch of logical operators as well as some excellent new sequencer primitives.
 
 These units all perform as well as the built-in core units, using < 1-2% CPU each.
-
-## And
-
-A logical `And` gate.
-
-Output goes high when the **unit input** _and_ the **gate** input are greater than zero.
-
-| Input            | Description                        |
-| ---------------- | ---------------------------------- |
-| **_unit input_** | The left input to the `and` gate.  |
-| **gate**         | The right input to the `and` gate. |
 
 ## Or
 

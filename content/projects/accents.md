@@ -7,8 +7,8 @@ link: https://github.com/SuperNiCd
 latest version: v0.6.02
 compatibility: { v05: true, v06: true }
 files:
-  - { name: Accents-0.6.02.pkg, compatibility: v06 }
-  - { name: Accents-0.5.04.zip, compatibility: v05 }
+  - Accents-0.6.02.pkg
+  - Accents-0.5.04.zip
 documentation: https://forum.orthogonaldevices.com/t/accents-v0-6-x/5263
 youtube:
   - btHXa_Kcoo4
@@ -30,8 +30,8 @@ units:
   - { name: Motion Sensor, category: Mapping and Control }
   - { name: Octave CV Shifter, category: Mapping and Control }
   - { name: Phaser, category: Audio Effects }
-  - { name: Pingable Scaled Random, category: Mapping and Control, docs: true }
-  - { name: Ring Modulator, category: Modulation, docs: external }
+  - { name: Pingable Scaled Random, category: Mapping and Control }
+  - { name: Ring Modulator, category: Modulation }
   - { name: Rotary Speaker Simulator, category: Audio Effects }
   - { name: Scorpio Vocoder, category: Filtering }
   - { name: Timed Gate, category: Timing }

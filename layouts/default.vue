@@ -32,6 +32,21 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+.content {
+  a .icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: flex-start;
+    height: 1.5rem;
+    width: 2rem;
+    
+    &.icon-link {
+      &:before {
+        content: url('/link-24px.svg');
+      }
+    }
+  }
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s 0.25s;

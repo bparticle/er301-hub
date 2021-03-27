@@ -1,9 +1,11 @@
 ---
 title: And
 description: Docs for logical unit 'And'
+author: tomf
+project: lojik
 ---
 
-## And
+# And
 
 A logical `And` gate.
 
