@@ -22,11 +22,27 @@
                   {{ doc.description }}
                 </p>
               </section>
-              <section class="section pt-0">
+              <section class="section pt-0 pb-0">
                 <a :href="'/projects/' + doc.project">Back to project</a>
               </section>
               <section class="content section">
                 <nuxt-content :document="doc" />
+              </section>
+            </div>
+          </div>
+          <div class="tile is-4 is-vertical is-parent">
+            <div class="tile is-child">
+              <section class="section download">
+                <h2 class="subtitle">Downloads</h2>
+                <a
+                  class="download__link"
+                  v-for="(file, index) in doc.files"
+                  :key="file + index"
+                  :href="'/docs/' + file"
+                  download
+                >
+                  {{ file }}
+                </a>
               </section>
             </div>
           </div>

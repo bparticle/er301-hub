@@ -280,12 +280,6 @@ export default {
   }
 }
 
-.download {
-  &__link {
-    display: block;
-  }
-}
-
 .unit {
   &__doc-link {
     display: flex;

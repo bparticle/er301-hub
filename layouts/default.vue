@@ -32,6 +32,11 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+.download {
+  &__link {
+    display: block;
+  }
+}
 .content {
   a .icon {
     align-items: center;
@@ -39,7 +44,7 @@ html {
     justify-content: flex-start;
     height: 1.5rem;
     width: 2rem;
-    
+
     &.icon-link {
       &:before {
         content: url('/link-24px.svg');
