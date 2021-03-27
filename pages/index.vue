@@ -179,7 +179,6 @@ export default {
       const filterValue = this.filterValue.toLowerCase()
 
       const filter = (project) => {
-        console.log(project)
         return (
           project.units
             .map((unit) => unit.name)

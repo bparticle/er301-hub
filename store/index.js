@@ -24,7 +24,7 @@ export const mutations = {
       // Get unique categories
       var uniqueCats = []
       var cats = []
-      if (!checkIfArray(payload.projects)) {
+      if (Array.isArray(payload.projects)) {
         for (let i = 0; i < payload.projects.length; i++) {
           const proj = payload.projects[i]
           for (let j = 0; j < proj.units.length; j++) {

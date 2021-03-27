@@ -7,8 +7,8 @@ link: https://github.com/SuperNiCd
 latest version: v0.6.02
 compatibility: { v05: true, v06: true }
 files:
-  - Accents-0.6.02.pkg
-  - Accents-0.5.04.zip
+  - { name: Accents-0.6.02.pkg, compatibility: v06 }
+  - { name: Accents-0.5.04.zip, compatibility: v05 }
 documentation: https://forum.orthogonaldevices.com/t/accents-v0-6-x/5263
 youtube:
   - btHXa_Kcoo4
@@ -62,4 +62,7 @@ Pro tip: you can edit the ab control and change it to a gate control if you want
 
 Ping it with a trigger and it spits out and holds a random value until the next ping. Can scale, offset, and quantize it.
 
-<md-img src="accents/ab586e81470da7292aa7fc0f9922a70d77878bf0.png" alt="Alt text">
+<md-img src="accents/ab586e81470da7292aa7fc0f9922a70d77878bf0.png" alt="Alt text"></md-img>
+
+### Ducking Delay
+<youtube :video-id="'btHXa_Kcoo4'"></youtube>

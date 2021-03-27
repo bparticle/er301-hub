@@ -180,7 +180,6 @@ export default {
         }
       } else {
         for (let i = 0; i < this.project.units.length; i++) {
-          console.log(unit)
           const unit = this.project.units[i]
           unit.color = ''
           unit.active = false
