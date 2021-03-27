@@ -48,7 +48,7 @@
                     >{{ category.category }}</a
                   >
                 </div>
-                <div class="tags">
+                <div class="tags" v-if="passiveCats.length">
                   <a
                     v-for="(category, index) in passiveCats"
                     :key="category.category + index"

@@ -121,9 +121,20 @@ Output the **unit input** when **pick** is low and the **alt** signal when **pic
 
 ## Sequencers
 
-- Register - A shift register that can hold up to 64 steps of arbitrary voltages. Contains a built in random source to sample from.
-  <md-img src="lojik/lojik__000.png" alt=""></md-img>
-- Turing - Basically just a register with a scale quantizer in front of it, ideal for quickly generating V/Oct sequences.
-  <md-img src="lojik/lojik__001.png" alt=""></md-img>
-- Seq - A step sequencer
-  <md-img src="lojik/lojik__002.png" alt=""></md-img>
+### Register
+
+A shift register that can hold up to 64 steps of arbitrary voltages. Contains a built in random source to sample from.
+
+<md-img src="lojik/lojik__000.png" alt=""></md-img>
+
+### Turing
+
+Basically just a register with a scale quantizer in front of it, ideal for quickly generating V/Oct sequences.
+
+<md-img src="lojik/lojik__001.png" alt=""></md-img>
+
+### Seq
+
+A step sequencer
+
+<md-img src="lojik/lojik__002.png" alt=""></md-img>
