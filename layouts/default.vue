@@ -29,6 +29,9 @@ export default {
 </script>
 
 <style lang="scss">
+html {
+  scroll-behavior: smooth;
+}
 .fade-enter-active,
 .fade-leave-active {
   transition: all 0.5s 0.25s;

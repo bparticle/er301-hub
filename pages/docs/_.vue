@@ -25,8 +25,9 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const doc = await $content('docs', params.slug).fetch()
+    const doc = await $content('docs', { deep: true }, params.pathMatch).fetch()
 
+    console.log(params)
     return { doc }
   },
 }

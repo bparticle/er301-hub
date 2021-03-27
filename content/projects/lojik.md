@@ -11,8 +11,8 @@ files:
   - lojik-0.2.0.pkg
   - lojik-0.4.0.pkg
 units:
-  - { name: And, category: Gates }
-  - { name: DLatch, category: Gates }
+  - { name: And, category: Gates, docs: external }
+  - { name: DLatch, category: Gates, docs: true }
   - { name: Latch, category: Gates }
   - { name: Not, category: Gates }
   - { name: Or, category: Gates }

@@ -30,7 +30,7 @@
               <section class="section units pt-0">
                 <h2 class="subtitle">Units</h2>
 
-                <div class="tags">
+                <div class="tags" v-if="activeCats.length">
                   <a
                     v-for="(category, index) in activeCats"
                     :key="category.category + index"
@@ -68,7 +68,7 @@
                 </div>
                 <div class="unit-list tags pb-2">
                   <span
-                    class="unit tag is-light"
+                    class="unit tag is-medium is-light"
                     v-for="unit in units"
                     :key="unit.name"
                     v-bind:style="[
@@ -78,6 +78,23 @@
                     ]"
                   >
                     {{ unit.name }}
+                    <a
+                      class="unit__doc-link"
+                      v-if="unit.docs"
+                      :href="anchorLink(unit)"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        width="24"
+                      >
+                        <path
+                          fill="#363636"
+                          d="M13 17H5c-.55 0-1 .45-1 1s.45 1 1 1h8c.55 0 1-.45 1-1s-.45-1-1-1zm6-8H5c-.55 0-1 .45-1 1s.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1zM5 15h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1s.45 1 1 1zM4 6c0 .55.45 1 1 1h14c.55 0 1-.45 1-1s-.45-1-1-1H5c-.55 0-1 .45-1 1z"
+                        />
+                      </svg>
+                    </a>
                   </span>
                 </div>
               </section>
@@ -143,6 +160,18 @@ export default {
     },
     disableCat: function (cat) {
       this.$store.commit('disableCat', cat)
+    },
+    anchorLink: function (unit) {
+      if (unit.docs === 'external') {
+        return (
+          '/docs/' +
+          this.project.title.toLowerCase().replace(/\s/g, '-') +
+          '/' +
+          unit.name.toLowerCase().replace(/\s/g, '-')
+        )
+      } else {
+        return '#' + unit.name.toLowerCase().replace(/\s/g, '-')
+      }
     },
   },
   computed: {
@@ -228,6 +257,9 @@ export default {
   margin-bottom: 0.5rem !important;
 }
 
+span.icon.icon-link {
+}
+
 .tag {
   &.is-white {
     padding: 0;
@@ -248,14 +280,19 @@ export default {
   }
 }
 
+.unit {
+  &__doc-link {
+    display: flex;
+  }
+}
 .unit-list {
   border-bottom: 2px solid #f5f5f5;
 }
 
 // Remove weird padding on markdown heading
-span.icon.icon-link {
-  display: none;
-}
+// span.icon.icon-link {
+//   display: none;
+// }
 
 // Responsive video embed
 .section.videos {
