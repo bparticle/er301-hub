@@ -139,7 +139,7 @@ export default {
       .sortBy('title', 'asc')
       .fetch()
 
-    store.commit('addUniqueCats', projects)
+    store.commit('addUniqueCats', { projects: projects, force: true })
 
     return {
       projects,

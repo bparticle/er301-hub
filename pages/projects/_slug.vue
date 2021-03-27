@@ -31,10 +31,11 @@
                 <h2 class="subtitle">Units</h2>
 
                 <div class="tags">
-                  <span
-                    v-for="(category, index) in cats"
+                  <a
+                    v-for="(category, index) in activeCats"
                     :key="category.category + index"
                     class="tag is-white"
+                    @click="disableCat(category)"
                     ><span
                       class="tag__dot"
                       v-bind:class="{ 'tag__dot--active': category.active }"
@@ -44,7 +45,25 @@
                           : { backgroundColor: 'whitesmoke' },
                       ]"
                     ></span
-                    >{{ category.category }}</span
+                    >{{ category.category }}</a
+                  >
+                </div>
+                <div class="tags">
+                  <a
+                    v-for="(category, index) in passiveCats"
+                    :key="category.category + index"
+                    class="tag is-white"
+                    @click="enableCat(category)"
+                    ><span
+                      class="tag__dot"
+                      v-bind:class="{ 'tag__dot--active': category.active }"
+                      v-bind:style="[
+                        category.active
+                          ? { backgroundColor: category.color }
+                          : { backgroundColor: 'whitesmoke' },
+                      ]"
+                    ></span
+                    >{{ category.category }}</a
                   >
                 </div>
                 <div class="unit-list tags pb-2">
@@ -114,6 +133,8 @@ export default {
       })
     }
 
+    store.commit('addUniqueCats', { projects: project, force: false })
+
     return { project, projectCats }
   },
   methods: {
@@ -136,6 +157,12 @@ export default {
             .includes(cat.category)
         )
       }
+    },
+    activeCats() {
+      return this.cats.filter((cat) => cat.active)
+    },
+    passiveCats() {
+      return this.cats.filter((cat) => !cat.active)
     },
     pastels() {
       return this.$store.state.pastels
@@ -199,6 +226,7 @@ export default {
 
 .tags {
   border-bottom: 2px solid #f5f5f5;
+  margin-bottom: 0.5rem !important;
 }
 
 .tag {

@@ -17,17 +17,28 @@ export const mutations = {
     state.cats = payload
   },
   addUniqueCats(state, payload) {
-    if (state.cats.length === 0) {
+    var checkIfArray = function (array) {
+      return (Array.isArray(array) === true && !array.length);
+    }
+    var fillCats = function () {
       // Get unique categories
       var uniqueCats = []
       var cats = []
-      for (let i = 0; i < payload.length; i++) {
-        const proj = payload[i]
-        for (let j = 0; j < proj.units.length; j++) {
-          const cat = proj.units[j].category
+      if (!checkIfArray(payload.projects)) {
+        for (let i = 0; i < payload.projects.length; i++) {
+          const proj = payload.projects[i]
+          for (let j = 0; j < proj.units.length; j++) {
+            const cat = proj.units[j].category
+            uniqueCats.push(cat)
+          }
+        }
+      } else {
+        for (let j = 0; j < payload.projects.units.length; j++) {
+          const cat = payload.projects.units[j].category
           uniqueCats.push(cat)
         }
       }
+
       uniqueCats = _.sortBy(
         uniqueCats.filter((e, i) => uniqueCats.indexOf(e) === i)
       )
@@ -40,8 +51,17 @@ export const mutations = {
           colorPassive: 'whitesmoke',
         })
       }
-
       state.cats = cats
+    }
+
+    // If force is true, refill categories
+    if (payload.force === true) {
+      fillCats()
+    } else {
+      // Else refill only when empty
+      if (state.cats.length === 0) {
+        fillCats()
+      }
     }
   }
 }
