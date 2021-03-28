@@ -16,3 +16,7 @@ The master branch is continuously deployed on Netlify. As soon as the pull reque
 ## Organization
 
 Organizing the different packages, units, presets and matching them with different firmware versions is currently what I'm trying to conceptualize in my head. Stay tuned. 😁
+
+## Local testing
+
+run ´npm install´ and then ´npm run dev´ in the folder to run Nuxt locally. The default port is http://localhost:3000/
