@@ -1,6 +1,6 @@
 <template>
   <div class="is-fluid home">
-    <main class="container content">
+    <main class="mb-6 container content">
       <div>
         <div class="tile is-parent">
           <div class="tile is-child is-4">
