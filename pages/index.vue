@@ -117,7 +117,6 @@
         </tbody>
       </table>
     </main>
-    <footer class="footer"></footer>
   </div>
 </template>
 

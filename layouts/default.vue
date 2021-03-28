@@ -15,6 +15,7 @@
     <transition name="fade">
       <Nuxt />
     </transition>
+    <footer class="footer"></footer>
   </div>
 </template>
 
