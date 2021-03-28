@@ -1,13 +1,11 @@
 ---
 title: And
-description: Docs for logical unit 'And'
+description: A logical `And` gate.
 author: tomf
 project: lojik
 ---
 
-# And
-
-A logical `And` gate.
+<md-img src="lojik/and.png" alt=""></md-img>
 
 Output goes high when the **unit input** _and_ the **gate** input are greater than zero.
 
