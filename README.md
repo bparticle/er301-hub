@@ -1,8 +1,10 @@
 # ER-301 community hub
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fb3a943f-637d-4eca-a6f8-a9c35343960d/deploy-status)](https://app.netlify.com/sites/er301-hub/deploys)
+
 https://er301-hub.netlify.app/
 
-this site is a proof of concept, or rather a testing environment for our quest to find a way to easily share code, patches, presets and packages for the ER-301 sound computer. The original forum discussion is here [Package management, distribution, organization - V0.6](https://forum.orthogonaldevices.com/t/package-management-distribution-organization-v0-6/5280?u=bparticle)
+this site is a testing environment for the Orthogonal Devices ER-301 sound computer community code hub. The goal of the app is organizing and sharing patches, presets, packages and documentation between users and developers. The original forum discussion is here [Package management, distribution, organization - V0.6](https://forum.orthogonaldevices.com/t/package-management-distribution-organization-v0-6/5280?u=bparticle)
 
 ## Nuxt content
 
@@ -13,10 +15,11 @@ Detailed documentation in our [Wiki](https://github.com/bparticle/er301-hub/wiki
 ## Netlify
 
 The master branch is continuously deployed on Netlify. As soon as the pull request is merged the changes are live. 🎉
+
 ## Organization
 
 Organizing the different packages, units, presets and matching them with different firmware versions is currently what I'm trying to conceptualize in my head. Stay tuned. 😁
 
 ## Local testing
 
-run ´npm install´ and then ´npm run dev´ in the folder to run Nuxt locally. The default port is http://localhost:3000/
+run `npm install` and then `npm run dev` in the folder to run Nuxt locally. The default port is http://localhost:3000/
