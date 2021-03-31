@@ -31,7 +31,7 @@ units:
 ---
 
 **Dependencies:**
-- `core`
+* `core`
 
 Lojik is a collection of logical gates, sequencers, and more.
 
