@@ -11,9 +11,9 @@ Output the **unit input** when **pick** is low and the **alt** signal when **pic
 
 #### Patch Ideas
 
-1. _Sequence Swap_<br><br>Pass in two sequences or CV sources and switch between them at will with the **pick** gate.
+1. _Sequence Swap_<br><br>Pass in two sequences or CV sources and switch between them at will with the **pick** gate.<br>
 
-2. _Audio Rate Slice_<br><br>Rapidly switch between two signals with an audio-rate **pick** input.
+2. _Audio Rate Slice_<br><br>Rapidly switch between two signals with an audio-rate **pick** input.<br>
 
 | Input            | Description                                               |
 | ---------------- | --------------------------------------------------------- |
