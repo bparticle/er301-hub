@@ -7,4 +7,4 @@ project: lojik
 
 <md-img src="lojik/turing.png" alt=""></md-img>
 
-Basically just a register with a scale quantizer in front of it, ideal for quickly generating V/Oct sequences.
+A specialized version of the `register` unit with a built in scale quantizer. See `register` for more details.
