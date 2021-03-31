@@ -15,9 +15,9 @@ Includes a helpful visualization of the generated rhythm. The outer ring display
 
 #### Patch Ideas
 
-1. _Euclids Triangle_<br><br>Run a triangle oscillator into the **unit input** and set **beats** close to **length** and the **Output Mode** to **through**. The resulting wave will be chopped up according to the rhythm for some interesting timbres.<br>
+1. _Euclids Triangle_<br>Run a triangle oscillator into the **unit input** and set **beats** close to **length** and the **Output Mode** to **through**. The resulting wave will be chopped up according to the rhythm for some interesting timbres.
 
-2. _Just Spinning_<br><br>Patch a clock into the **rotate** gate instead of the **unit input**, because why play by the rules.<br>
+2. _Just Spinning_<br>Patch a clock into the **rotate** gate instead of the **unit input**, because why play by the rules.
 
 | Input            | Description                        |
 | ---------------- | ---------------------------------- |

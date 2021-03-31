@@ -11,11 +11,11 @@ Keeps an internal step counter that increments on the **clock**. Outputs the **u
 
 #### Patch Ideas
 
-1. _Clock Divider_<br><br>Patch a clock into the **clock** input as well as the **unit input** to divide the clock by **wait** minus 1.<br>
+1. _Clock Divider_<br>Patch a clock into the **clock** input as well as the **unit input** to divide the clock by **wait** minus 1.
 
-2. _Sub-harmonics_<br><br>Patch an oscillator into the **unit input** and trigger the **clock** at audio rate to chop it up.<br>
+2. _Sub-harmonics_<br>Patch an oscillator into the **unit input** and trigger the **clock** at audio rate to chop it up.
 
-3. _Clocked Mute_<br><br>Mute a signal for **wait** steps before bringing it back in.<br>
+3. _Clocked Mute_<br>Mute a signal for **wait** steps before bringing it back in.
 
 | Input            | Description                                                                         |
 | ---------------- | ----------------------------------------------------------------------------------- |
