@@ -22,9 +22,9 @@ units:
   - { name: Register, category: Sequencers, docs: true }
   - { name: Turing, category: Sequencers, docs: true }
   - { name: Seq, category: Sequencers, docs: true }
-  - { name: Pulse, category: Gates, Oscillators, docs: true },
-  - { name: Wait, category: Gates, docs: true },
-  - { name: Euclid, category: Gates, Sequencers, docs: true },
+  - { name: Pulse, category: Gates, Oscillators, docs: true }
+  - { name: Wait, category: Gates, docs: true }
+  - { name: Euclid, category: Gates, Sequencers, docs: true }
 ---
 
 **Dependencies:**
