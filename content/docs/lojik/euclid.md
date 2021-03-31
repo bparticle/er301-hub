@@ -6,6 +6,7 @@ project: lojik
 ---
 
 <md-img src="lojik/euclid.png" alt=""></md-img>
+
 <md-img src="lojik/euclid-ext.png" alt=""></md-img>
 
 A euclidean rhythm generator. Takes a clock signal at the **unit input** and converts it to a euclidean rhythm.
