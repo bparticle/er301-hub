@@ -9,11 +9,11 @@ project: lojik
 
 A simple square wave oscillator with pulse **width** and **V/Oct** control.
 
-| Input            | Description                        |
-| ---------------- | ---------------------------------- |
-| **_unit input_** | _NA_  |
-| **V/Oct**        | Standard tuning control, sums with the base **freq**. |
-| **freq**         | The base frequency. |
+| Input            | Description                                                    |
+| ---------------- | -------------------------------------------------------------- |
+| **_unit input_** | _NA_                                                           |
+| **V/Oct**        | Standard tuning control, sums with the base **freq**.          |
+| **freq**         | The base frequency.                                            |
 | **sync**         | Hard **sync** the oscillator so it starts when you want it to. |
-| **width**        | The pulse width. |
-| **gain**         | The output level. |
+| **width**        | The pulse width.                                               |
+| **gain**         | The output level.                                              |

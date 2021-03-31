@@ -47,9 +47,11 @@ units:
   - { name: Xxxxxx, category: Synthesizers }
 ---
 
-### AB switch
+**Dependencies:**
 
-**Category:** Experimental
+- `core`
+
+### AB switch
 
 Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.
 
@@ -57,12 +59,54 @@ Pro tip: you can edit the ab control and change it to a gate control if you want
 
 ### Pingable Scaled Random
 
-**Category**
+Ping it with a trigger and it spits out and holds a random value until the next ping. You can scale, offset, and quantize it.
 
-Ping it with a trigger and it spits out and holds a random value until the next ping. Can scale, offset, and quantize it.
+<md-img src="accents/pingable-scaled-random.png" alt=""></md-img>
 
-<md-img src="accents/ab586e81470da7292aa7fc0f9922a70d77878bf0.png" alt="Alt text"></md-img>
+<youtube :video-id="'66MMMyfIy50'"></youtube>
 
-### Ducking Delay
+### Clocked Random Gate
 
-<youtube :video-id="'btHXa_Kcoo4'"></youtube>
+Send it pulses or a clock. You control the probability that a gate will fire when it’s pinged
+
+<md-img src="accents/clocked-random-gate.png" alt=""></md-img>
+
+<youtube :video-id="'2sSnTLD1nR8'"></youtube>
+
+### Weighted Coin Toss
+
+Send a pulse and it outputs heads (1) or tails (0). You can weight it so that it’s more likely to give heads or tails.
+
+<md-img src="accents/coin-toss.png" alt=""></md-img>
+
+<youtube :video-id="'GqVS3U53bWk'"></youtube>
+
+### Motion Sensor
+
+This one’s the most experimental. I didn’t think it could be done in the middle layer, but it’s actually working decently well. It detects when a CV signal is moving, and can output a toggle, gate, or trigger signal.
+
+<md-img src="accents/motion-sensor" alt=""></md-img>
+
+<youtube :video-id="'8nTXRooI4fM'"></youtube>
+
+### Voltage Vault
+
+I think 128 is a good number of vaults/indices. That’s 8 measures of 16th notes, or enough to store translations for an 88-note keyboard. We could go higher. The way it is built now, I don’t think more indices will increase CPU, just RAM. But just a tiny bit of RAM. Let me know if you can think of a reason to go higher (or lower).
+
+When you trigger the store parameter, Voltage Vault will sample whatever voltage is at it’s input into the selected index location. It stores a discrete single floating point value (voltage) per index. The output of the unit is whatever value is stored in the selected index’s memory slot, default 0.0 if you haven’t stored anything there yet. If the bypass parameter is toggled on, Voltage Vault will just pass whatever is at it’s input through to the output. This is probably most useful when building your table of values so that you can “hear” what you’re about to “store.”
+
+So Voltage Vault is essentially a lookup table (LUT). You could potentially use it as a sequencer, or to do translations or arbitrary transfer functions of your own design. Here’s a video I made about it’s predecessor, Voltage Bank, that might give you some ideas.
+
+<youtube :video-id="'pqyuhNSQ7po'"></youtube>
+
+### Maths
+
+| Mode     | Formula | Description                                           |
+| -------- | ------- | ----------------------------------------------------- |
+| **DIV**  | A/B     | division. if B = 0, outputs a very large number (10k) |
+| **INV**  | 1 / A   | inverse. if A = 0, outputs a very large number (10k)  |
+| **MOD**  | A % B   | modulus. if B = 0, outputs zero                       |
+| **TANH** | TANH(A) | hyperbolic tangent                                    |
+| **ATAN** | ATAN(A) | arctangent                                            |
+
+The B chain is ignored for INV, TANH, ATAN.
