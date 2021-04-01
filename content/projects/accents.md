@@ -51,6 +51,25 @@ units:
 
 - `core`
 
+## Installation
+
+### V.05
+
+Unzip the Accents-0.5.04.zip file in your ER-301/libs folder. They should appear across the different categories in the main unit list.
+
+### V.06
+
+To install Accents (and other packaged mods) on firmware 0.6.x:
+
+1. Make sure you are running the required version of the firmware 11 (currently 0.6.03+)
+2. Download the attached file Accents-0.6.03.pkg
+3. Copy the .pkg file to your SD card into the folder /ER-301/packages
+4. Go to the admin area and select Package Manager
+5. You should see Accents as an available choice along with the core and teletype mods, which will most likely already be installed
+6. Highlight Accents and press the install button.
+
+## Documentation
+
 ### AB switch
 
 Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.

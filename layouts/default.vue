@@ -49,6 +49,8 @@ html {
     &.icon-link {
       &:before {
         content: url('/link-24px.svg');
+        padding-top: 8px;
+        position: absolute;
       }
     }
   }

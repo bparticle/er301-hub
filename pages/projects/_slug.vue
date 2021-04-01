@@ -262,7 +262,7 @@ export default {
 
 .unit {
   &__icon {
-    margin: 0.5rem 0 0.5rem 0.5rem;
+    margin-left: 0.5rem;
   }
 }
 
