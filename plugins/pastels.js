@@ -6,7 +6,6 @@ export const pastels = [
     "#d1dd93",
     "#ffc840",
     "#f0edaa",
-    "#c2d5f4",
     "#bdeeed",
     "#ffb6b9",
     "#fae3d9",

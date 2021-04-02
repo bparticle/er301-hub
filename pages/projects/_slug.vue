@@ -132,6 +132,7 @@
 export default {
   async asyncData({ $content, params, store }) {
     const project = await $content('projects', params.slug).fetch()
+    project.files.sort().reverse()
 
     // Get unique categories
     var uniqueCats = []
