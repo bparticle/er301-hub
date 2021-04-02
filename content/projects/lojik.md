@@ -5,26 +5,28 @@ author: tomf
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/tomf/summary
 link: https://github.com/tmfset/er-301-custom-units
-latest version: v0.5.0
+latest version: v1.0.0
 files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
   - lojik-0.4.0.pkg
   - lojik-0.5.0.pkg
+  - lojik-1.0.0.pkg
 units:
-  - { name: And, category: Gates, Logic, docs: true }
-  - { name: Or, category: Gates, Logic, docs: true }
-  - { name: Not, category: Gates, Logic, docs: true }
-  - { name: Trig, category: Gates, docs: true }
-  - { name: Latch, category: Gates, docs: true }
-  - { name: DLatch, category: Gates, docs: true }
-  - { name: Pick, category: Gates, docs: true }
-  - { name: Register, category: Sequencers, docs: true }
-  - { name: Turing, category: Sequencers, docs: true }
-  - { name: Seq, category: Sequencers, docs: true }
-  - { name: Pulse, category: Gates, Oscillators, docs: true }
-  - { name: Wait, category: Gates, docs: true }
-  - { name: Euclid, category: Gates, Sequencers, docs: true }
+  - { name: Register, category: Sequencer, docs: true }
+  - { name: Turing, category: Sequencer, docs: true }
+  - { name: Seq, category: Sequencer, docs: true }
+  - { name: Latch, category: Latch, docs: true }
+  - { name: DLatch, category: Latch, docs: true }
+  - { name: Pick, category: Switch, docs: true }
+  - { name: Pulse, category: Oscillator, docs: true }
+  - { name: Wait, category: Switch, docs: true }
+  - { name: Euclid, category: Divider, docs: true }
+  - { name: Chance, category: Divider, docs: true }
+  - { name: And, category: Logic, docs: true }
+  - { name: Or, category: Logic, docs: true }
+  - { name: Not, category: Logic, docs: true }
+  - { name: Trig, category: Logic, docs: true }
 ---
 
 **Dependencies:**

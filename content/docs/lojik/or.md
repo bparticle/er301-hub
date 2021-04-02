@@ -13,3 +13,7 @@ Output goes high when either the **unit input** _or_ the **gate** input is great
 | ---------------- | --------------------------------- |
 | **_unit input_** | The left input to the `or` gate.  |
 | **gate**         | The right input to the `or` gate. |
+
+| Menu Item        | Description                        |
+| ---------------- | ---------------------------------- |
+| **Input Sense** | Input sensitivity, use high for through-zero signals and low for gate/trigger signals. |

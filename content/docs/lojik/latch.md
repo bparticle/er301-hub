@@ -13,3 +13,7 @@ Output is latched high when the **unit input** is greater than zero.
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **_unit input_** | The latch is set when the **unit input** is greater than zero.                       |
 | **reset**        | Reset the latch to zero on gate high unless the **unit input** is greater than zero. |
+
+| Menu Item        | Description                        |
+| ---------------- | ---------------------------------- |
+| **Input Sense** | Input sensitivity, use high for through-zero signals and low for gate/trigger signals. |
