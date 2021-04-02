@@ -32,3 +32,4 @@ Includes a helpful visualization of the generated rhythm. The outer ring display
 | ---------------- | ---------------------------------- |
 | **Output Mode**  | **trigger**: output a trigger when the current step is active.<br>**gate**: output a gate when the current step is active.<br>**through**: output the incoming signal when the current step is active. |
 | **Clock Sync**   |  **rotate**: synchronize rotate triggers to the input signal to ensure they don't interupt the beat.<br>**reset**: synchronize reset triggers to the input signal. |
+| **Input Sense** | Input sensitivity, use high for through-zero signals and low for gate/trigger signals. |

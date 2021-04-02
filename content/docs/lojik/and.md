@@ -13,3 +13,7 @@ Output goes high when the **unit input** _and_ the **gate** input are greater th
 | ---------------- | ---------------------------------- |
 | **_unit input_** | The left input to the `and` gate.  |
 | **gate**         | The right input to the `and` gate. |
+
+| Menu Item        | Description                        |
+| ---------------- | ---------------------------------- |
+| **Input Sense** | Input sensitivity, use high for through-zero signals and low for gate/trigger signals. |

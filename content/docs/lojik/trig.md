@@ -12,3 +12,7 @@ Outputs a trigger when the **unit input** is greater than zero.
 | Input            | Description                         |
 | ---------------- | ----------------------------------- |
 | **_unit input_** | The input to the trigger converter. |
+
+| Menu Item        | Description                        |
+| ---------------- | ---------------------------------- |
+| **Input Sense** | Input sensitivity, use high for through-zero signals and low for gate/trigger signals. |
