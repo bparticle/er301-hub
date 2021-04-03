@@ -162,7 +162,7 @@ export default {
         let regex = github.tagRegex;
         if (!regex) return releases;
         return releases.filter(release => !!(release.tag_name || "").match(regex));
-      });
+      })();
 
       console.log(releases);
       console.log(filtered);
