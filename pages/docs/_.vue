@@ -1,7 +1,7 @@
 
 <template>
-  <div class="container is-fluid home">
-    <main class="mb-6 content">
+  <div class="is-fluid home">
+    <main class="mb-6 container content">
       <article>
         <div class="tile is-ancestor">
           <div class="tile is-parent">

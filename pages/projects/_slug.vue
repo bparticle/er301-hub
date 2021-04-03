@@ -1,7 +1,7 @@
 
 <template>
   <div class="container is-fluid home">
-    <main class="mb-6 content">
+    <main class="mb-6 container content">
       <article>
         <div class="tile is-ancestor">
           <div class="tile is-parent">
@@ -109,6 +109,23 @@
           <div class="tile is-4 is-vertical is-parent">
             <div class="tile is-child">
               <section class="section download">
+                <div class="gh-release" v-if="project.ghRelease">
+                  <h2 class="gh-release__title">Latest GitHub release</h2>
+                  <button class="button is-rounded">
+                    <a :href="project.ghRelease.zipball_url">{{
+                      project.ghRelease.name
+                    }}</a>
+                  </button>
+                  <p class="mt-4">
+                    Published on
+                    <strong>
+                      {{
+                        project.ghRelease.published_at
+                          | moment('dddd, MMMM Do YYYY')
+                      }}</strong
+                    >
+                  </p>
+                </div>
                 <h2 class="subtitle">Downloads</h2>
                 <a
                   class="download__link"
@@ -130,9 +147,15 @@
 
 <script>
 export default {
-  async asyncData({ $content, params, store }) {
+  async asyncData({ $content, params, store, $axios }) {
     const project = await $content('projects', params.slug).fetch()
     project.files.sort().reverse()
+
+    if (project.ghRelease) {
+      console.log(project.ghRelease)
+      project.ghRelease = await $axios.$get(project.ghRelease)
+      console.log(project.ghRelease)
+    }
 
     // Get unique categories
     var uniqueCats = []
@@ -232,6 +255,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.gh-release {
+  &__title {
+    &:before {
+      margin-right: 5px;
+      content: url('/GitHub-Mark-32px.png');
+    }
+  }
+}
 .project {
   &__title {
     font-size: 3rem;
