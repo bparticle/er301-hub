@@ -5,7 +5,8 @@ author: tomf
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/tomf/summary
 link: https://github.com/tmfset/er-301-custom-units
-ghRelease: https://api.github.com/repos/tmfset/er-301-custom-units/releases/latest
+github.path: tmfset/er-301-custom-units
+github.tagRegex: ^lojik.*$
 latest version: v1.0.0
 files:
   - lojik-0.1.1.pkg

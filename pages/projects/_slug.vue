@@ -109,18 +109,18 @@
           <div class="tile is-4 is-vertical is-parent">
             <div class="tile is-child">
               <section class="section download">
-                <div class="gh-release" v-if="project.ghRelease">
+                <div class="gh-release" v-if="project.github.latest">
                   <h2 class="gh-release__title">Latest GitHub release</h2>
                   <button class="button is-rounded">
-                    <a :href="project.ghRelease.zipball_url">{{
-                      project.ghRelease.name
+                    <a :href="project.github.latest.url">{{
+                      project.github.latest.name
                     }}</a>
                   </button>
                   <p class="mt-4">
                     Published on
                     <strong>
                       {{
-                        project.ghRelease.published_at
+                        project.github.latest.published
                           | moment('dddd, MMMM Do YYYY')
                       }}</strong
                     >
@@ -151,10 +151,36 @@ export default {
     const project = await $content('projects', params.slug).fetch()
     project.files.sort().reverse()
 
-    if (project.ghRelease) {
-      console.log(project.ghRelease)
-      project.ghRelease = await $axios.$get(project.ghRelease)
-      console.log(project.ghRelease)
+    let github = project.github || {};
+    project.github = github;
+
+    if (github.path) {
+      let response = await $axios.$get(`https://api.github.com/repos/${github.path}/releases`);
+      let releases = response || [];
+
+      let filtered = (() => {
+        let regex = github.tagRegex;
+        if (!regex) return releases;
+        return releases.filter(release => !!(release.tag_name || "").match(regex));
+      });
+
+      let compareByReleaseIdDesc = (left, right) => {
+        return right.id - left.id;
+      }
+
+      github.latest = (() => {
+        let release = filtered.sort(compareByReleaseIdDesc)[0];
+        if (!release) return;
+
+        let asset = (release.assets || [])[0];
+        if (!asset) return;
+
+        return {
+          name: release.name,
+          published: release.published_at,
+          url: asset.browser_download_url
+        };
+      })();
     }
 
     // Get unique categories
