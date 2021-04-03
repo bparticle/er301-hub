@@ -153,7 +153,7 @@ export default {
 
     let github = project.github || {};
     project.github = github;
-
+    console.log(project.github);
     if (github.path) {
       let response = await $axios.$get(`https://api.github.com/repos/${github.path}/releases`);
       let releases = response || [];
@@ -163,6 +163,9 @@ export default {
         if (!regex) return releases;
         return releases.filter(release => !!(release.tag_name || "").match(regex));
       });
+
+      console.log(releases);
+      console.log(filtered);
 
       let compareByReleaseIdDesc = (left, right) => {
         return right.id - left.id;
@@ -181,6 +184,8 @@ export default {
           url: asset.browser_download_url
         };
       })();
+      console.log(github);
+      console.log(project.github);
     }
 
     // Get unique categories
