@@ -135,6 +135,7 @@ export default {
   },
   async asyncData({ $content, params, store }) {
     const projects = await $content('projects', params.slug)
+      .where({ title: { $nin: 'Example' } })
       .sortBy('title', 'asc')
       .fetch()
 
