@@ -9,6 +9,8 @@ github:
   path: tmfset/er-301-custom-units
   tagRegex: ^sloop.*$
 latest version: v1.0.0
+files:
+  - sloop-1.0.0.pkg
 units:
   - { name: Sloop, category: Looper }
 ---
