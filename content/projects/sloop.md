@@ -8,7 +8,7 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^sloop.*$
-latest version: v1.0.0
+latest version: v1.0.2
 files:
   - sloop-1.0.0.pkg
 units:
