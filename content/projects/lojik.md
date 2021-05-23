@@ -16,13 +16,13 @@ files:
   - lojik-0.5.0.pkg
   - lojik-1.0.0.pkg
 units:
-  - { name: Register, category: Sequencer, docs: true }
-  - { name: Turing, category: Sequencer, docs: true }
-  - { name: Seq, category: Sequencer, docs: true }
+  - { name: Register, category: Sequencers, docs: true }
+  - { name: Turing, category: Sequencers, docs: true }
+  - { name: Seq, category: Sequencers, docs: true }
   - { name: Latch, category: Latch, docs: true }
   - { name: DLatch, category: Latch, docs: true }
   - { name: Pick, category: Switch, docs: true }
-  - { name: Pulse, category: Oscillator, docs: true }
+  - { name: Pulse, category: Oscillators, docs: true }
   - { name: Wait, category: Switch, docs: true }
   - { name: Euclid, category: Divider, docs: true }
   - { name: Chance, category: Divider, docs: true }
@@ -35,7 +35,7 @@ units:
 **Dependencies:**
 * `core`
 
-Lojik is a collection of logical gates, sequencers, and more.
+Lojik is a collection of logical gates, sequencerss, and more.
 
 This collection is built entirely in the DSP layer and operates similarly to the built-in `core` units, that is to say _very efficiently_ (~1-2% CPU).
 
