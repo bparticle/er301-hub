@@ -20,7 +20,7 @@ FilterDelays contains a bunch of units based on -- you guessed it -- delays.
 
 ## FilterDelay
 
-The FilterDelay unit is a simple delay with a tone control in the feedback loop. The stereo version also has a randomized 'spread' control.
+The FilterDelay unit is a simple clocked delay with a tone control in the feedback loop. The stereo version also has a randomized 'spread' control.
 
 ## FDN
 
