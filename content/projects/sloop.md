@@ -8,11 +8,11 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^sloop.*$
-latest version: v1.0.0
+latest version: v1.0.2
 files:
   - sloop-1.0.0.pkg
 units:
-  - { name: Sloop, category: Looper }
+  - { name: Sloop, category: Loopers }
 ---
 
 Sloop is a clock synchronized looper that allows you to record audio or CV precisely on the beat. Besides being a recorder, it is also a flexible playback tool that can be used to slice audio and playback those slices in time.
