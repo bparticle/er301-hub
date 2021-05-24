@@ -8,10 +8,9 @@ link: https://github.com/yrn1/FilterDelays
 github:
   path: yrn1/FilterDelays
   tagRegex: ^0.6.*$
-latest version: 0.6.02
+latest version: 0.6.03
 files:
-  - FilterDelays-0.6.01.pkg
-  - FilterDelays-0.6.02.pkg
+  - FilterDelays-0.6.03.pkg
 units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
   - { name: Filter Delay, category: Delays and Reverb, docs: false } # Object with two required keys: name and category. "docs" is optional: if set to true, then you can link to a dedicated documentation page in /content/docs/my-project/name-of-unit.md
   - { name: Feedback Delay Network, category: Delays and Reverb, docs: false }
@@ -29,4 +28,4 @@ The FDN unit is a Feedback Delay Network, inspired by the paper by [Tom Erbe - U
 
 With small delay times, it sounds like a simple reverb with tone and feedback control. But the delay times go so insanely big that it can also behave like a delay that eventuelly smears out into a reverby sound.
 
-Note: the 'level' control adjusts the input level to the FND network.
+<youtube :video-id="'cX_T2rWy1HM'"></youtube>
