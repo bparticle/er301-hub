@@ -12,8 +12,8 @@ latest version: 0.6.04
 files:
   - FilterDelays-0.6.03.pkg
   - FilterDelays-0.6.04.pkg
-units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
-  - { name: Filter Delay, category: Delays and Reverb, docs: false } # Object with two required keys: name and category. "docs" is optional: if set to true, then you can link to a dedicated documentation page in /content/docs/my-project/name-of-unit.md
+units:
+  - { name: Filter Delay, category: Delays and Reverb, docs: false }
   - { name: Feedback Delay Network, category: Delays and Reverb, docs: false }
   - { name: Simple Feedback Delay Network, category: Delays and Reverb, docs: false }
 ---
