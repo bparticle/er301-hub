@@ -9,6 +9,8 @@ github:
   path: tmfset/er-301-custom-units
   tagRegex: ^strike.*$
 latest version: v1.0.0
+files:
+  - strike-1.0.0.pkg
 units:
   - { name: Arc, category: Envelope, docs: true }
   - { name: Fin, category: Oscillator, docs: true }
