@@ -151,36 +151,42 @@ export default {
     const project = await $content('projects', params.slug).fetch()
     project.files.sort().reverse()
 
-    let github = project.github || {};
-    project.github = github;
+    let github = project.github || {}
+    project.github = github
 
     if (github.path) {
-      let response = await $axios.$get(`https://api.github.com/repos/${github.path}/releases`);
-      let releases = response || [];
+      let response = await $axios.$get(
+        `https://api.github.com/repos/${github.path}/releases`
+      )
+      let releases = response || []
 
       let filtered = (() => {
-        let regex = github.tagRegex;
-        if (!regex) return releases;
-        return releases.filter(release => !!(release.tag_name || "").match(regex));
-      })();
+        let regex = github.tagRegex
+        if (!regex) return releases
+        return releases.filter(
+          (release) =>
+            !!(release.name || '').match(regex) ||
+            !!(release.tag_name || '').match(regex)
+        )
+      })()
 
       let compareByReleaseIdDesc = (left, right) => {
-        return right.id - left.id;
+        return right.id - left.id
       }
 
       github.latest = (() => {
-        let release = filtered.sort(compareByReleaseIdDesc)[0];
-        if (!release) return;
+        let release = filtered.sort(compareByReleaseIdDesc)[0]
+        if (!release) return
 
-        let asset = (release.assets || [])[0];
-        if (!asset) return;
+        let asset = (release.assets || [])[0]
+        if (!asset) return
 
         return {
           name: release.name,
           published: release.published_at,
-          url: asset.browser_download_url
-        };
-      })();
+          url: asset.browser_download_url,
+        }
+      })()
     }
 
     // Get unique categories
