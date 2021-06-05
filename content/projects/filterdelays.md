@@ -4,10 +4,10 @@ description: Some filtered delays
 author: yrn1
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/yrn1/summary
-link: https://github.com/yrn1/FilterDelays
+link: https://github.com/yrn1/er-301-units
 github:
-  path: yrn1/FilterDelays
-  tagRegex: ^0.6.*$
+  path: yrn1/er-301-units
+  tagRegex: ^FilterDelays-.*$
 latest version: 0.6.04
 files:
   - FilterDelays-0.6.03.pkg
