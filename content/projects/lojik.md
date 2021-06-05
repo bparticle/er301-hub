@@ -8,7 +8,7 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^lojik.*$
-latest version: v1.0.0
+latest version: v1.1.0
 files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
