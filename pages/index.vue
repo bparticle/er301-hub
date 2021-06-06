@@ -64,8 +64,6 @@
             <td># units</td>
             <td>Author</td>
             <td>Latest version</td>
-            <td>V0.5 (stable)</td>
-            <td>V0.6</td>
           </tr>
         </thead>
         <tbody>
@@ -92,26 +90,6 @@
             </td>
             <td>
               {{ project['latest version'] }}
-            </td>
-            <td>
-              <div
-                class="status-light"
-                :class="
-                  project.compatibility.v05
-                    ? 'status-light--yes'
-                    : 'status-light--no'
-                "
-              ></div>
-            </td>
-            <td>
-              <div
-                class="status-light"
-                :class="
-                  project.compatibility.v06
-                    ? 'status-light--yes'
-                    : 'status-light--no'
-                "
-              ></div>
             </td>
           </tr>
         </tbody>
