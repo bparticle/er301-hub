@@ -11,7 +11,7 @@ Limits the incoming signal with a `tanh` function.
 
 Essentially computes `output = tanh(input * gain)`. As the input signal approaches one or negative one it is soft clipped, the gain value helps push the signal up to the limits:
 
-<md-img src="strike/tanh-explain.png" alt=""></md-img>
+<md-img src="strike/tanh-explain.gif" alt=""></md-img>
 
 On this graph `x` is the amplitude of our input signal. You can see that as `x` increases `y` approaches one and can never exceed it.
 
