@@ -22,28 +22,28 @@ units:
   - { name: Tanh, category: Limiter, docs: true }
 ---
 
-**[Strike (LPG)](docs/strike/strike)** 
+**[Strike (LPG)](/docs/strike/strike)** 
 <md-img src="strike/strike.png"/> 
 
 A lowpass gate using the envelope from arc and a 12dB/oct biquad filter. 
 
 Also includes EOF/EOR gate outputs from the **rise**/**fall** controls as well as the envelope out from the **height** control. 
 
-**[Bique (BCF)](docs/strike/bique)** 
+**[Bique (BCF)](/docs/strike/bique)** 
 <md-img src="strike/bique.png"/> 
 
 A multi-mode biquad cascade filter with options for lowpass, bandpass, and highpass at either 12dB/oct, 24dB/oct, or 36dB/oct. Modeled after the equations outlined [here](https://webaudio.github.io/Audio-EQ-Cookbook/audio-eq-cookbook.html) by Robert Bristow-Johnson. 
 
 Output is **tanh** limited to give distortion at higher gain levels. This is particularly useful when pinging the filter at high resonance. 
 
-**[Sieve (SVF)](docs/strike/sieve)** 
+**[Sieve (SVF)](/docs/strike/sieve)** 
 <md-img src="strike/sieve.png"/> 
 
 A state variable filter that mixes between lowpass, bandpass, and highpass. Modeled after the algorithm designed by Andrew Simper outlined [here](https://www.cytomic.com/files/dsp/SvfLinearTrapOptimised2.pdf). 
 
 Output is **tanh** limited to give distortion at higher gain levels. This is particularly useful when pinging the filter at high resonance. 
 
-**[Arc (AD)](docs/strike/arc)** 
+**[Arc (AD)](/docs/strike/arc)** 
 <md-img src="strike/arc.png"/> 
 <md-img src="strike/arc-wave.png"/> 
 
@@ -51,7 +51,7 @@ An AD envelope with loop toggle and bend control.
 
 Also includes EOF/EOR gate outputs from the **rise**/**fall** controls. 
 
-**[Fin (Osc)](docs/strike/fin)** 
+**[Fin (Osc)](/docs/strike/fin)** 
 <md-img src="strike/fin.png"/> 
 <md-img src="strike/fin-wave.png"/> 
 
@@ -59,19 +59,19 @@ A "fin" wave oscillator, so called because the wave resembles a shark fin.
 
 Essentially this is just a different configuration of **arc** as an oscillator. 
 
-**[Formant (Osc)](docs/strike/formant)** 
+**[Formant (Osc)](/docs/strike/formant)** 
 <md-img src="strike/formant.png"/> 
 <md-img src="strike/formant-wave.png"/> 
 
 A formant oscillator [based on](https://github.com/whimsicalraps/Mannequins-Technical-Maps/blob/master/mangrove/mangrove.md) the [Mangrove](https://www.whimsicalraps.com/products/mangrove) module by Whimsical Raps. 
 
-**[Softy (Osc)](docs/strike/softy)** 
+**[Softy (Osc)](/docs/strike/softy)** 
 <md-img src="strike/softy.png"/> 
 <md-img src="strike/softy-wave.png"/> 
 
 A triangle (atan) oscillator with soft sync. 
 
-**[Tanh](docs/strike/tanh)** 
+**[Tanh](/docs/strike/tanh)** 
 <md-img src="strike/tanh.png"/> 
 
 Limits the incoming signal with a tanh function. 
