@@ -8,7 +8,7 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^lojik.*$
-latest version: v1.1.0
+latest version: v1.1.1
 files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
@@ -19,11 +19,11 @@ units:
   - { name: Register, category: Sequencers, docs: true }
   - { name: Turing, category: Sequencers, docs: true }
   - { name: Seq, category: Sequencers, docs: true }
-  - { name: Latch, category: Latch, docs: true }
-  - { name: DLatch, category: Latch, docs: true }
+  - { name: Latch, category: Switch, docs: true }
+  - { name: DLatch, category: Switch, docs: true }
   - { name: Pick, category: Switch, docs: true }
   - { name: Pulse, category: Oscillators, docs: true }
-  - { name: Wait, category: Switch, docs: true }
+  - { name: Wait, category: Divider, docs: true }
   - { name: Euclid, category: Divider, docs: true }
   - { name: Chance, category: Divider, docs: true }
   - { name: And, category: Logic, docs: true }
@@ -35,12 +35,75 @@ units:
 **Dependencies:**
 * `core`
 
-Lojik is a collection of logical gates, sequencerss, and more.
+**[Register](/docs/lojik/register)** 
+<md-img src="lojik/register.png" alt=""></md-img> 
 
-This collection is built entirely in the DSP layer and operates similarly to the built-in `core` units, that is to say _very efficiently_ (~1-2% CPU).
+A shift register that can hold up to 64 steps of arbitrary voltages. Contains a built in random source to sample from. 
 
-One of the core principals behind these units is _experimentation_. All units operate just as well slowly (CV) as they do quickly (audio rate). Although some of these functions can be found elsewhere (e.g. `And` is just a simplified VCA), hopefully the design encourages viewing those existing functions in new and interesting ways.
+**[Turing](/docs/lojik/turing)** 
+<md-img src="lojik/turing.png" alt=""></md-img> 
 
-What happens when you write to a shift `register` and freeze it at audio rate? What if the driving `pulse` follows a euclidean rythm? What then if you sequence the `pulse` rate?
+Basically just a register with a scale quantizer in front of it, ideal for quickly generating V/Oct sequences. 
 
-There's only one way to find out!
+
+**[Seq](/docs/lojik/seq)** 
+<md-img src="lojik/seq.png" alt=""></md-img> 
+
+A step sequencer. 
+
+**[Euclid](/docs/lojik/euclid)** 
+<md-img src="lojik/euclid.png" alt=""></md-img>
+
+<md-img src="lojik/euclid-ext.png" alt=""></md-img> 
+
+A euclidean rhythm generator. 
+
+**[Wait](/docs/lojik/wait)** 
+<md-img src="lojik/wait.png" alt=""></md-img> 
+
+Arm to wait a number of input pulses, invert to pass a number of pulses. 
+
+**[Pulse](/docs/lojik/pulse)** 
+<md-img src="lojik/pulse.png" alt=""></md-img> 
+
+A square wave oscillator. 
+
+**[Trig](/docs/lojik/trig)** 
+<md-img src="lojik/trig.png" alt=""></md-img> 
+
+Convert the input signal to a trigger. 
+
+**[Not](/docs/lojik/not)** 
+<md-img src="lojik/not.png" alt=""></md-img> 
+
+Is the input signal less than or equal to zero? 
+
+**[And](/docs/lojik/and)** 
+<md-img src="lojik/and.png" alt=""></md-img> 
+
+Is the input signal and gate input greater than zero? 
+
+**[Or](/docs/lojik/or)** 
+<md-img src="lojik/or.png" alt=""></md-img> 
+
+Is the input signal or gate input greater than zero? 
+
+**[Pick](/docs/lojik/pick)** 
+<md-img src="lojik/pick.png" alt=""></md-img> 
+
+Output input on gate low, alt on gate high. 
+
+**[Latch](/docs/lojik/latch)** 
+<md-img src="lojik/latch.png" alt=""></md-img> 
+
+An SR latch, set it high and reset it low. 
+
+**[DLatch](/docs/lojik/dlatch)** 
+<md-img src="lojik/dlatch.png" alt=""></md-img> 
+
+A data latch, essentially just a sample and hold. 
+
+**[Chance](/docs/lojik/chance)** 
+<md-img src="lojik/chance.png" alt=""></md-img> 
+
+A probabilistic gate. Randomly pass clock pulses based on a probability. 
