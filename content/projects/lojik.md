@@ -35,80 +35,73 @@ units:
 **Dependencies:**
 * `core`
 
-**Sequencers** 
-
 **[Register](/docs/lojik/register)** 
-<md-img src="lojik/register.png"/> 
+<md-img src="lojik/register.png" alt=""></md-img> 
 
 A shift register that can hold up to 64 steps of arbitrary voltages. Contains a built in random source to sample from. 
 
 **[Turing](/docs/lojik/turing)** 
-<md-img src="lojik/turing.png"/> 
+<md-img src="lojik/turing.png" alt=""></md-img> 
 
 Basically just a register with a scale quantizer in front of it, ideal for quickly generating V/Oct sequences. 
 
 
 **[Seq](/docs/lojik/seq)** 
-<md-img src="lojik/seq.png"/> 
+<md-img src="lojik/seq.png" alt=""></md-img> 
 
 A step sequencer. 
 
-**Clocks** 
-
 **[Euclid](/docs/lojik/euclid)** 
-<md-img src="lojik/euclid.png"/> <md-img src="lojik/euclid-ext.png"/> 
+<md-img src="lojik/euclid.png" alt=""></md-img> <md-img src="lojik/euclid-ext.png" alt=""></md-img> 
 
 A euclidean rhythm generator. 
 
 **[Wait](/docs/lojik/wait)** 
-<md-img src="lojik/wait.png"/> 
+<md-img src="lojik/wait.png" alt=""></md-img> 
 
 Arm to wait a number of input pulses, invert to pass a number of pulses. 
 
 **[Pulse](/docs/lojik/pulse)** 
-<md-img src="lojik/pulse.png"/> 
+<md-img src="lojik/pulse.png" alt=""></md-img> 
 
 A square wave oscillator. 
 
-**Gates** 
-
 **[Trig](/docs/lojik/trig)** 
-<md-img src="lojik/trig.png"/> 
+<md-img src="lojik/trig.png" alt=""></md-img> 
 
 Convert the input signal to a trigger. 
 
 **[Not](/docs/lojik/not)** 
-<md-img src="lojik/not.png"/> 
+<md-img src="lojik/not.png" alt=""></md-img> 
 
 Is the input signal less than or equal to zero? 
 
 **[And](/docs/lojik/and)** 
-<md-img src="lojik/and.png"/> 
+<md-img src="lojik/and.png" alt=""></md-img> 
 
 Is the input signal and gate input greater than zero? 
 
 **[Or](/docs/lojik/or)** 
-<md-img src="lojik/or.png"/> 
+<md-img src="lojik/or.png" alt=""></md-img> 
 
 Is the input signal or gate input greater than zero? 
 
-
 **[Pick](/docs/lojik/pick)** 
-<md-img src="lojik/pick.png"/> 
+<md-img src="lojik/pick.png" alt=""></md-img> 
 
 Output input on gate low, alt on gate high. 
 
 **[Latch](/docs/lojik/latch)** 
-<md-img src="lojik/latch.png"/> 
+<md-img src="lojik/latch.png" alt=""></md-img> 
 
 An SR latch, set it high and reset it low. 
 
 **[DLatch](/docs/lojik/dlatch)** 
-<md-img src="lojik/dlatch.png"/> 
+<md-img src="lojik/dlatch.png" alt=""></md-img> 
 
 A data latch, essentially just a sample and hold. 
 
 **[Chance](/docs/lojik/chance)** 
-<md-img src="lojik/chance.png"/> 
+<md-img src="lojik/chance.png" alt=""></md-img> 
 
 A probabilistic gate. Randomly pass clock pulses based on a probability. 
