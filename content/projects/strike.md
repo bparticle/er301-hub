@@ -45,6 +45,7 @@ Output is **tanh** limited to give distortion at higher gain levels. This is par
 
 **[Arc (AD)](/docs/strike/arc)** 
 <md-img src="strike/arc.png"/> 
+
 <md-img src="strike/arc-wave.png"/> 
 
 An AD envelope with loop toggle and bend control. 
@@ -53,6 +54,7 @@ Also includes EOF/EOR gate outputs from the **rise**/**fall** controls.
 
 **[Fin (Osc)](/docs/strike/fin)** 
 <md-img src="strike/fin.png"/> 
+
 <md-img src="strike/fin-wave.png"/> 
 
 A "fin" wave oscillator, so called because the wave resembles a shark fin. 
@@ -61,12 +63,14 @@ Essentially this is just a different configuration of **arc** as an oscillator.
 
 **[Formant (Osc)](/docs/strike/formant)** 
 <md-img src="strike/formant.png"/> 
+
 <md-img src="strike/formant-wave.png"/> 
 
 A formant oscillator [based on](https://github.com/whimsicalraps/Mannequins-Technical-Maps/blob/master/mangrove/mangrove.md) the [Mangrove](https://www.whimsicalraps.com/products/mangrove) module by Whimsical Raps. 
 
 **[Softy (Osc)](/docs/strike/softy)** 
 <md-img src="strike/softy.png"/> 
+
 <md-img src="strike/softy-wave.png"/> 
 
 A triangle (atan) oscillator with soft sync. 
