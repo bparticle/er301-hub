@@ -19,11 +19,11 @@ units:
   - { name: Register, category: Sequencers, docs: true }
   - { name: Turing, category: Sequencers, docs: true }
   - { name: Seq, category: Sequencers, docs: true }
-  - { name: Latch, category: Latch, docs: true }
-  - { name: DLatch, category: Latch, docs: true }
+  - { name: Latch, category: Switch, docs: true }
+  - { name: DLatch, category: Switch, docs: true }
   - { name: Pick, category: Switch, docs: true }
   - { name: Pulse, category: Oscillators, docs: true }
-  - { name: Wait, category: Switch, docs: true }
+  - { name: Wait, category: Divider, docs: true }
   - { name: Euclid, category: Divider, docs: true }
   - { name: Chance, category: Divider, docs: true }
   - { name: And, category: Logic, docs: true }
@@ -52,7 +52,9 @@ Basically just a register with a scale quantizer in front of it, ideal for quick
 A step sequencer. 
 
 **[Euclid](/docs/lojik/euclid)** 
-<md-img src="lojik/euclid.png" alt=""></md-img> <md-img src="lojik/euclid-ext.png" alt=""></md-img> 
+<md-img src="lojik/euclid.png" alt=""></md-img>
+
+<md-img src="lojik/euclid-ext.png" alt=""></md-img> 
 
 A euclidean rhythm generator. 
 
