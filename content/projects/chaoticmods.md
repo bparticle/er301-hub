@@ -1,7 +1,7 @@
 ---
 title: Chaotic Modulations
 description: Chaotic modulation sources
-author: ljwall
+author: ljw
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/ljw/summary
 link: https://github.com/ljwall/er-301-units

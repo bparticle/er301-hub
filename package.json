@@ -17,6 +17,7 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.21",
     "nuxt": "^2.14.6",
+    "vue-avatar": "^2.3.3",
     "vue-lodash": "^2.1.2",
     "vue-moment": "^4.1.0",
     "vue-youtube-embed": "^2.2.2"
