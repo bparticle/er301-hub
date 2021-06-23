@@ -5,7 +5,7 @@ author: worldwave # If you use the exact OD forum username then the avatar will 
 compatibility: { v05: false, v06: true } # object with two keys and boolean values: v05 and v06
 contact: https://forum.orthogonaldevices.com/u/worldwave/summary # Just a link to wherever you can be contacted
 link: https://forum.orthogonaldevices.com/t/utensils-precious-sound-design-tools-i-use-constantly # Another link, to the project source or
-latest version:
+latest version: v0.0.0
 files: # A list of files that you have uploaded in /static/packages
   - Utensils.pkg
 units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
