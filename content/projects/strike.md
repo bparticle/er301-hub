@@ -8,7 +8,7 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^strike.*$
-latest version: v1.1.0
+latest version: v1.2.0
 files:
   - strike-1.0.0.pkg
 units:
