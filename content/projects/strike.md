@@ -20,6 +20,7 @@ units:
   - { name: Formant, category: Oscillator, docs: true }
   - { name: Softy, category: Oscillator, docs: true }
   - { name: Tanh, category: Limiter, docs: true }
+  - { name: CPR, category: Compressor, docs: true }
 ---
 
 **[Strike (LPG)](/docs/strike/strike)** 
@@ -68,6 +69,7 @@ A formant oscillator [based on](https://github.com/whimsicalraps/Mannequins-Tech
 **[Softy (Osc)](/docs/strike/softy)** 
 <md-img src="strike/softy.png" alt=""></md-img> 
 <md-img src="strike/softy-wave.png" alt=""></md-img> 
+<md-img src="strike/softy-wave2.png" alt=""></md-img>
 
 A triangle (atan) oscillator with soft sync. 
 
@@ -75,3 +77,11 @@ A triangle (atan) oscillator with soft sync.
 <md-img src="strike/tanh.png" alt=""></md-img> 
 
 Limits the incoming signal with a tanh function. 
+
+**[CPR](/docs/strike/cpr)**
+<md-img src="strike/cpr.png" alt=""></md-img> 
+<md-img src="strike/cpr-sub.png" alt=""></md-img> 
+
+A stereo peak compressor.
+
+Includes a sidechain branch and optional auto makeup gain. Outputs available for the reduction signal as well as a gate for when the compressor is active.
