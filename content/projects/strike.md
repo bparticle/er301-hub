@@ -8,11 +8,11 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^strike.*$
-latest version: v1.2.0
+latest version: v1.3.0
 files:
   - strike-1.0.0.pkg
 units:
-  - { name: Strike, category: Envelope, docs: true }
+  - { name: Strike, category: LPG, docs: true }
   - { name: Bique, category: Filter, docs: true }
   - { name: Sieve, category: Filter, docs: true }
   - { name: Arc, category: Envelope, docs: true }
@@ -21,6 +21,7 @@ units:
   - { name: Softy, category: Oscillator, docs: true }
   - { name: Tanh, category: Limiter, docs: true }
   - { name: CPR, category: Compressor, docs: true }
+  - { name: Lift, category: LPG, docs: true }
 ---
 
 **[Strike (LPG)](/docs/strike/strike)** 
@@ -29,6 +30,13 @@ units:
 A lowpass gate using the envelope from arc and a 12dB/oct biquad filter. 
 
 Also includes EOF/EOR gate outputs from the **rise**/**fall** controls as well as the envelope out from the **height** control. 
+
+**[Lift (LPG)](/docs/strike/lift)**
+<md-img src="strike/lift.png" alt=""></md-img> 
+
+A lowpass gate using a slew limiter and a 6dB/oct filter.
+
+Includes the slew output from the **height** control.
 
 **[Bique (BCF)](/docs/strike/bique)** 
 <md-img src="strike/bique.png" alt=""></md-img> 
