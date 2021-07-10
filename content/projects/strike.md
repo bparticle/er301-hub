@@ -31,13 +31,6 @@ A lowpass gate using the envelope from arc and a 12dB/oct biquad filter.
 
 Also includes EOF/EOR gate outputs from the **rise**/**fall** controls as well as the envelope out from the **height** control. 
 
-**[Lift (LPG)](/docs/strike/lift)**
-<md-img src="strike/lift.png" alt=""></md-img> 
-
-A lowpass gate using a slew limiter and a 6dB/oct filter.
-
-Includes the slew output from the **height** control.
-
 **[Bique (BCF)](/docs/strike/bique)** 
 <md-img src="strike/bique.png" alt=""></md-img> 
 
@@ -93,3 +86,10 @@ Limits the incoming signal with a tanh function.
 A stereo peak compressor.
 
 Includes a sidechain branch and optional auto makeup gain. Outputs available for the reduction signal as well as a gate for when the compressor is active.
+
+**[Lift (LPG)](/docs/strike/lift)**
+<md-img src="strike/lift.png" alt=""></md-img> 
+
+A lowpass gate using a slew limiter envelope and a 6dB/oct filter.
+
+Includes the slew output from the **height** control.
