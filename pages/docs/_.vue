@@ -1,54 +1,48 @@
 
 <template>
   <div class="is-fluid home">
-    <main class="mb-6 container content">
-      <article>
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child">
-              <section class="section introduction m-4 has-background-light">
-                <h1 class="docs__title">{{ doc.title }}</h1>
-                <div class="docs__author">
-                  <a
-                    class="docs__author-link"
-                    target="_blank"
-                    :href="doc.author"
-                  >
-                    <avatar :userName="doc.author" />
-                    <span class="docs__author-name">{{ doc.author }}</span>
-                  </a>
-                </div>
-                <p class="description">
-                  {{ doc.description }}
-                </p>
-              </section>
-              <section class="section pt-0 pb-0">
-                <a :href="'/projects/' + doc.project">Back to project</a>
-              </section>
-              <section class="content section">
-                <nuxt-content :document="doc" />
-              </section>
-            </div>
-          </div>
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child">
-              <section class="section download">
-                <h2 class="subtitle">Downloads</h2>
-                <a
-                  class="download__link"
-                  v-for="(file, index) in doc.files"
-                  :key="file + index"
-                  :href="'/docs/' + file"
-                  download
-                >
-                  {{ file }}
+    <article>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child">
+            <section class="section introduction m-4 has-background-light">
+              <h1 class="docs__title">{{ doc.title }}</h1>
+              <div class="docs__author">
+                <a class="docs__author-link" target="_blank" :href="doc.author">
+                  <avatar :userName="doc.author" />
+                  <span class="docs__author-name">{{ doc.author }}</span>
                 </a>
-              </section>
-            </div>
+              </div>
+              <p class="description">
+                {{ doc.description }}
+              </p>
+            </section>
+            <section class="section pt-0 pb-0">
+              <a :href="'/projects/' + doc.project">Back to project</a>
+            </section>
+            <section class="content section">
+              <nuxt-content :document="doc" />
+            </section>
           </div>
         </div>
-      </article>
-    </main>
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child">
+            <section class="section download">
+              <h2 class="subtitle">Downloads</h2>
+              <a
+                class="download__link"
+                v-for="(file, index) in doc.files"
+                :key="file + index"
+                :href="'/docs/' + file"
+                download
+              >
+                {{ file }}
+              </a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 

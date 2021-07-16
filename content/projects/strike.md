@@ -12,14 +12,14 @@ latest version: v1.2.0
 files:
   - strike-1.0.0.pkg
 units:
-  - { name: Strike, category: Envelope, docs: true }
+  - { name: Strike, category: Envelopes, docs: true }
   - { name: Bique, category: Filter, docs: true }
   - { name: Sieve, category: Filter, docs: true }
-  - { name: Arc, category: Envelope, docs: true }
-  - { name: Fin, category: Oscillator, docs: true }
-  - { name: Formant, category: Oscillator, docs: true }
-  - { name: Softy, category: Oscillator, docs: true }
-  - { name: Tanh, category: Limiter, docs: true }
+  - { name: Arc, category: Envelopes, docs: true }
+  - { name: Fin, category: Oscillators, docs: true }
+  - { name: Formant, category: Oscillators, docs: true }
+  - { name: Softy, category: Oscillators, docs: true }
+  - { name: Tanh, category: Limiters, docs: true }
   - { name: CPR, category: Compressor, docs: true }
 ---
 

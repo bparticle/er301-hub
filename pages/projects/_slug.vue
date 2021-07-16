@@ -1,147 +1,143 @@
 
 <template>
   <div class="container is-fluid home">
-    <main class="mb-6 container content">
-      <article>
-        <div class="tile is-ancestor">
-          <div class="tile is-parent">
-            <div class="tile is-child">
-              <section class="section introduction m-4 has-background-light">
-                <h1 class="project__title">{{ project.title }}</h1>
-                <div class="project__author">
-                  <a
-                    class="project__author-link"
-                    target="_blank"
-                    :href="project.contact"
-                  >
-                    <avatar :userName="project.author" />
-                    <span class="project__author-name">{{
-                      project.author
-                    }}</span>
-                  </a>
-                </div>
-                <a :href="project.link" class="project__link" target="_blank">{{
-                  project.link
-                }}</a>
-                <p class="description">
-                  {{ project.description }}
-                </p>
-              </section>
-              <section class="section units pt-0">
-                <h2 class="subtitle">Units</h2>
-
-                <div class="tags" v-if="activeCats.length">
-                  <a
-                    v-for="(category, index) in activeCats"
-                    :key="category.category + index"
-                    class="tag is-white"
-                    @click="disableCat(category)"
-                    ><span
-                      class="tag__dot"
-                      v-bind:class="{ 'tag__dot--active': category.active }"
-                      v-bind:style="[
-                        category.active
-                          ? { backgroundColor: category.color }
-                          : { backgroundColor: 'whitesmoke' },
-                      ]"
-                    ></span
-                    >{{ category.category }}</a
-                  >
-                </div>
-                <div class="tags" v-if="passiveCats.length">
-                  <a
-                    v-for="(category, index) in passiveCats"
-                    :key="category.category + index"
-                    class="tag is-white"
-                    @click="enableCat(category)"
-                    ><span
-                      class="tag__dot"
-                      v-bind:class="{ 'tag__dot--active': category.active }"
-                      v-bind:style="[
-                        category.active
-                          ? { backgroundColor: category.color }
-                          : { backgroundColor: 'whitesmoke' },
-                      ]"
-                    ></span
-                    >{{ category.category }}</a
-                  >
-                </div>
-                <div class="unit-list tags pb-2">
-                  <a
-                    class="unit tag is-medium is-light"
-                    v-for="unit in units"
-                    :key="unit.name"
-                    :href="anchorLink(unit)"
-                    v-bind:style="[
-                      unit.active
-                        ? { backgroundColor: unit.color }
-                        : { backgroundColor: unit.colorPassive },
-                    ]"
-                  >
-                    {{ unit.name }}
-                    <a class="unit__doc-link" v-if="unit.docs">
-                      <svg
-                        class="unit__icon"
-                        v-if="unit.docs"
-                        xmlns="http://www.w3.org/2000/svg"
-                        enable-background="new 0 0 24 24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        width="24"
-                      >
-                        <g>
-                          <rect fill="none" height="24" width="24" />
-                          <path
-                            fill="#363636"
-                            d="M19,3H5C3.89,3,3,3.9,3,5v14c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.11,3,19,3z M19,19H5V7h14V19z M16,12H8 c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0C17,11.55,16.55,12,16,12z M12,16H8c-0.55,0-1-0.45-1-1v0 c0-0.55,0.45-1,1-1h4c0.55,0,1,0.45,1,1v0C13,15.55,12.55,16,12,16z"
-                          />
-                        </g>
-                      </svg>
-                    </a>
-                  </a>
-                </div>
-              </section>
-              <section class="content section pt-2">
-                <nuxt-content :document="project" />
-              </section>
-            </div>
-          </div>
-          <div class="tile is-4 is-vertical is-parent">
-            <div class="tile is-child">
-              <section class="section download">
-                <div class="gh-release" v-if="project.github.latest">
-                  <h2 class="gh-release__title">Latest GitHub release</h2>
-                  <button class="button is-rounded">
-                    <a :href="project.github.latest.url">{{
-                      project.github.latest.name
-                    }}</a>
-                  </button>
-                  <p class="mt-4">
-                    Published on
-                    <strong>
-                      {{
-                        project.github.latest.published
-                          | moment('dddd, MMMM Do YYYY')
-                      }}</strong
-                    >
-                  </p>
-                </div>
-                <h2 class="subtitle">Downloads</h2>
+    <article>
+      <div class="tile is-ancestor">
+        <div class="tile is-parent">
+          <div class="tile is-child">
+            <section class="section introduction m-4 has-background-light">
+              <h1 class="project__title">{{ project.title }}</h1>
+              <div class="project__author">
                 <a
-                  class="download__link"
-                  v-for="(file, index) in project.files"
-                  :key="file + index"
-                  :href="'/packages/' + file"
-                  download
+                  class="project__author-link"
+                  target="_blank"
+                  :href="project.contact"
                 >
-                  {{ file }}
+                  <avatar :userName="project.author" />
+                  <span class="project__author-name">{{ project.author }}</span>
                 </a>
-              </section>
-            </div>
+              </div>
+              <a :href="project.link" class="project__link" target="_blank">{{
+                project.link
+              }}</a>
+              <p class="description">
+                {{ project.description }}
+              </p>
+            </section>
+            <section class="section units pt-0">
+              <h2 class="subtitle">Units</h2>
+
+              <div class="tags" v-if="activeCats.length">
+                <a
+                  v-for="(category, index) in activeCats"
+                  :key="category.category + index"
+                  class="tag is-white"
+                  @click="disableCat(category)"
+                  ><span
+                    class="tag__dot"
+                    v-bind:class="{ 'tag__dot--active': category.active }"
+                    v-bind:style="[
+                      category.active
+                        ? { backgroundColor: category.color }
+                        : { backgroundColor: 'whitesmoke' },
+                    ]"
+                  ></span
+                  >{{ category.category }}</a
+                >
+              </div>
+              <div class="tags" v-if="passiveCats.length">
+                <a
+                  v-for="(category, index) in passiveCats"
+                  :key="category.category + index"
+                  class="tag is-white"
+                  @click="enableCat(category)"
+                  ><span
+                    class="tag__dot"
+                    v-bind:class="{ 'tag__dot--active': category.active }"
+                    v-bind:style="[
+                      category.active
+                        ? { backgroundColor: category.color }
+                        : { backgroundColor: 'whitesmoke' },
+                    ]"
+                  ></span
+                  >{{ category.category }}</a
+                >
+              </div>
+              <div class="unit-list tags pb-2">
+                <a
+                  class="unit tag is-medium is-light"
+                  v-for="unit in units"
+                  :key="unit.name"
+                  :href="anchorLink(unit)"
+                  v-bind:style="[
+                    unit.active
+                      ? { backgroundColor: unit.color }
+                      : { backgroundColor: unit.colorPassive },
+                  ]"
+                >
+                  {{ unit.name }}
+                  <a class="unit__doc-link" v-if="unit.docs">
+                    <svg
+                      class="unit__icon"
+                      v-if="unit.docs"
+                      xmlns="http://www.w3.org/2000/svg"
+                      enable-background="new 0 0 24 24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      width="24"
+                    >
+                      <g>
+                        <rect fill="none" height="24" width="24" />
+                        <path
+                          fill="#363636"
+                          d="M19,3H5C3.89,3,3,3.9,3,5v14c0,1.1,0.89,2,2,2h14c1.1,0,2-0.9,2-2V5C21,3.9,20.11,3,19,3z M19,19H5V7h14V19z M16,12H8 c-0.55,0-1-0.45-1-1v0c0-0.55,0.45-1,1-1h8c0.55,0,1,0.45,1,1v0C17,11.55,16.55,12,16,12z M12,16H8c-0.55,0-1-0.45-1-1v0 c0-0.55,0.45-1,1-1h4c0.55,0,1,0.45,1,1v0C13,15.55,12.55,16,12,16z"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </a>
+              </div>
+            </section>
+            <section class="content section pt-2">
+              <nuxt-content :document="project" />
+            </section>
           </div>
         </div>
-      </article>
-    </main>
+        <div class="tile is-4 is-vertical is-parent">
+          <div class="tile is-child">
+            <section class="section download">
+              <div class="gh-release" v-if="project.github.latest">
+                <h2 class="gh-release__title">Latest GitHub release</h2>
+                <button class="button is-rounded">
+                  <a :href="project.github.latest.url">{{
+                    project.github.latest.name
+                  }}</a>
+                </button>
+                <p class="mt-4">
+                  Published on
+                  <strong>
+                    {{
+                      project.github.latest.published
+                        | moment('dddd, MMMM Do YYYY')
+                    }}</strong
+                  >
+                </p>
+              </div>
+              <h2 class="subtitle">Downloads</h2>
+              <a
+                class="download__link"
+                v-for="(file, index) in project.files"
+                :key="file + index"
+                :href="'/packages/' + file"
+                download
+              >
+                {{ file }}
+              </a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </article>
   </div>
 </template>
 

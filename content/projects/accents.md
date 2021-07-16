@@ -20,7 +20,7 @@ units:
   - { name: Compare, category: Mapping and Control }
   - { name: Ensemble, category: Audio Effects }
   - { name: Flanger, category: Audio Effects }
-  - { name: Ladder BPF, category: Filtering }
+  - { name: Ladder BPF, category: Filter }
   - { name: Ladder BPF2, category: Experimental }
   - { name: Linear Sampling VCA, category: Essentials }
   - { name: Logics, category: Mapping and Control }
@@ -32,13 +32,13 @@ units:
   - { name: Pingable Scaled Random, category: Mapping and Control }
   - { name: Ring Modulator, category: Modulation }
   - { name: Rotary Speaker Simulator, category: Audio Effects }
-  - { name: Scorpio Vocoder, category: Filtering }
+  - { name: Scorpio Vocoder, category: Filter }
   - { name: Timed Gate, category: Timing }
   - { name: Voltage Bank 2, category: Mapping and Control }
   - { name: Voltage Bank 4, category: Mapping and Control }
   - { name: Voltage Bank, category: Mapping and Control }
   - { name: Voltage vault (only v0.6), category: Mapping and Control }
-  - { name: Voltage vault, category: Mapping }
+  - { name: Voltage vault, category: Mapping and Control }
   - { name: Weighted Coin Toss, category: Mapping and Control }
   - { name: Xfade, category: Essentials }
   - { name: Xo, category: Synthesizers }

@@ -1,51 +1,41 @@
 <template>
   <div class="is-fluid firmware">
-    <main class="mb-6 container content">
-      <div class="tile is-ancestor">
-        <div class="tile is-parent">
-          <div class="tile is-child">
-            <section class="section introduction m-4 has-background-light">
-              <h1 class="project__title">ER-301 sound computer</h1>
-              <p class="is-size-5">Latest firmware release</p>
-              <div class="gh-release">
-                <button class="button is-rounded">
-                  <a :href="githubLatest.url">{{ githubLatest.name }}</a>
-                </button>
-                <p class="mt-4">
-                  Published on
-                  <strong>
-                    {{
-                      githubLatest.published | moment('dddd, MMMM Do YYYY')
-                    }}</strong
-                  >
-                </p>
-              </div>
-            </section>
-            <section class="section units pt-0">
-              <h2>Previous releases</h2>
-              <table class="table">
-                <thead>
-                  <tr>
-                    <th>Release</th>
-                    <th>Publish date</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr v-for="release in previousReleases" :key="release.id">
-                    <td>
-                      <a :href="release.url">{{ release.name }}</a>
-                    </td>
-                    <td>
-                      {{ release.published | moment('dddd, MMMM Do YYYY') }}
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </section>
-          </div>
-        </div>
+    <section class="section introduction has-background-light">
+      <h1 class="project__title">ER-301 sound computer</h1>
+      <p class="is-size-5">Latest firmware release</p>
+      <div class="gh-release">
+        <button class="button is-rounded">
+          <a :href="githubLatest.url">{{ githubLatest.name }}</a>
+        </button>
+        <p class="mt-4">
+          Published on
+          <strong>
+            {{ githubLatest.published | moment('dddd, MMMM Do YYYY') }}</strong
+          >
+        </p>
       </div>
-    </main>
+    </section>
+    <section class="section units pt-0">
+      <h2>Previous releases</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Release</th>
+            <th>Publish date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="release in previousReleases" :key="release.id">
+            <td>
+              <a :href="release.url">{{ release.name }}</a>
+            </td>
+            <td>
+              {{ release.published | moment('dddd, MMMM Do YYYY') }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
   </div>
 </template>
 
