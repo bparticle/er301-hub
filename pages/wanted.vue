@@ -85,10 +85,18 @@
             v-for="prod in er301Prod"
             :key="prod.id"
           >
-            <a :href="'https://shop.modularmotel.com' + prod.url">
-              {{ prod.name }}</a
+            <a
+              class="bigcartel__product-link"
+              target="_blank"
+              :href="'https://shop.modularmotel.com' + prod.url"
             >
-            <img :src="prod.images[0].url" :alt="prod.images" />
+              <img
+                class="bigcartel__product-image"
+                :src="prod.images[0].url"
+                :alt="prod.images"
+              />
+              <span class="bigcartel__product-title">{{ prod.name }}</span>
+            </a>
           </div>
         </div>
         <div class="disclaimer is-size-6">
@@ -97,8 +105,8 @@
             no idea about the profit margins of the shop (I have never done this
             before), and the way we will figure out all the details. This
             project is in an experimental stage. As data comes in all will be
-            clear and the specifics will get sorted out on the forum and in our
-            Discord, in the most transperent way.
+            clear and the specifics will get sorted out in the most transparent
+            way, on the forum and in the Discord channel.
           </p>
         </div>
       </div>
@@ -175,7 +183,7 @@ export default {
   }
 
   &__img {
-    transition: all 0.25s ease;
+    transition: all 0.2s ease;
 
     .shop-now:hover &,
     .shop-now:focus & {
@@ -197,8 +205,18 @@ export default {
   grid-gap: 1rem;
 
   &__product {
-    padding: 0.5rem;
-    border-radius: 4px;
+    &-link {
+      display: block;
+    }
+
+    &-image {
+      transition: all 0.2s ease;
+
+      .bigcartel__product-link:hover &,
+      .bigcartel__product-link:hover & {
+        filter: sepia(25%) hue-rotate(70deg) saturate(150%) invert(80%);
+      }
+    }
   }
 }
 </style>
