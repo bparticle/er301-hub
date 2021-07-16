@@ -41,6 +41,10 @@ body {
 main {
   margin-top: 4rem;
   min-height: 100vh;
+  padding-bottom: 6rem;
+}
+.footer {
+  background-color: $dark;
 }
 .download {
   &__link {
@@ -50,6 +54,15 @@ main {
 
 a {
   color: rgb(65, 41, 59);
+
+  &[target='_blank']::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0px 3px 0px 5px;
+  }
+}
+
+p a {
+  text-decoration: underline;
 }
 
 .content {

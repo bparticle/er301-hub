@@ -184,19 +184,6 @@ export default {
     transition: max-height 0.3s;
   }
 }
-.status-light {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-left: 10px;
-
-  &--no {
-    background-color: #ed1c24;
-  }
-  &--yes {
-    background-color: green;
-  }
-}
 
 .content table td,
 .content table th {
