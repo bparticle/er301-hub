@@ -93,7 +93,7 @@
           <h2 class="title">How does it work?</h2>
           <p class="pt-3 pb-3">
             Not all ER-301 enthusiasts, sound designers and musicians are also
-            gifted programmers and DSP ninjas. But some of them actually are,
+            gifted programmers and DSP wizards. But some of them actually are,
             and they are building cool stuff that we all benefit from. The
             bounty hunter project is an attempt to communicate and document the
             priorities of the community while also supporting and encouraging
@@ -121,7 +121,7 @@
               >50% of the profit will go to the project of your choice</strong
             >
             (don't forget to mention the project name in the final step of the
-            checkout process). If on the other hand you don't need a t-shirt or
+            checkout process)! If on the other hand you don't need a t-shirt or
             a hat and you just want to push a certain unit to the top of the
             priority list, then you can purchase a
             <a
@@ -144,7 +144,7 @@
             amount we have collected in the way that is convenient to them.
           </p>
           <p>
-            That is about it, except here is
+            That's about it, except here is
             <a href="#disclaimer">a disclaimer</a>.
           </p>
         </section>
@@ -166,6 +166,7 @@
             alt="Modular Motel logo"
           />
         </a>
+        <p class="has-text-right has-text-weight-bold">Worldwide shipping</p>
         <div class="bigcartel mt-4">
           <div
             class="bigcartel__product"
@@ -255,6 +256,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &:after {
+    content: none !important;
+  }
 
   &__tagline {
     font-size: 1.6em;
