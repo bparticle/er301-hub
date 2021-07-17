@@ -218,15 +218,14 @@
         <div class="disclaimer is-size-7" id="disclaimer">
           <p class="pt-3 pb-3">
             <sup>*</sup><u>Disclaimer</u>: at the moment of this writing I have
-            no idea about the profit margins of the shop. There are multiple
-            paid services involved, taxes need to be paid here and there, there
-            are currency conversions etc. Goes without saying that it's not as
-            simple as "half of the product price equals money in the project".
-            Let's just say this project is in an experimental stage. As data
-            comes in all will be clear and the specifics will get sorted out in
-            the most transparent way, on the forum and in the Discord channel.
-            In the future, if all goes well, I will be able to set a flatrate
-            sponsorship amount for every sale and that will be easier to manage.
+            no idea about the profit margins of the shop. There are paid
+            services involved, taxes here and there, currency conversions yada
+            yada etc. Let's just say this project is in an experimental stage.
+            As data comes in all will be clear and the specifics will get sorted
+            out in the most transparent way, on the forum and in the Discord
+            channel. In the future, if all goes well, I will be able to set a
+            flatrate sponsorship amount for every sale and that will be easier
+            to manage.
           </p>
         </div>
       </div>
