@@ -23,10 +23,15 @@
               href="https://shop.modularmotel.com/product/bounty-hunters-target"
               target="_blank"
               >bounty hunter's target</a
+            >
+            or making a
+            <a
+              href="https://www.paypal.com/donate?hosted_button_id=DTLPFT6S72RF6"
+              >donation with PayPal</a
             >.
             <strong
-              >Make sure to mention a unit from the nominated projects below on
-              checkout!</strong
+              >Whichever method you choose, make sure to mention the project you
+              are backing as a comment or on the checkout page</strong
             >.
           </p>
           <p class="pt-3 pb-3">
@@ -88,6 +93,10 @@
               </tr>
             </tbody>
           </table>
+          <p>
+            (The current status may not be up to date while I'm processing
+            orders.)
+          </p>
         </section>
         <section
           id="explain"
@@ -215,6 +224,13 @@
             </a>
           </div>
         </div>
+        <div class="paypal-donation">
+          <a
+            href="https://www.paypal.com/donate?hosted_button_id=DTLPFT6S72RF6"
+            class="button is-link is-rounded"
+            >Donate with PayPal</a
+          >
+        </div>
         <div class="disclaimer is-size-7" id="disclaimer">
           <p class="pt-3 pb-3">
             <sup>*</sup><u>Disclaimer</u>: at the moment of this writing I have
@@ -319,6 +335,11 @@ export default {
       filter: sepia(69%) hue-rotate(120deg) saturate(290%) invert(100%);
     }
   }
+}
+
+.paypal-donation {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .screenshot {
