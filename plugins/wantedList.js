@@ -22,6 +22,15 @@ export const wantedList = [
         ]
     },
     {
+        name: "Shards",
+        prize: 0,
+        link: "https://forum.orthogonaldevices.com/t/shards-custom-unit/2541",
+        status: "open",
+        requirements: [
+            "A v0.6 port of the custom unit",
+        ]
+    },
+    {
         name: "Tuner",
         prize: 1,
         status: "open",
