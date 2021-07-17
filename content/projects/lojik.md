@@ -8,7 +8,7 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^lojik.*$
-latest version: v1.1.1
+latest version: v1.2.0
 files:
   - lojik-0.1.1.pkg
   - lojik-0.2.0.pkg
@@ -21,6 +21,7 @@ units:
   - { name: Seq, category: Sequencers, docs: true }
   - { name: Latch, category: Switch, docs: true }
   - { name: DLatch, category: Switch, docs: true }
+  - { name: TLatch, category: Switch, docs: true }
   - { name: Pick, category: Switch, docs: true }
   - { name: Pulse, category: Oscillators, docs: true }
   - { name: Wait, category: Divider, docs: true }
@@ -102,6 +103,11 @@ An SR latch, set it high and reset it low.
 <md-img src="lojik/dlatch.png" alt=""></md-img> 
 
 A data latch, essentially just a sample and hold. 
+
+**[TLatch](/docs/lojik/tlatch)** 
+<md-img src="lojik/tlatch.png" alt=""></md-img> 
+
+A timed latch, set it high for a limited amount of time. 
 
 **[Chance](/docs/lojik/chance)** 
 <md-img src="lojik/chance.png" alt=""></md-img> 

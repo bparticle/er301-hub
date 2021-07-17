@@ -8,11 +8,11 @@ link: https://github.com/tmfset/er-301-custom-units
 github:
   path: tmfset/er-301-custom-units
   tagRegex: ^strike.*$
-latest version: v1.2.0
+latest version: v1.3.0
 files:
   - strike-1.0.0.pkg
 units:
-  - { name: Strike, category: Envelopes, docs: true }
+  - { name: Strike, category: LPG, docs: true }
   - { name: Bique, category: Filter, docs: true }
   - { name: Sieve, category: Filter, docs: true }
   - { name: Arc, category: Envelopes, docs: true }
@@ -21,6 +21,7 @@ units:
   - { name: Softy, category: Oscillators, docs: true }
   - { name: Tanh, category: Limiters, docs: true }
   - { name: CPR, category: Compressor, docs: true }
+  - { name: Lift, category: LPG, docs: true }
 ---
 
 **[Strike (LPG)](/docs/strike/strike)** 
@@ -85,3 +86,10 @@ Limits the incoming signal with a tanh function.
 A stereo peak compressor.
 
 Includes a sidechain branch and optional auto makeup gain. Outputs available for the reduction signal as well as a gate for when the compressor is active.
+
+**[Lift (LPG)](/docs/strike/lift)**
+<md-img src="strike/lift.png" alt=""></md-img> 
+
+A lowpass gate using a slew limiter envelope and a 6dB/oct filter.
+
+Includes the slew output from the **height** control.

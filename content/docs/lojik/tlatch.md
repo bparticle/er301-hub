@@ -1,18 +1,19 @@
 ---
-title: Latch
-description: An SR latch.
+title: TLatch
+description: A timed latch.
 author: tomf
 project: lojik
 ---
 
-<md-img src="lojik/latch.png" alt=""></md-img>
+<md-img src="lojik/tlatch.png" alt=""></md-img>
 
-Output is latched high when the **unit input** is greater than zero.
+Output is latched high when the **unit input** is greater than zero. It will remain high for the specified **time** or until **reset** is fired.
 
 | Input            | Description                                                                          |
 | ---------------- | ------------------------------------------------------------------------------------ |
 | **_unit input_** | The latch is set when the **unit input** is greater than zero.                       |
-| **reset**        | Reset the latch to zero on gate high unless the **unit input** is greater than zero. |
+| **time**         | The amount of time to stay high. |
+| **reset**        | Reset the latch to zero on gate high. |
 
 | Menu Item        | Description                        |
 | ---------------- | ---------------------------------- |

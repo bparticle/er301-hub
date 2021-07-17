@@ -1,6 +1,6 @@
 ---
 title: Strike (LPG)
-description: A lowpass gate.
+description: A 12dB/oct lowpass gate.
 author: tomf
 project: strike
 ---
