@@ -52,6 +52,22 @@ main {
   }
 }
 
+u {
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: yellow;
+    mix-blend-mode: multiply;
+    left: 0;
+    bottom: 0px;
+  }
+}
+
 a {
   color: rgb(65, 41, 59);
 

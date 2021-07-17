@@ -99,8 +99,9 @@
             and they are building cool stuff that we all benefit from. The
             bounty hunter project is an attempt to communicate and document the
             priorities of the community while also supporting and encouraging
-            the developers, by pooling dollars in different projects that are
-            rewarded to the person who delivers a unit that ticks all the boxes.
+            the developers,
+            <u>by pooling dollars in different projects</u> that are rewarded to
+            the person who delivers a unit that ticks all the boxes.
           </p>
           <p class="pt-3 pb-3">
             If you find a projects you would like to sponsor on the list above
@@ -113,15 +114,15 @@
             >
             on the Orthogonal Devices forum and request a new project with your
             requirements. Any idea works I guess so it's just up to the
-            maintainers to add it to the list. Ideally, every requested unit
-            will have its own thread so we can keep communicating about it and
-            also announce the delivery of the unit. The link to this thread will
-            be on the list.
+            maintainers to add it to the list. Ideally,
+            <u>every requested unit will have its own thread</u> so we can keep
+            communicating about it and also announce the delivery of the unit.
+            The link to this thread will be on the list.
           </p>
           <p class="pt-3 pb-3">
             Once you have picked a unit from the list of nominees you can go
-            ahead and sponsor the project by shopping for swag or buying a Head
-            Hunter's target in the
+            ahead and <u>sponsor the project</u> by shopping for swag or buying
+            a Head Hunter's target in the
             <a href="https://shop.modularmotel.com" target="_blank"
               >Modular Motel shop</a
             >. If you go for the merchandise then
@@ -169,7 +170,9 @@
           <p class="pt-3 pb-3">
             This is how the final step of the checkout looks like. Please use
             the optional notes or instructions field to mention the unit you
-            want to sponsor.
+            want to sponsor. If you are ordering multiple items, you can mention
+            an equal amount of projects on the checkout form. The money will be
+            split among the mentioned projects.
           </p>
         </section>
       </div>
@@ -211,14 +214,18 @@
             </a>
           </div>
         </div>
-        <div class="disclaimer is-size-6" id="disclaimer">
+        <div class="disclaimer is-size-7" id="disclaimer">
           <p class="pt-3 pb-3">
             <sup>*</sup><u>Disclaimer</u>: at the moment of this writing I have
-            no idea about the profit margins of the shop (I have never done this
-            before), and the way we will figure out all the details. This
-            project is in an experimental stage. As data comes in all will be
-            clear and the specifics will get sorted out in the most transparent
-            way, on the forum and in the Discord channel.
+            no idea about the profit margins of the shop. There are multiple
+            paid services involved, taxes need to be paid here and there, there
+            are currency conversions etc. Goes without saying that it's not as
+            simple as "half of the product price equals money in the project".
+            Let's just say this project is in an experimental stage. As data
+            comes in all will be clear and the specifics will get sorted out in
+            the most transparent way, on the forum and in the Discord channel.
+            In the future, if all goes well, I will be able to set a flatrate
+            sponsorship amount for every sale and that will be easier to manage.
           </p>
         </div>
       </div>

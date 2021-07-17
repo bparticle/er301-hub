@@ -6,7 +6,9 @@
         <Nuxt-Link class="navbar-item" :to="'/firmware'"
           >O|D firmware</Nuxt-Link
         >
-        <Nuxt-Link class="navbar-item" :to="'/wanted'">Wanted!</Nuxt-Link>
+        <Nuxt-Link class="navbar-item" :to="'/wanted'"
+          ><u>Wanted!</u></Nuxt-Link
+        >
         <Nuxt-Link class="navbar-item" :to="'/about'">About</Nuxt-Link>
       </div>
 
