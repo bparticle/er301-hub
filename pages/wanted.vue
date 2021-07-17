@@ -28,12 +28,14 @@
               checkout!</strong
             >.
           </p>
-          <p>
+          <p class="pt-3 pb-3">
             Check out the
-            <a href="#explain" class="pt-3 pb-3">rules of the game</a>
+            <a href="#explain" class="pt-3 pb-3">detailed instructions</a> and
+            the rules of the game.
           </p>
         </section>
         <section class="section introduction">
+          <h2 class="subtitle has-text-centered is-size-3">The list</h2>
           <table class="wanted-list table is-fullwidth">
             <thead>
               <tr>
@@ -101,19 +103,25 @@
             rewarded to the person who delivers a unit that ticks all the boxes.
           </p>
           <p class="pt-3 pb-3">
-            If you are desperate to have a certain unit in your toolkit and it
-            is not yet on the list above, then you can get your idea nominated
-            by visiting
+            If you find a projects you would like to sponsor on the list above
+            then you can skip to the next paragraph to find out how to do that.
+            If on the other hand you are desperate to have a certain unit in
+            your toolkit and it is not yet described on the list, then you can
+            get your idea nominated by visiting
             <a href="https://forum.orthogonaldevices.com/" target="_blank"
               >this thread</a
             >
-            on the Orthogonal Devices forum and communicate the requirements
-            with us.
+            on the Orthogonal Devices forum and request a new project with your
+            requirements. Any idea works I guess so it's just up to the
+            maintainers to add it to the list. Ideally, every requested unit
+            will have its own thread so we can keep communicating about it and
+            also announce the delivery of the unit. The link to this thread will
+            be on the list.
           </p>
           <p class="pt-3 pb-3">
-            Once your unit is on the list of nominees you can go ahead and
-            sponsor the project by shopping for swag or buying a Head Hunter's
-            target in the
+            Once you have picked a unit from the list of nominees you can go
+            ahead and sponsor the project by shopping for swag or buying a Head
+            Hunter's target in the
             <a href="https://shop.modularmotel.com" target="_blank"
               >Modular Motel shop</a
             >. If you go for the merchandise then
@@ -121,16 +129,17 @@
               >50% of the profit will go to the project of your choice</strong
             >
             (don't forget to mention the project name in the final step of the
-            checkout process)! If on the other hand you don't need a t-shirt or
-            a hat and you just want to push a certain unit to the top of the
-            priority list, then you can purchase a
+            checkout process: see screenshot below). If on the other hand you
+            don't need a t-shirt or a hat and you just want to push a certain
+            unit to the top of the priority list, then you can purchase a
             <a
               href="https://shop.modularmotel.com/product/bounty-hunters-target"
               target="_blank"
               >bounty hunter's target</a
             >
-            for different amounts that may reflect your sense of urgency that
-            this particual project sees the light of day. In this case
+            for different amounts that may or may not reflect the sense of
+            urgency you feel that this particual project sees the light of day.
+            In this case
             <strong
               >70% of the profits will go to the project's cash pool</strong
             >
@@ -138,14 +147,29 @@
             In both cases, the remaining funds will be reinvested in the shop
             and the maintenance of this website.
           </p>
-          <p>
+          <figure class="screenshot">
+            <img
+              class="screenshot__img"
+              src="/images/wanted/shop_checkout-instructions.png"
+              alt="Shop checkout instructions"
+            />
+            <figcaption class="screenshot_caption has-text-right is-size-6">
+              Screenshot of the Modular Motel checkout form
+            </figcaption>
+          </figure>
+          <p class="pt-3 pb-3">
             At the moment a developer submits a project to the hub that ticks
             all the boxes of a certain target on the list, they will get the
             amount we have collected in the way that is convenient to them.
           </p>
-          <p>
-            That's about it, except here is
-            <a href="#disclaimer">a disclaimer</a>.
+          <p class="pt-3 pb-3">
+            That's about it! Except maybe read
+            <a href="#disclaimer">the disclaimer</a> too.
+          </p>
+          <p class="pt-3 pb-3">
+            This is how the final step of the checkout looks like. Please use
+            the optional notes or instructions field to mention the unit you
+            want to sponsor.
           </p>
         </section>
       </div>
@@ -290,6 +314,14 @@ export default {
   }
 }
 
+.screenshot {
+  padding: 1rem;
+
+  &__image {
+    vertical-align: bottom;
+  }
+}
+
 .status-light {
   width: 12px;
   height: 12px;
@@ -315,6 +347,22 @@ export default {
   margin: 2rem 0;
   padding: 2rem;
   border-radius: 5px;
+
+  &:target {
+    animation: target 0.8s ease-out 0.5s 1;
+  }
+
+  @keyframes target {
+    0% {
+      background-color: antiquewhite;
+    }
+    30% {
+      background-color: gold;
+    }
+    100% {
+      background-color: antiquewhite;
+    }
+  }
 }
 
 .bigcartel {
