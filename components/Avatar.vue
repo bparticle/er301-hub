@@ -30,7 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
-  max-width: 25px;
+  width: 25px;
+  height: 25px;
   border-radius: 5px;
   margin-right: 0.5rem;
 }

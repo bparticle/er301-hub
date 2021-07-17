@@ -16,8 +16,8 @@
             >
             so you can contribute today by shopping for
             <i>unofficial</i> ER-301 fan merchandise
-            <a href="#disclaimer"><sup>*</sup></a> or (if you don't want no damn
-            t-shirt) you can sponsor a project directly by purchasing a
+            <a href="#disclaimer"><sup>*</sup></a> or (<u>if you don't want no damn
+            t-shirt</u>) you can sponsor a project directly by purchasing a
             <a
               href="https://shop.modularmotel.com/product/bounty-hunters-target"
               target="_blank"

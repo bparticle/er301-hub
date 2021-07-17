@@ -177,6 +177,7 @@ export default {
 .projects-table {
   &__author {
     display: flex;
+    align-items: center;
   }
 }
 .search-project {

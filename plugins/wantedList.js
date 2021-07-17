@@ -15,7 +15,7 @@ export const wantedList = [
         prize: 2,
         status: "open",
         requirements: [
-            "first click and count click",
+            "beat and sub-beat click sound",
             "selectable rhythms",
             "mute button",
             "bpm input",
@@ -26,7 +26,7 @@ export const wantedList = [
         prize: 1,
         status: "open",
         requirements: [
-            "Show note instead of Herzt values",
+            "Show note name instead of Herzt values",
             "Graphic representation of tuning",
         ]
     }
