@@ -18,13 +18,7 @@
             <i>unofficial</i> ER-301 fan merchandise
             <a href="#disclaimer"><sup>*</sup></a> or (<u
               >if you don't want no damn t-shirt</u
-            >) you can sponsor a project directly by purchasing a
-            <a
-              href="https://shop.modularmotel.com/product/bounty-hunters-target"
-              target="_blank"
-              >bounty hunter's target</a
-            >
-            or making a
+            >) you can sponsor a project directly by making a
             <a
               href="https://www.paypal.com/donate?hosted_button_id=DTLPFT6S72RF6"
               >donation with PayPal</a
@@ -48,8 +42,9 @@
                 <th>Project name</th>
                 <th>Requirements</th>
                 <th>Discussion/Link</th>
-                <th>Cash prize</th>
                 <th>Status</th>
+                <th>Cash prize</th>
+                <th>#</th>
               </tr>
             </thead>
             <tbody>
@@ -75,11 +70,6 @@
                   >
                 </td>
                 <td>
-                  <span class="tag is-medium has-text-weight-bold">
-                    {{ project.prize }} $</span
-                  >
-                </td>
-                <td>
                   <span
                     class="tag"
                     :class="
@@ -89,6 +79,16 @@
                     "
                     >{{ project.status }}</span
                   >
+                </td>
+                <td>
+                  <span class="tag is-medium has-text-weight-bold">
+                    {{ project.award }} $</span
+                  >
+                </td>
+                <td>
+                  <span v-if="project.backers">{{
+                    project.backers.length
+                  }}</span>
                 </td>
               </tr>
             </tbody>
@@ -142,11 +142,10 @@
             (don't forget to mention the project name in the final step of the
             checkout process: see screenshot below). If on the other hand you
             don't need a t-shirt or a hat and you just want to push a certain
-            unit to the top of the priority list, then you can purchase a
+            unit to the top of the priority list, then you can making a
             <a
-              href="https://shop.modularmotel.com/product/bounty-hunters-target"
-              target="_blank"
-              >bounty hunter's target</a
+              href="https://www.paypal.com/donate?hosted_button_id=DTLPFT6S72RF6"
+              >donation with PayPal</a
             >
             for different amounts that may or may not reflect the sense of
             urgency you feel that this particual project sees the light of day.
@@ -267,9 +266,7 @@ export default {
   },
   computed: {
     wanted() {
-      return this.$store.state.wantedList.sort((a, b) =>
-        a.prize > b.prize ? -1 : 1
-      )
+      return this.$store.getters.processedWanted
     },
   },
   methods: {

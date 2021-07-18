@@ -1,6 +1,34 @@
 import { pastels } from "../plugins/pastels"
 import { wantedList } from "../plugins/wantedList"
 
+Number.prototype.toFixedDown = function (digits) {
+  var re = new RegExp("(\\d+\\.\\d{" + digits + "})(\\d)"),
+    m = this.toString().match(re);
+  return m ? parseFloat(m[1]) : this.valueOf();
+};
+
+for (let i = 0; i < wantedList.length; i++) {
+  const project = wantedList[i]
+  let totalIn = 0, totalOut = 0
+  if (project.backers) {
+    for (let j = 0; j < project.backers.length; j++) {
+      const backer = project.backers[j];
+      totalIn += backer.amount
+      totalOut += backer.expenses
+    }
+    const grossIn = parseFloat(totalIn - totalOut) // Remove Printful expenses
+    const netIn = grossIn - (grossIn * .02) // - 2% BigCartel, miscellaneous fees and currency conversion costs
+    const award = netIn / 2 // 50% of remaining sum goes to developer
+    wantedList[i].award = award.toFixedDown(1)
+  } else {
+    wantedList[i].award = "0"
+  }
+}
+
+wantedList.sort((a, b) =>
+  a.award > b.award ? -1 : 1
+)
+
 export const state = () => ({
   wantedList: wantedList,
   pastels: pastels,
@@ -8,7 +36,16 @@ export const state = () => ({
   catColors: []
 })
 
+export const getters = {
+  processedWanted: state => {
+    return state.wantedList
+  },
+}
+
 export const mutations = {
+  addAward(state, payload) {
+    state.wantedList[payload.index].award = payload.award
+  },
   enableCat(state, payload) {
     state.cats.find(cat => cat === payload).active = true
   },
