@@ -112,7 +112,9 @@
             priorities of the community while also supporting and encouraging
             the developers,
             <u>by pooling dollars in different projects</u> that are rewarded to
-            the person who delivers a unit that ticks all the boxes.
+            the person who delivers a unit that ticks all the boxes. If the
+            developer chooses not to accept the tip for whatever reason, it will
+            be donated to a charity of their choice.
           </p>
           <p class="pt-3 pb-3">
             If you find a projects you would like to sponsor on the list above
@@ -120,7 +122,9 @@
             If on the other hand you are desperate to have a certain unit in
             your toolkit and it is not yet described on the list, then you can
             get your idea nominated by visiting
-            <a href="https://forum.orthogonaldevices.com/" target="_blank"
+            <a
+              href="https://forum.orthogonaldevices.com/t/announcement-launch-of-bounty-hunters-project-shop-is-open"
+              target="_blank"
               >this thread</a
             >
             on the Orthogonal Devices forum and request a new project with your
