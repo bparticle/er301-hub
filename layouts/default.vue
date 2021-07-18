@@ -44,7 +44,7 @@ main {
   padding-bottom: 6rem;
 }
 .footer {
-  background-color: $dark;
+  background-color: $grey;
 }
 .download {
   &__link {

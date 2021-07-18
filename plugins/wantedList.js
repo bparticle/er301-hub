@@ -64,8 +64,8 @@ export const wantedList = [
         name: "Phase distortion",
         status: "open",
         requirements: [
-            "linear phase shifter with an auxiliary input",
-            "to overlay one sound over another’s phase",
+            "Linear phase shifter with an auxiliary input",
+            "to overlay one signal over another's phase",
         ]
     },
     {
@@ -73,7 +73,7 @@ export const wantedList = [
         name: "Upwards compressor, downwards expander",
         status: "open",
         requirements: [
-            "with atk/release"
+            "with attack/release"
         ]
     },
     {
