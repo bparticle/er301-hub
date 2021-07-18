@@ -88,7 +88,8 @@
                 <td>
                   <span v-if="project.backers">{{
                     project.backers.length
-                  }}</span>
+                  }}</span
+                  ><span v-else>-</span>
                 </td>
               </tr>
             </tbody>

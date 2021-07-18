@@ -58,5 +58,38 @@ export const wantedList = [
             "Show note name instead of Herzt values",
             "Graphic representation of tuning",
         ]
+    },
+    {
+        id: 5,
+        name: "Phase distortion",
+        status: "open",
+        requirements: [
+            "linear phase shifter with an auxiliary input",
+            "to overlay one sound over another’s phase",
+        ]
+    },
+    {
+        id: 8,
+        name: "Upwards compressor, downwards expander",
+        status: "open",
+        requirements: [
+            "with atk/release"
+        ]
+    },
+    {
+        id: 6,
+        name: "MI port Elements",
+        status: "open",
+        requirements: [
+            "",
+        ]
+    },
+    {
+        id: 7,
+        name: "MI port Rings",
+        status: "open",
+        requirements: [
+            "",
+        ]
     }
 ]
