@@ -91,6 +91,10 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
   }
 }
 </style>
