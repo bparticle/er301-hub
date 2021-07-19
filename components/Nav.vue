@@ -37,6 +37,13 @@
             </a>
             <a
               target="_blank"
+              href="https://docs.orthogonaldevices.com/er-301/"
+              class="navbar-item"
+            >
+              O|D docs
+            </a>
+            <a
+              target="_blank"
               href="https://github.com/bparticle"
               class="navbar-item"
             >
