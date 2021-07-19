@@ -40,7 +40,7 @@
               href="https://docs.orthogonaldevices.com/er-301/"
               class="navbar-item"
             >
-              O|D docs
+              official ER-301 docs
             </a>
             <a
               target="_blank"
