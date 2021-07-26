@@ -80,6 +80,13 @@ export const wantedList = [
         id: 6,
         name: "MI port Elements",
         status: "open",
+        backers: [{
+            method: "donation",
+            id: "27D84702VD193592T",
+            amount: 5.3,
+            expenses: 0,
+            currency: "USD"
+        }],
         requirements: [
             "",
         ]
@@ -88,6 +95,13 @@ export const wantedList = [
         id: 7,
         name: "MI port Rings",
         status: "open",
+        backers: [{
+            method: "donation",
+            id: "27D84702VD193592T",
+            amount: 5.3,
+            expenses: 0,
+            currency: "USD"
+        }],
         requirements: [
             "",
         ]
