@@ -1,3 +1,23 @@
+/* 
+ * NO SENSITIVE INFOMATION MAY BE SHARED IN THIS FILE!!
+ * --> only anonymized data for calculations on the WANTED page
+ *
+ * backers: object with the following required fields
+ *   method: string
+ *     if "donation" then we follow the donation percentages, else assumed Big Cartel purchase
+ *   id: string
+ *     PayPal transaction code of other unique ID
+ *   amount: number
+ *     gross amount in USD in with PayPal fee subtracted
+ *   expenses: number
+ *     PrinFul expenses
+ *   originalAmount: string
+ *     just a reminder of the original currency and amount
+ *   currency: string
+ *     a way to remenber what currency the purchase was made
+ */
+
+
 export const wantedList = [
     {
         id: 1,
@@ -43,6 +63,13 @@ export const wantedList = [
             amount: 35.16,
             expenses: 13.12,
             currency: "USD"
+        }, {
+            method: "PayPal",
+            id: "7CJ23396TA5052804",
+            originalAmount: "€30.56EUR - €14.94EUR Printful",
+            amount: 36.15,
+            expenses: 17.67,
+            currency: "EUR>USD"
         }],
         link: "https://forum.orthogonaldevices.com/t/shards-custom-unit/2541",
         status: "open",
