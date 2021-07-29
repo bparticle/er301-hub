@@ -237,15 +237,18 @@
         </div>
         <div class="disclaimer is-size-7" id="disclaimer">
           <p class="pt-3 pb-3">
-            <sup>*</sup><u>Disclaimer</u>: at the moment of this writing I have
-            no idea about the profit margins of the shop. There are paid
-            services involved, taxes here and there, currency conversions yada
-            yada etc. Let's just say this project is in an experimental stage.
-            As data comes in all will be clear and the specifics will get sorted
-            out in the most transparent way, on the forum and in the Discord
-            channel. In the future, if all goes well, I will be able to set a
-            flatrate sponsorship amount for every sale and that will be easier
-            to manage.
+            <sup>*</sup><u>Disclaimer</u>: this project is in an experimental
+            stage. We are still figuring out the profit margins of the shop
+            (with taxes, currency conversions, fees and so forth) so the details
+            are still subject to change. As data comes in all will be clear and
+            the specifics will get sorted out in the most transparent way, on
+            the forum (in
+            <a
+              target="_blank"
+              href="https://forum.orthogonaldevices.com/t/announcement-launch-of-bounty-hunters-project-shop-is-open"
+              >this thread</a
+            >
+            most probably) and in the Discord channel.
           </p>
         </div>
       </div>
