@@ -13,7 +13,6 @@
  *     PrinFul expenses
  *   originalAmount: string
  *     just a reminder of the original currency and amount
- *   currency: string
  *     a way to remenber what currency the purchase was made
  */
 
@@ -23,17 +22,21 @@ export const wantedList = [
         id: 1,
         name: "Polyphonic synth voices",
         backers: [{
+            method: "PayPal BigCartel",
+            id: "8XP50585A76648707",
+            originalAmount: "€30.56EUR - €15.44EUR Printful",
+            amount: 36.32,
+            expenses: 18.35,
+        }, {
             method: "PayPal",
             id: "2ME005286P6288212",
             amount: 4.41,
             expenses: 0,
-            currency: "USD"
         }, {
             method: "manual pledge Bruno",
             id: "manualrandomstring014354612021684",
             amount: 4,
             expenses: 0,
-            currency: "USD"
         }],
         status: "open",
         link: "https://forum.orthogonaldevices.com/t/polyphonic-synthesizer-bespoke-unit",
@@ -62,14 +65,12 @@ export const wantedList = [
             id: "2ME005286P6288212",
             amount: 35.16,
             expenses: 13.12,
-            currency: "USD"
         }, {
             method: "PayPal",
             id: "7CJ23396TA5052804",
             originalAmount: "€30.56EUR - €14.94EUR Printful",
             amount: 36.15,
             expenses: 17.67,
-            currency: "EUR>USD"
         }],
         link: "https://forum.orthogonaldevices.com/t/shards-custom-unit/2541",
         status: "open",
@@ -112,7 +113,6 @@ export const wantedList = [
             id: "27D84702VD193592T",
             amount: 5.3,
             expenses: 0,
-            currency: "USD"
         }],
         requirements: [
             "",
@@ -127,7 +127,6 @@ export const wantedList = [
             id: "27D84702VD193592T",
             amount: 5.3,
             expenses: 0,
-            currency: "USD"
         }],
         requirements: [
             "",
