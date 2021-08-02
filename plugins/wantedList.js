@@ -120,8 +120,9 @@ export const wantedList = [
     },
     {
         id: 7,
-        name: "MI port Rings",
+        name: "Resonator VCO",
         status: "open",
+        link: "https://forum.orthogonaldevices.com/t/wanted-resonator-vco",
         backers: [{
             method: "donation",
             id: "27D84702VD193592T",
@@ -129,7 +130,8 @@ export const wantedList = [
             expenses: 0,
         }],
         requirements: [
-            "",
+            "Excitation input",
+            "Round robin voice allocation"
         ]
     }
 ]
