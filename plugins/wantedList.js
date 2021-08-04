@@ -118,6 +118,11 @@ export const wantedList = [
             id: "27D84702VD193592T",
             amount: 5.3,
             expenses: 0,
+        }, {
+            method: "donation",
+            id: "84N50938UE048280N",
+            amount: 9,
+            expenses: 0,
         }],
         requirements: [
             "Sample tails to ring out and overlap",
@@ -157,5 +162,5 @@ export const wantedList = [
 /*
  * NOTES
  * -----
- * The donation 84N50938UE048280N was arbitrarily split between Poly synth voices and Karplus / modal projects (no preference was communicated)
+ * The donation 84N50938UE048280N was arbitrarily split between Poly synth voices, Karplus-strong/modal and poly-sample projects (no preference was communicated)
  */
