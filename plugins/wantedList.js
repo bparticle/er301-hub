@@ -129,6 +129,11 @@ export const wantedList = [
             id: "27D84702VD193592T",
             amount: 5.3,
             expenses: 0,
+        }, {
+            method: "manual pledge Bruno",
+            id: "manualrandomstring14687351468154864351",
+            amount: 7,
+            expenses: 0,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
