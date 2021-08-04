@@ -106,7 +106,7 @@ export const wantedList = [
     },
     {
         id: 6,
-        name: "MI port Elements",
+        name: "Polyphonic sample player",
         status: "open",
         backers: [{
             method: "donation",
@@ -115,12 +115,13 @@ export const wantedList = [
             expenses: 0,
         }],
         requirements: [
-            "",
+            "Sample tails to ring out and overlap",
+            "Round robin or other method of polyphony",
         ]
     },
     {
         id: 7,
-        name: "Resonator VCO",
+        name: "Karplus-strong / Modal Resonator VCO",
         status: "open",
         link: "https://forum.orthogonaldevices.com/t/wanted-resonator-vco",
         backers: [{
@@ -130,7 +131,9 @@ export const wantedList = [
             expenses: 0,
         }],
         requirements: [
-            "Excitation input",
+            "Karplus-strong synthesis / resonator based sound generator",
+            "Input for excitation (defaulting to white noise)",
+            "V/Oct. input",
             "Round robin voice allocation"
         ]
     }
