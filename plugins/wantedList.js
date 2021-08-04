@@ -37,6 +37,11 @@ export const wantedList = [
             id: "manualrandomstring014354612021684",
             amount: 4,
             expenses: 0,
+        }, {
+            method: "donation",
+            id: "84N50938UE048280N",
+            amount: 10,
+            expenses: 0,
         }],
         status: "open",
         link: "https://forum.orthogonaldevices.com/t/polyphonic-synthesizer-bespoke-unit",
@@ -134,6 +139,11 @@ export const wantedList = [
             id: "manualrandomstring14687351468154864351",
             amount: 7,
             expenses: 0,
+        }, {
+            method: "donation",
+            id: "84N50938UE048280N",
+            amount: 37.95,
+            expenses: 0,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
@@ -143,3 +153,9 @@ export const wantedList = [
         ]
     }
 ]
+
+/*
+ * NOTES
+ * -----
+ * The donation 84N50938UE048280N was arbitrarily split between Poly synth voices and Karplus / modal projects (no preference was communicated)
+ */
