@@ -87,6 +87,13 @@ export const wantedList = [
         id: 4,
         name: "Tuner",
         status: "open",
+        backers: [{
+            comment: "Also Stripe payment pm_1JLQmRFOjjc1191vawFy5s97 but margin too low, my bad",
+            method: "donation",
+            id: "78P23286K8101524V",
+            amount: 5,
+            expenses: 0,
+        }],
         requirements: [
             "Show note name instead of Herzt values",
             "Graphic representation of tuning",
