@@ -34,7 +34,7 @@
             the rules of the game.
           </p>
         </section>
-        <section class="section introduction">
+        <section class="section wanted">
           <h2 class="subtitle has-text-centered is-size-3">The list</h2>
           <table class="wanted-list table is-fullwidth">
             <thead>
@@ -49,7 +49,13 @@
             </thead>
             <tbody>
               <tr v-for="project in wanted" :key="unique(project.name)">
-                <td class="has-text-weight-bold">{{ project.name }}</td>
+                <td class="has-text-weight-bold">
+                  <span
+                    :class="{ 'tag is-link': project.status === 'completed' }"
+                  >
+                    {{ project.name }}
+                  </span>
+                </td>
                 <td class="requirements">
                   <ul class="requirements__list">
                     <li
@@ -98,6 +104,58 @@
             (The current status may not be up to date while I'm processing
             orders.)
           </p>
+        </section>
+        <section class="section completed">
+          <h2 class="subtitle has-text-centered is-size-3">Completed</h2>
+          <table class="wanted-list table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Project name</th>
+                <th>Requirements</th>
+                <th>Discussion/Link</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="project in completed" :key="unique(project.name)">
+                <td class="has-text-weight-bold">
+                  <span>
+                    {{ project.name }}
+                  </span>
+                </td>
+                <td class="requirements">
+                  <ul class="requirements__list">
+                    <li
+                      v-for="(req, index) in project.requirements"
+                      :key="unique(index)"
+                    >
+                      {{ req }}
+                    </li>
+                  </ul>
+                </td>
+                <td>
+                  <a
+                    v-if="project.link"
+                    :href="project.link"
+                    target="_blank"
+                    class="button is-link is-light"
+                    >Link</a
+                  >
+                </td>
+                <td>
+                  <span
+                    class="tag"
+                    :class="
+                      project.status === 'open'
+                        ? 'is-danger is-light'
+                        : 'is-link is-light'
+                    "
+                    >{{ project.status }}</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
         </section>
         <section
           id="explain"
@@ -274,7 +332,10 @@ export default {
   },
   computed: {
     wanted() {
-      return this.$store.getters.processedWanted
+      return this.$store.getters.openProjects
+    },
+    completed() {
+      return this.$store.getters.completedProjects
     },
   },
   methods: {
@@ -342,6 +403,10 @@ export default {
   }
 }
 
+.is-completed {
+  background-color: powderblue;
+}
+
 .paypal-donation {
   display: flex;
   justify-content: flex-end;
@@ -371,7 +436,8 @@ export default {
 
 .requirements {
   &__list {
-    list-style-type: circle;
+    list-style-type: cambodian;
+    margin-left: 1.5rem;
   }
 }
 

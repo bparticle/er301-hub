@@ -65,20 +65,8 @@ export const wantedList = [
     {
         id: 3,
         name: "Shards",
-        backers: [{
-            method: "PayPal",
-            id: "2ME005286P6288212",
-            amount: 35.16,
-            expenses: 13.12,
-        }, {
-            method: "PayPal",
-            id: "7CJ23396TA5052804",
-            originalAmount: "€30.56EUR - €14.94EUR Printful",
-            amount: 36.15,
-            expenses: 17.67,
-        }],
         link: "https://forum.orthogonaldevices.com/t/shards-custom-unit/2541",
-        status: "open",
+        status: "completed",
         requirements: [
             "A v0.6 port of the custom unit",
         ]
@@ -162,6 +150,28 @@ export const wantedList = [
             "Input for excitation (defaulting to white noise)",
             "V/Oct. input",
             "Round robin voice allocation"
+        ]
+    },
+    {
+        id: 9,
+        name: "Teletype SC.PROBE",
+        status: "open",
+        backers: [{
+            method: "Fund migration from the Shards project by Joe",
+            id: "2ME005286P6288212",
+            amount: 35.16,
+            expenses: 13.12,
+        }, {
+            method: "Fund migration from the Shards project by Joe",
+            id: "7CJ23396TA5052804",
+            originalAmount: "€30.56EUR - €14.94EUR Printful",
+            amount: 36.15,
+            expenses: 17.67,
+        }],
+        link: "https://forum.orthogonaldevices.com",
+        requirements: [
+            "lets the ER-301 talk back to the i2c leader",
+            "Drop this anywhere in an ER-301 chain, set it’s port number, and when requested by an i2c leader, it would report back the discrete value of the signal at it’s location at that moment in time",
         ]
     }
 ]

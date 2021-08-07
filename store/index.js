@@ -34,20 +34,32 @@ for (let i = 0; i < wantedList.length; i++) {
   }
 }
 
-wantedList.sort((a, b) =>
+const sortedProjects = wantedList.sort((a, b) =>
   a.award > b.award ? -1 : 1
 )
 
+const openProjects = sortedProjects.filter(proj => {
+  return proj.status === "open"
+})
+
+const completedProjects = sortedProjects.filter(proj => {
+  return proj.status === "completed"
+})
+
 export const state = () => ({
-  wantedList: wantedList,
+  openProjects: openProjects,
+  completedProjects: completedProjects,
   pastels: pastels,
   cats: [],
   catColors: []
 })
 
 export const getters = {
-  processedWanted: state => {
-    return state.wantedList
+  openProjects: state => {
+    return state.openProjects
+  },
+  completedProjects: state => {
+    return state.completedProjects
   },
 }
 
