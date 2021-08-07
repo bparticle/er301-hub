@@ -168,7 +168,7 @@ export const wantedList = [
             amount: 36.15,
             expenses: 17.67,
         }],
-        link: "https://forum.orthogonaldevices.com",
+        link: "https://forum.orthogonaldevices.com/t/wanted-two-way-teletype-integration-er-301-tt-tt-code-modification",
         requirements: [
             "lets the ER-301 talk back to the i2c leader",
             "Drop this anywhere in an ER-301 chain, set it’s port number, and when requested by an i2c leader, it would report back the discrete value of the signal at it’s location at that moment in time",
