@@ -4,9 +4,13 @@ description: An essential bunch of wonderful units
 author: Joe
 contact: https://forum.orthogonaldevices.com/u/joe/summary
 link: https://github.com/SuperNiCd
-latest version: v0.6.03
+github:
+  path: SuperNiCd/Accents
+  tagRegex: ^Accents.*$
+latest version: v0.6.14
 compatibility: { v05: true, v06: true }
 files:
+  - Accents-0.6.14.pkg
   - Accents-0.6.03.pkg
   - Accents-0.6.02.pkg
   - Accents-0.5.04.zip
