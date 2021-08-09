@@ -131,6 +131,11 @@ export const wantedList = [
         link: "https://forum.orthogonaldevices.com/t/wanted-resonator-vco",
         backers: [{
             method: "donation",
+            id: "9K042806JG8515355",
+            amount: 5,
+            expenses: 0,
+        }, {
+            method: "donation",
             id: "27D84702VD193592T",
             amount: 5.3,
             expenses: 0,
