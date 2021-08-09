@@ -144,6 +144,11 @@ export const wantedList = [
             id: "84N50938UE048280N",
             amount: 37.95,
             expenses: 0,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "9RS142907N0424046",
+            amount: 29.92,
+            expenses: 10.32,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
