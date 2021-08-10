@@ -115,6 +115,11 @@ export const wantedList = [
             expenses: 0,
         }, {
             method: "donation",
+            id: "3WF254839F936914K",
+            amount: 12.5,
+            expenses: 0,
+        }, {
+            method: "donation",
             id: "84N50938UE048280N",
             amount: 9,
             expenses: 0,
@@ -133,6 +138,11 @@ export const wantedList = [
             method: "donation",
             id: "9K042806JG8515355",
             amount: 5,
+            expenses: 0,
+        }, {
+            method: "donation",
+            id: "3WF254839F936914K",
+            amount: 12.5,
             expenses: 0,
         }, {
             method: "donation",
