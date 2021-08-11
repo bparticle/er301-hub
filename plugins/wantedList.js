@@ -163,6 +163,11 @@ export const wantedList = [
             method: "PayPal Big Cartel",
             id: "9RS142907N0424046",
             amount: 29.92,
+            expenses: 20.5,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "8KN15268X15007640",
+            amount: 29.92,
             expenses: 10.32,
         }],
         requirements: [
