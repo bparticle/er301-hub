@@ -2,6 +2,8 @@
  * NO SENSITIVE INFOMATION MAY BE SHARED IN THIS FILE!!
  * --> only anonymized data for calculations on the WANTED page
  *
+ * link: string (URL to forum discussion)
+ * hubPage: string (URL to finished project page on the hub)
  * backers: object with the following required fields
  *   method: string
  *     if "donation" then we follow the donation percentages, else assumed Big Cartel purchase
@@ -66,6 +68,7 @@ export const wantedList = [
         id: 3,
         name: "Shards",
         link: "https://forum.orthogonaldevices.com/t/shards-custom-unit/2541",
+        hubPage: "/projects/shards",
         status: "completed",
         requirements: [
             "A v0.6 port of the custom unit",
@@ -115,8 +118,9 @@ export const wantedList = [
             expenses: 0,
         }, {
             method: "donation",
+            originalAmount: "€12.5EUR",
             id: "3WF254839F936914K",
-            amount: 12.5,
+            amount: 14.65,
             expenses: 0,
         }, {
             method: "donation",
@@ -136,13 +140,15 @@ export const wantedList = [
         link: "https://forum.orthogonaldevices.com/t/wanted-resonator-vco",
         backers: [{
             method: "donation",
+            originalAmount: "€5EUR",
             id: "9K042806JG8515355",
-            amount: 5,
+            amount: 5.86,
             expenses: 0,
         }, {
             method: "donation",
+            originalAmount: "€12.5EUR",
             id: "3WF254839F936914K",
-            amount: 12.5,
+            amount: 14.65,
             expenses: 0,
         }, {
             method: "donation",
@@ -162,13 +168,16 @@ export const wantedList = [
         }, {
             method: "PayPal Big Cartel",
             id: "9RS142907N0424046",
-            amount: 29.92,
-            expenses: 20.5,
+            date: "2021-08-08T23:54:29.511Z",
+            originalAmount: "€29.92EUR - €20.5EUR",
+            amount: 35,
+            expenses: 24,
         }, {
             method: "PayPal Big Cartel",
             id: "8KN15268X15007640",
-            amount: 29.92,
-            expenses: 10.32,
+            originalAmount: "€29.92EUR - €10.32EUR",
+            amount: 35,
+            expenses: 12.10,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
@@ -183,7 +192,7 @@ export const wantedList = [
         status: "open",
         backers: [{
             method: "Fund migration from the Shards project by Joe",
-            id: "2ME005286P6288212",
+            id: "missing ID",
             amount: 35.16,
             expenses: 13.12,
         }, {
@@ -204,5 +213,5 @@ export const wantedList = [
 /*
  * NOTES
  * -----
- * The donation 84N50938UE048280N was arbitrarily split between Poly synth voices, Karplus-strong/modal and poly-sample projects (no preference was communicated)
+ * The donation 84N50938UE048280N of €47.95EUR -> $56,95USD was arbitrarily split between Poly synth voices, Karplus-strong/modal and poly-sample projects (no preference was communicated)
  */

@@ -112,7 +112,7 @@
               <tr>
                 <th>Project name</th>
                 <th>Requirements</th>
-                <th>Discussion/Link</th>
+                <th>Download</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -134,12 +134,11 @@
                   </ul>
                 </td>
                 <td>
-                  <a
-                    v-if="project.link"
-                    :href="project.link"
-                    target="_blank"
+                  <Nuxt-Link
+                    v-if="project.hubPage"
                     class="button is-link is-light"
-                    >Link</a
+                    :to="project.hubPage"
+                    >Project</Nuxt-Link
                   >
                 </td>
                 <td>
@@ -171,8 +170,9 @@
             the developers,
             <u>by pooling dollars in different projects</u> that are rewarded to
             the person who delivers a unit that ticks all the boxes. If the
-            developer chooses not to accept the tip for whatever reason, it will
-            be donated to a charity of their choice.
+            developer chooses not to accept the tip for whatever reason, it may
+            be donated to a charity of their choice, or migrated to a new or
+            existing Bounty Hunter project.
           </p>
           <p class="pt-3 pb-3">
             If you find a projects you would like to sponsor on the list above
