@@ -136,9 +136,8 @@
                 <td>
                   <Nuxt-Link
                     v-if="project.hubPage"
-                    class="button is-link is-light"
                     :to="project.hubPage"
-                    >Project</Nuxt-Link
+                    >Project page</Nuxt-Link
                   >
                 </td>
                 <td>
