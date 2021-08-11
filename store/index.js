@@ -60,7 +60,7 @@ export const getters = {
   },
   completedProjects: state => {
     return state.completedProjects
-  },
+  }
 }
 
 export const mutations = {
@@ -88,13 +88,13 @@ export const mutations = {
         for (let i = 0; i < payload.projects.length; i++) {
           const proj = payload.projects[i]
           for (let j = 0; j < proj.units.length; j++) {
-            const cat = proj.units[j].category
+            const cat = proj.units[j].category.toLowerCase()
             uniqueCats.push(cat)
           }
         }
       } else {
         for (let j = 0; j < payload.projects.units.length; j++) {
-          const cat = payload.projects.units[j].category
+          const cat = payload.projects.units[j].category.toLowerCase()
           uniqueCats.push(cat)
         }
       }
@@ -107,7 +107,7 @@ export const mutations = {
         cats.push({
           category: uniqueCats[k],
           active: false,
-          color: state.pastels[k],
+          color: pastels[Math.floor(Math.random() * pastels.length)],
           colorPassive: 'whitesmoke',
         })
       }

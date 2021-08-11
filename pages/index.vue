@@ -44,7 +44,7 @@
                     : { backgroundColor: category.colorPassive },
                 ]"
                 @click="enableCat(category)"
-                >{{ category.category }}</a
+                >{{ category.category | upperCased }}</a
               >
               <a
                 v-if="category.active"
@@ -129,6 +129,11 @@ export default {
       this.$store.commit('disableCat', cat)
     },
   },
+  filters: {
+    upperCased: function (data) {
+      return data.replace(/^\w/, (c) => c.toUpperCase())
+    },
+  },
   computed: {
     cats: function () {
       return this.$store.state.cats
@@ -138,10 +143,10 @@ export default {
       function filterProjects(project) {
         let testArr = []
         const projectCats = [
-          ...new Set(project.units.map((unit) => unit.category)),
+          ...new Set(project.units.map((unit) => unit.category.toLowerCase())),
         ]
         for (let i = 0; i < activeCats.length; i++) {
-          testArr.push(projectCats.includes(activeCats[i].category))
+          testArr.push(projectCats.includes(activeCats[i].category.toLowerCase()))
         }
         return testArr.every((test) => test === true)
       }
@@ -160,7 +165,7 @@ export default {
             .map((unit) => unit.name)
             .some((unit) => unit.toLowerCase().includes(filterValue)) ||
           project.units
-            .map((unit) => unit.category)
+            .map((unit) => unit.category.toLowerCase())
             .some((unit) => unit.toLowerCase().includes(filterValue)) ||
           project.title.toLowerCase().includes(filterValue) ||
           project.author.toLowerCase().includes(filterValue) ||

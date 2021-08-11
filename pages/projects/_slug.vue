@@ -257,7 +257,7 @@ export default {
         for (let i = 0; i < this.project.units.length; i++) {
           const unit = this.project.units[i]
           const cat = this.$store.state.cats.filter(
-            (cat) => cat.category === unit.category
+            (cat) => cat.category === unit.category.toLowerCase()
           )[0]
           unit.color = cat.color
           unit.active = cat.active
