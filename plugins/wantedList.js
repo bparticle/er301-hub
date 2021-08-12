@@ -178,6 +178,13 @@ export const wantedList = [
             originalAmount: "€29.92EUR - €10.32EUR",
             amount: 35,
             expenses: 12.10,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "7BB98429T9947402C",
+            date: "2021-08-12T23:54:29.511Z",
+            originalAmount: "€28.98EUR - €16.6EUR",
+            amount: 34.01,
+            expenses: 19.48,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
