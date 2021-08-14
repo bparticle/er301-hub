@@ -25,6 +25,12 @@ export const wantedList = [
         name: "Polyphonic synth voices",
         backers: [{
             method: "PayPal BigCartel",
+            id: "49P99905FF4394649",
+            originalAmount: "€29.6EUR - €14.94EUR Printful",
+            amount: 34.92,
+            expenses: 17.62,
+        }, {
+            method: "PayPal BigCartel",
             id: "8XP50585A76648707",
             originalAmount: "€30.56EUR - €15.44EUR Printful",
             amount: 36.32,
