@@ -19,8 +19,8 @@
         <Nuxt-Link class="navbar-item" :to="'/firmware'"
           >O|D firmware</Nuxt-Link
         >
-        <Nuxt-Link class="navbar-item" :to="'/wanted'">WANTED</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/card-one'">CardOne</Nuxt-Link>
+        <Nuxt-Link class="navbar-item" :to="'/wanted'">WANTED</Nuxt-Link>
       </div>
 
       <div class="navbar-end">
