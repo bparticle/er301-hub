@@ -8,23 +8,35 @@ link: https://github.com/yrn1/er-301-units
 github:
   path: yrn1/er-301-units
   tagRegex: ^FilterDelays-.*$
-latest version: 0.6.04
+latest version: 0.6.05
 files:
   - FilterDelays-0.6.03.pkg
   - FilterDelays-0.6.04.pkg
+  - FilterDelays-0.6.05.pkg
 units:
   - { name: Filter Delay, category: Delays and Reverb, docs: false }
+  - { name: Tuned Filter Delay, category: Delays and Reverb, docs: false }
   - { name: Feedback Delay Network, category: Delays and Reverb, docs: false }
   - { name: Simple Feedback Delay Network, category: Delays and Reverb, docs: false }
 ---
 
 FilterDelays contains a bunch of units based on -- you guessed it -- delays.
 
-## FilterDelay
+## Filter Delay
 
-The FilterDelay unit is a simple clocked delay with a tone control in the feedback loop. The stereo version also has a randomized 'spread' control.
+The Filter Delay unit is a simple clocked delay with a tone control in the feedback loop. The stereo version also has a randomized 'spread' control.
 
 The stereo verion uses 9%-10% CPU.
+
+## Tuned Filter Delay
+
+The Tuned Filter Delay unit is a simple delay with a tone control in the feedback loop and a V/Oct tuned delay time. When you feed it noise pulses, it sounds Karplus-Strong-like. When you feed it anything else, well...
+
+Note that due to the way the feedback loop is implemented, the maximum frequency is about 375Hz.
+
+The stereo verion uses 9%-10% CPU.
+
+<youtube :video-id="'nqHFELsciLc'"></youtube>
 
 ## FDN
 
