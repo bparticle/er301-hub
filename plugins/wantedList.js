@@ -96,10 +96,6 @@ export const wantedList = [
     {
         id: 4,
         name: "Signal analysis",
-        requirements: [
-            "Tuner",
-            "other types of signal analysis?"
-        ],
         status: "open",
         backers: [{
             comment: "Also Stripe payment pm_1JLQmRFOjjc1191vawFy5s97 but margin too low, my bad",
@@ -109,8 +105,9 @@ export const wantedList = [
             expenses: 0,
         }],
         requirements: [
-            "Show note name instead of Herzt values",
+            "Tuner: show note name instead of Herzt values",
             "Graphic representation of tuning",
+            "other types of signal analysis?"
         ]
     },
     {
