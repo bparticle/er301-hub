@@ -3,7 +3,12 @@
 </template>
 
 <script>
+import Avatar from 'vue-avatar'
+
 export default {
+  components: {
+    Avatar,
+  },
   name: 'Avatar',
   props: {
     userName: {
@@ -13,11 +18,11 @@ export default {
   },
   computed: {
     avatarSrc: function () {
-      return (
+      const forumAvatar =
         'https://forum.orthogonaldevices.com/user_avatar/forum.orthogonaldevices.com/' +
         this.userName +
         '/50/3702_2.png'
-      )
+      return forumAvatar
     },
   },
 }
@@ -25,7 +30,8 @@ export default {
 
 <style lang="scss" scoped>
 .avatar {
-  max-width: 25px;
+  width: 25px;
+  height: 25px;
   border-radius: 5px;
   margin-right: 0.5rem;
 }

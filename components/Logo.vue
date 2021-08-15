@@ -328,10 +328,6 @@
   animation: 1.5s appear;
   margin: auto;
   transition: all 0.3s;
-
-  .index & {
-    max-width: 300px;
-  }
 }
 
 @keyframes appear {

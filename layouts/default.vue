@@ -6,16 +6,17 @@
           <Logo />
         </nuxt-link>
         <h1 class="title">OD ER-301 hub</h1>
-        <p class="intro">
-          Orthogonal Devices ER-301 sound computer community packages, presets
-          and bespoke units
-        </p>
       </div>
     </div>
+    <Nav />
     <transition name="fade">
-      <Nuxt />
+      <main class="container mt-4">
+        <Nuxt />
+      </main>
     </transition>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="container"></div>
+    </footer>
   </div>
 </template>
 
@@ -33,11 +34,53 @@ export default {
 html {
   scroll-behavior: smooth;
 }
+body {
+  font-size: 1.1em;
+  line-height: 1.7;
+}
+main {
+  margin-top: 4rem;
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+.footer {
+  background-color: $grey;
+}
 .download {
   &__link {
     display: block;
   }
 }
+
+u {
+  text-decoration: none;
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 8px;
+    background-color: yellow;
+    mix-blend-mode: multiply;
+    left: 0;
+    bottom: 0px;
+  }
+}
+
+a {
+  color: #3273dc;
+
+  &[target='_blank']::after {
+    content: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAQElEQVR42qXKwQkAIAxDUUdxtO6/RBQkQZvSi8I/pL4BoGw/XPkh4XigPmsUgh0626AjRsgxHTkUThsG2T/sIlzdTsp52kSS1wAAAABJRU5ErkJggg==);
+    margin: 0px 3px 0px 5px;
+  }
+}
+
+p a {
+  text-decoration: underline;
+}
+
 .content {
   a .icon {
     align-items: center;
@@ -77,10 +120,7 @@ html {
   margin-top: 2rem;
   padding-bottom: 0;
   border-bottom: 1px solid;
-
-  .index & {
-    padding-bottom: 2rem;
-  }
+  padding-bottom: 1rem;
 }
 
 html {
