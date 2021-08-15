@@ -15,11 +15,11 @@
     </a>
     <div class="navbar-menu" ref="mainNav">
       <div class="navbar-start">
-        <Nuxt-Link class="navbar-item" :to="'/'">Home</Nuxt-Link>
+        <Nuxt-Link class="navbar-item" :to="'/'">Projects</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/firmware'"
           >O|D firmware</Nuxt-Link
         >
-        <Nuxt-Link class="navbar-item" :to="'/wanted'">Wanted!</Nuxt-Link>
+        <Nuxt-Link class="navbar-item" :to="'/wanted'">WANTED</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/card-one'">CardOne</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/about'">About</Nuxt-Link>
       </div>

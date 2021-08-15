@@ -1,6 +1,6 @@
 
 <template>
-  <div class="container is-fluid home">
+  <div class="is-fluid home">
     <article>
       <div class="tile is-ancestor">
         <div class="tile is-parent">
@@ -184,6 +184,7 @@ export default {
         }
       })()
     }
+    console.log(project.github.latest);
 
     // Get unique categories
     var uniqueCats = []

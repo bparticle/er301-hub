@@ -34,7 +34,9 @@ You can use images, provided you have added them to the `/static/images` folder 
 
 And you can use YouTube videos like this:
 
-<youtube :video-id="'66MMMyfIy50'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'66MMMyfIy50'"></youtube>
+</div>
 
 ## Last unit
 

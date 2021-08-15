@@ -86,7 +86,9 @@ Ping it with a trigger and it spits out and holds a random value until the next 
 
 <md-img src="accents/pingable-scaled-random.png" alt=""></md-img>
 
-<youtube :video-id="'66MMMyfIy50'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'66MMMyfIy50'"></youtube>
+</div>
 
 ### Clocked Random Gate
 
@@ -94,7 +96,9 @@ Send it pulses or a clock. You control the probability that a gate will fire whe
 
 <md-img src="accents/clocked-random-gate.png" alt=""></md-img>
 
-<youtube :video-id="'2sSnTLD1nR8'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'2sSnTLD1nR8'"></youtube>
+</div>
 
 ### Weighted Coin Toss
 
@@ -102,7 +106,9 @@ Send a pulse and it outputs heads (1) or tails (0). You can weight it so that it
 
 <md-img src="accents/coin-toss.png" alt=""></md-img>
 
-<youtube :video-id="'GqVS3U53bWk'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'GqVS3U53bWk'"></youtube>
+</div>
 
 ### Motion Sensor
 
@@ -110,7 +116,9 @@ This one’s the most experimental. I didn’t think it could be done in the mid
 
 <md-img src="accents/motion-sensor" alt=""></md-img>
 
-<youtube :video-id="'8nTXRooI4fM'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'8nTXRooI4fM'"></youtube>
+</div>
 
 ### Voltage Vault
 
@@ -120,7 +128,9 @@ When you trigger the store parameter, Voltage Vault will sample whatever voltage
 
 So Voltage Vault is essentially a lookup table (LUT). You could potentially use it as a sequencer, or to do translations or arbitrary transfer functions of your own design. Here’s a video I made about it’s predecessor, Voltage Bank, that might give you some ideas.
 
-<youtube :video-id="'pqyuhNSQ7po'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'pqyuhNSQ7po'"></youtube>
+</div>
 
 ### Maths
 

@@ -30,7 +30,7 @@ export default {
   ],
 
   styleResources: {
-    scss: ['./assets/scss/*.scss']
+    scss: ['./assets/scss/common.scss']
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
