@@ -20,6 +20,7 @@
           >O|D firmware</Nuxt-Link
         >
         <Nuxt-Link class="navbar-item" :to="'/wanted'">Wanted!</Nuxt-Link>
+        <Nuxt-Link class="navbar-item" :to="'/card-one'">CardOne</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/about'">About</Nuxt-Link>
       </div>
 
