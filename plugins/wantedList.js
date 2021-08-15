@@ -228,6 +228,12 @@ export const wantedList = [
             originalAmount: "€30.56EUR - €14.94EUR Printful",
             amount: 36.15,
             expenses: 17.67,
+        }, {
+            method: "donation",
+            id: "b5a1c06",
+            originalAmount: "€15EUR PP donation",
+            amount: 17.69,
+            expenses: 0,
         }],
         link: "https://forum.orthogonaldevices.com/t/wanted-two-way-teletype-integration-er-301-tt-tt-code-modification",
         requirements: [
