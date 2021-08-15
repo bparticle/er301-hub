@@ -95,7 +95,11 @@ export const wantedList = [
     },
     {
         id: 4,
-        name: "Tuner",
+        name: "Signal analysis",
+        requirements: [
+            "Tuner",
+            "other types of signal analysis?"
+        ],
         status: "open",
         backers: [{
             comment: "Also Stripe payment pm_1JLQmRFOjjc1191vawFy5s97 but margin too low, my bad",
