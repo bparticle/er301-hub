@@ -21,7 +21,6 @@
         >
         <Nuxt-Link class="navbar-item" :to="'/wanted'">WANTED</Nuxt-Link>
         <Nuxt-Link class="navbar-item" :to="'/card-one'">CardOne</Nuxt-Link>
-        <Nuxt-Link class="navbar-item" :to="'/about'">About</Nuxt-Link>
       </div>
 
       <div class="navbar-end">
