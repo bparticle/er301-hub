@@ -24,6 +24,19 @@ export const wantedList = [
         id: 1,
         name: "Polyphonic synth voices",
         backers: [{
+            method: "donation",
+            id: "0FA42908KV450101U",
+            date: "2021-08-15T23:54:29.511Z",
+            amount: 4.38,
+            expenses: 0,
+        }, {
+            method: "PayPal BigCartel",
+            id: "2AH7353309316470N",
+            originalAmount: "€29.92EUR - €10.32EUR Printful",
+            date: "2021-08-10T23:54:29.511Z",
+            amount: 35.29,
+            expenses: 12.17,
+        }, {
             method: "PayPal BigCartel",
             id: "49P99905FF4394649",
             originalAmount: "€29.6EUR - €14.94EUR Printful",
@@ -36,7 +49,7 @@ export const wantedList = [
             amount: 36.32,
             expenses: 18.35,
         }, {
-            method: "PayPal",
+            method: "PayPal (bounty Hunter's target test donation)",
             id: "2ME005286P6288212",
             amount: 4.41,
             expenses: 0,
