@@ -19,6 +19,7 @@ units:
   - { name: AB Switch, category: Experimental }
   - { name: Aliasing Pulse, category: Oscillators }
   - { name: Amie, category: Synthesizers }
+  - { name: Bitwise, category: Audio Effects }
   - { name: Carousel Clock Divider, category: Timing }
   - { name: Clocked Random Gate, category: Mapping and Control }
   - { name: Compare, category: Mapping and Control }
@@ -38,6 +39,7 @@ units:
   - { name: Rotary Speaker Simulator, category: Audio Effects }
   - { name: Scorpio Vocoder, category: Filter }
   - { name: Timed Gate, category: Timing }
+  - { name: Tuner, category: Measurement and Control }
   - { name: Voltage Bank 2, category: Mapping and Control }
   - { name: Voltage Bank 4, category: Mapping and Control }
   - { name: Voltage Bank, category: Mapping and Control }
@@ -65,8 +67,8 @@ Unzip the Accents-0.5.04.zip file in your ER-301/libs folder. They should appear
 
 To install Accents (and other packaged mods) on firmware 0.6.x:
 
-1. Make sure you are running the required version of the firmware 11 (currently 0.6.03+)
-2. Download the attached file Accents-0.6.03.pkg
+1. Make sure you are running the required version of the firmware 11 (currently 0.6.14+)
+2. Download the attached file Accents-0.6.16.pkg
 3. Copy the .pkg file to your SD card into the folder /ER-301/packages
 4. Go to the admin area and select Package Manager
 5. You should see Accents as an available choice along with the core and teletype mods, which will most likely already be installed
@@ -75,8 +77,9 @@ To install Accents (and other packaged mods) on firmware 0.6.x:
 ## Documentation
 
 ### AB switch
+<md-img src="accents/ABSwitch.png" alt=""></md-img>
 
-Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.
+A simple A/B switch for switching between two signal chains. Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.
 
 Pro tip: you can edit the ab control and change it to a gate control if you want this to be a momentary switch.
 
