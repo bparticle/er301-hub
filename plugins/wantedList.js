@@ -30,6 +30,12 @@ export const wantedList = [
             amount: 4.38,
             expenses: 0,
         }, {
+            method: "donation",
+            id: "6H823656G1770412G",
+            date: "2021-08-18T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
+        }, {
             method: "PayPal BigCartel",
             id: "2AH7353309316470N",
             originalAmount: "€29.92EUR - €10.32EUR Printful",
@@ -113,6 +119,13 @@ export const wantedList = [
     {
         id: 5,
         name: "Phase distortion",
+        backers: [{
+            method: "donation",
+            id: "6H823656G1770412G",
+            date: "2021-08-18T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
+        }],
         status: "open",
         requirements: [
             "Linear phase shifter with an auxiliary input",
