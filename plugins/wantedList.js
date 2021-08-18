@@ -24,6 +24,12 @@ export const wantedList = [
         id: 1,
         name: "Polyphonic synth voices",
         backers: [{
+            method: "PayPal Big Cartel",
+            id: "3HG38017B8838733R",
+            date: "2021-08-17T23:54:29.511Z",
+            amount: 20,
+            expenses: 10,
+        }, {
             method: "donation",
             id: "0FA42908KV450101U",
             date: "2021-08-15T23:54:29.511Z",
@@ -218,6 +224,13 @@ export const wantedList = [
             originalAmount: "€28.98EUR - €16.6EUR",
             amount: 34.01,
             expenses: 19.48,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "3HG38017B8838733R",
+            date: "2021-08-17T23:54:29.511Z",
+            originalAmount: "€65.34EUR - €35.25EUR",
+            amount: 56.54,
+            expenses: 31.29,
         }],
         requirements: [
             "Karplus-strong synthesis / resonator based sound generator",
