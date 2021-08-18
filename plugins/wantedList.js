@@ -221,9 +221,10 @@ export const wantedList = [
             method: "PayPal Big Cartel",
             id: "7BB98429T9947402C",
             date: "2021-08-12T23:54:29.511Z",
-            originalAmount: "€28.98EUR - €16.6EUR",
-            amount: 34.01,
-            expenses: 19.48,
+            comment: "order changed for Australia: higher production costs",
+            originalAmount: "€28.98EUR - €22.16EUR",
+            amount: 35,
+            expenses: 25.96,
         }, {
             method: "PayPal Big Cartel",
             id: "3HG38017B8838733R",
