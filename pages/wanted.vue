@@ -104,6 +104,11 @@
             (The current status may not be up to date while I'm processing
             orders.)
           </p>
+          <p>
+            There a bunch of
+            <Nuxt-Link :to="'/unsorted'">unsorted projects</Nuxt-Link> that need
+            organizing
+          </p>
         </section>
         <section class="section completed">
           <h2 class="subtitle has-text-centered is-size-3">Completed</h2>
@@ -134,9 +139,7 @@
                   </ul>
                 </td>
                 <td>
-                  <Nuxt-Link
-                    v-if="project.hubPage"
-                    :to="project.hubPage"
+                  <Nuxt-Link v-if="project.hubPage" :to="project.hubPage"
                     >Project page</Nuxt-Link
                   >
                 </td>
