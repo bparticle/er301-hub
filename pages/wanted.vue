@@ -98,6 +98,15 @@
                   ><span v-else>-</span>
                 </td>
               </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <span class="tag is-medium has-text-weight-bold">
+                    {{ totalAmountOpen }} $</span
+                  >
+                </td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
           <p>
@@ -338,6 +347,9 @@ export default {
     },
     completed() {
       return this.$store.getters.completedProjects
+    },
+    totalAmountOpen() {
+      return this.$store.getters.totalAmountOpen.toFixed(2)
     },
   },
   methods: {

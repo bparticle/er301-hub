@@ -60,6 +60,11 @@ export const getters = {
   },
   completedProjects: state => {
     return state.completedProjects
+  },
+  totalAmountOpen: state => {
+    return Number(state.openProjects.map(proj => proj.award).reduce(function (a, b) {
+      return a + b;
+    }, 0))
   }
 }
 
