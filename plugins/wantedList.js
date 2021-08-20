@@ -37,6 +37,12 @@ export const wantedList = [
             expenses: 0,
         }, {
             method: "donation",
+            id: "22T00777346801233",
+            date: "2021-08-20T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
+        }, {
+            method: "donation",
             id: "6H823656G1770412G",
             date: "2021-08-18T23:54:29.511Z",
             amount: 10,
@@ -115,6 +121,12 @@ export const wantedList = [
             id: "78P23286K8101524V",
             amount: 5,
             expenses: 0,
+        }, {
+            method: "donation",
+            id: "22T00777346801233",
+            date: "2021-08-20T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
         }],
         requirements: [
             "Tuner: show note name instead of Herzt values",
@@ -129,6 +141,12 @@ export const wantedList = [
             method: "donation",
             id: "6H823656G1770412G",
             date: "2021-08-18T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
+        }, {
+            method: "donation",
+            id: "22T00777346801233",
+            date: "2021-08-20T23:54:29.511Z",
             amount: 10,
             expenses: 0,
         }],
@@ -165,6 +183,12 @@ export const wantedList = [
             method: "donation",
             id: "84N50938UE048280N",
             amount: 9,
+            expenses: 0,
+        }, {
+            method: "donation",
+            id: "22T00777346801233",
+            date: "2021-08-20T23:54:29.511Z",
+            amount: 10,
             expenses: 0,
         }],
         requirements: [
@@ -260,6 +284,12 @@ export const wantedList = [
             id: "b5a1c06",
             originalAmount: "€15EUR PP donation",
             amount: 17.69,
+            expenses: 0,
+        }, {
+            method: "donation",
+            id: "22T00777346801233",
+            date: "2021-08-20T23:54:29.511Z",
+            amount: 10,
             expenses: 0,
         }],
         link: "https://forum.orthogonaldevices.com/t/wanted-two-way-teletype-integration-er-301-tt-tt-code-modification",
