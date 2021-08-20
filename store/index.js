@@ -39,7 +39,7 @@ const sortedProjects = wantedList.sort((a, b) =>
 )
 
 const openProjects = sortedProjects.filter(proj => {
-  return proj.status === "open"
+  return proj.status === "open" || proj.status === "in development"
 })
 
 const completedProjects = sortedProjects.filter(proj => {

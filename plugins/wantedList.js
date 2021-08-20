@@ -82,7 +82,7 @@ export const wantedList = [
             amount: 10,
             expenses: 0,
         }],
-        status: "open",
+        status: "in development",
         link: "https://forum.orthogonaldevices.com/t/polyphonic-synthesizer-bespoke-unit",
         requirements: [
             "V/Oct inputs per voice",
@@ -114,7 +114,7 @@ export const wantedList = [
     {
         id: 4,
         name: "Signal analysis",
-        status: "open",
+        status: "in development",
         backers: [{
             comment: "Also Stripe payment pm_1JLQmRFOjjc1191vawFy5s97 but margin too low, my bad",
             method: "donation",
@@ -169,6 +169,13 @@ export const wantedList = [
         name: "Polyphonic sample player",
         status: "open",
         backers: [{
+            method: "PayPal BigCartel",
+            id: "0FX0195142822284S",
+            date: "2021-08-20T23:54:29.511Z",
+            originalAmount: "€30,56 EUR - €17.64EUR Printful",
+            amount: 35.74,
+            expenses: 20.63,
+        }, {
             method: "donation",
             id: "27D84702VD193592T",
             amount: 5.3,
@@ -199,7 +206,7 @@ export const wantedList = [
     {
         id: 7,
         name: "Karplus-strong / Modal Resonator VCO",
-        status: "open",
+        status: "in development",
         link: "https://forum.orthogonaldevices.com/t/wanted-resonator-vco",
         backers: [{
             method: "donation",
