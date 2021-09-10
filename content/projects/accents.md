@@ -19,12 +19,12 @@ units:
   - { name: AB Switch, category: Experimental }
   - { name: Aliasing Pulse, category: Oscillators }
   - { name: Amie, category: Synthesizers }
-  - { name: Bitwise, category: Audio Effects }
+  - { name: Bitwise, category: Effects }
   - { name: Carousel Clock Divider, category: Timing }
   - { name: Clocked Random Gate, category: Mapping and Control }
   - { name: Compare, category: Mapping and Control }
-  - { name: Ensemble, category: Audio Effects }
-  - { name: Flanger, category: Audio Effects }
+  - { name: Ensemble, category: Effects }
+  - { name: Flanger, category: Effects }
   - { name: Ladder BPF, category: Filter }
   - { name: Ladder BPF2, category: Experimental }
   - { name: Linear Sampling VCA, category: Essentials }
@@ -32,11 +32,11 @@ units:
   - { name: Maths, category: Mapping and Control }
   - { name: Motion Sensor, category: Mapping and Control }
   - { name: Octave CV Shifter, category: Mapping and Control }
-  - { name: Phaser, category: Audio Effects }
+  - { name: Phaser, category: Effects }
   - { name: Points, category: Envelopes, docs: true }
   - { name: Pingable Scaled Random, category: Mapping and Control }
   - { name: Ring Modulator, category: Modulation }
-  - { name: Rotary Speaker Simulator, category: Audio Effects }
+  - { name: Rotary Speaker Simulator, category: Effects }
   - { name: Scorpio Vocoder, category: Filter }
   - { name: Timed Gate, category: Timing }
   - { name: Tuner, category: Measurement and Control }
