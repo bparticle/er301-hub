@@ -63,6 +63,7 @@
           <td># units</td>
           <td>Author</td>
           <td>Latest version</td>
+          <td>GitHub</td>
         </tr>
       </thead>
       <tbody>
@@ -90,6 +91,11 @@
           <td>
             {{ project['latest version'] }}
           </td>
+          <td>
+            <span v-if="project.github">
+              {{ fetchGitHub(project) }}
+            </span>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -115,6 +121,10 @@ export default {
       .sortBy('title', 'asc')
       .fetch()
 
+    store.commit('addAllProjects', projects)
+
+    const isInit = store.state.allProjects === []
+    console.log(isInit)
     store.commit('addUniqueCats', { projects: projects, force: true })
 
     return {
@@ -122,6 +132,9 @@ export default {
     }
   },
   methods: {
+    fetchGitHub: function (project) {
+      return this.$fetchGitHub(project)
+    },
     enableCat: function (cat) {
       this.$store.commit('enableCat', cat)
     },
@@ -146,7 +159,9 @@ export default {
           ...new Set(project.units.map((unit) => unit.category.toLowerCase())),
         ]
         for (let i = 0; i < activeCats.length; i++) {
-          testArr.push(projectCats.includes(activeCats[i].category.toLowerCase()))
+          testArr.push(
+            projectCats.includes(activeCats[i].category.toLowerCase())
+          )
         }
         return testArr.every((test) => test === true)
       }

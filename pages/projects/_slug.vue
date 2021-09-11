@@ -184,7 +184,6 @@ export default {
         }
       })()
     }
-    console.log(project.github.latest);
 
     // Get unique categories
     var uniqueCats = []
@@ -210,7 +209,7 @@ export default {
 
     return { project, projectCats }
   },
-  methods: {
+  methods: {  
     enableCat: function (cat) {
       this.$store.commit('enableCat', cat)
     },

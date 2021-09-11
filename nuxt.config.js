@@ -37,7 +37,8 @@ export default {
   plugins: [
     '~/plugins/vueMoment.js',
     '~/plugins/lodash.js',
-    '~/plugins/youTubeEmbed.js'
+    '~/plugins/youTubeEmbed.js',
+    '~/plugins/fetchGitHub.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
