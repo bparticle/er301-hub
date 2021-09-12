@@ -5,7 +5,7 @@
       <div class="tile is-ancestor">
         <div class="tile is-parent">
           <div class="tile is-child">
-            <section class="section introduction m-4 has-background-light">
+            <section class="section introduction mb-4 has-background-light">
               <h1 class="project__title">{{ project.title }}</h1>
               <div class="project__author">
                 <a
@@ -105,7 +105,7 @@
         </div>
         <div class="tile is-4 is-vertical is-parent">
           <div class="tile is-child">
-            <section class="section download">
+            <section class="download">
               <div class="gh-release" v-if="project.github.latest">
                 <h2 class="gh-release__title">Latest GitHub release</h2>
                 <button class="button is-rounded">
@@ -113,7 +113,7 @@
                     project.github.latest.name
                   }}</a>
                 </button>
-                <p class="mt-4">
+                <p class="mt-4 is-size-6">
                   Published on
                   <strong>
                     {{
@@ -209,7 +209,7 @@ export default {
 
     return { project, projectCats }
   },
-  methods: {  
+  methods: {
     enableCat: function (cat) {
       this.$store.commit('enableCat', cat)
     },
@@ -284,9 +284,20 @@ export default {
 
 <style lang="scss" scoped>
 .gh-release {
+  border: 1px solid darkgray;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+
   &__title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+
     &:before {
-      margin-right: 5px;
+      margin-right: 1rem;
       content: url('/GitHub-Mark-32px.png');
     }
   }

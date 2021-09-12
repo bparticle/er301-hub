@@ -1,19 +1,19 @@
 <template>
   <div class="is-fluid">
     <div>
-      <div class="tile is-parent">
-        <div class="tile is-child is-4">
-          <label class="label">Search projects</label>
-          <input
-            class="input"
-            v-model="filterValue"
-            type="search"
-            autocomplete="off"
-          />
-        </div>
+      <h3>Search projects</h3>
+      <div class="tile">
+        <input
+          class="input"
+          v-model="filterValue"
+          type="search"
+          autocomplete="off"
+        />
       </div>
       <div class="search-project__results">
-        <ul
+        <transition-group
+          tag="ul"
+          name="slide"
           class="search-project__list"
           v-if="searchProject.length != projects.length"
         >
@@ -26,9 +26,10 @@
               >{{ project.title }}</nuxt-link
             >
           </li>
-        </ul>
+        </transition-group>
       </div>
-      <div class="tile is-parent">
+      <h3>Filters</h3>
+      <div class="tile">
         <div class="field is-grouped is-grouped-multiline">
           <div
             class="control"
@@ -56,14 +57,16 @@
         </div>
       </div>
     </div>
+    <h3>Index</h3>
+
     <table class="projects table is-fullwidth">
       <thead>
         <tr>
-          <td>Project title</td>
-          <td># units</td>
-          <td>Author</td>
-          <td>Latest version</td>
-          <td>GitHub</td>
+          <th class="projects__td--narrow"></th>
+          <th>Project title</th>
+          <th># units</th>
+          <th>Latest version</th>
+          <th><span class="gh-dl"> GitHub </span></th>
         </tr>
       </thead>
       <tbody>
@@ -72,6 +75,11 @@
           v-for="(project, index) of filteredProjects"
           :key="project + index + project.author"
         >
+          <td class="projects__td--narrow">
+            <div class="projects__author">
+              <avatar :userName="project.author" />
+            </div>
+          </td>
           <td>
             <nuxt-link
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
@@ -83,18 +91,16 @@
             {{ project.units.length }}
           </td>
           <td>
-            <div class="projects-table__author">
-              <avatar :userName="project.author" />
-              {{ project.author }}
-            </div>
-          </td>
-          <td>
             {{ project['latest version'] }}
           </td>
           <td>
-            <span v-if="project.github">
-              {{ fetchGitHub(project) }}
-            </span>
+            <button
+              class="button is-small is-rounded"
+              v-if="project.github"
+              @click="fetchGitHub(project)"
+            >
+              Download
+            </button>
           </td>
         </tr>
       </tbody>
@@ -124,7 +130,6 @@ export default {
     store.commit('addAllProjects', projects)
 
     const isInit = store.state.allProjects === []
-    console.log(isInit)
     store.commit('addUniqueCats', { projects: projects, force: true })
 
     return {
@@ -133,7 +138,14 @@ export default {
   },
   methods: {
     fetchGitHub: function (project) {
-      return this.$fetchGitHub(project)
+      let gitHubData
+      this.$fetchGitHub(project).then((value) => {
+        gitHubData = value
+        if (gitHubData.url) {
+          window.open(gitHubData.url)
+          return false
+        }
+      })
     },
     enableCat: function (cat) {
       this.$store.commit('enableCat', cat)
@@ -194,13 +206,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projects-table {
+.projects {
+  &__td {
+    &--narrow {
+      max-width: 20px;
+      border: none;
+      padding: 0.8rem 0;
+    }
+  }
   &__author {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
   }
 }
 .search-project {
+  &__list {
+    list-style: circle;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
   &__result {
     transition: max-height 0.3s;
   }
@@ -238,6 +264,30 @@ export default {
 }
 
 .tags .tag {
+  transition: all 0.5s;
+}
+
+.gh-dl {
+  display: flex;
+
+  &:before {
+    margin-right: 1rem;
+    content: url('/GitHub-Mark-32px.png');
+  }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(1rem);
+  opacity: 0;
+}
+
+.slide-move {
   transition: all 0.5s;
 }
 </style>

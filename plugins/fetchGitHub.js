@@ -10,7 +10,7 @@ export default ({ app }, inject) => {
                     `https://api.github.com/repos/${github.path}/releases`
                 )
                 let releases = response || []
-                
+
                 let filtered = (() => {
                     let regex = github.tagRegex
                     if (!regex) return releases
@@ -25,25 +25,23 @@ export default ({ app }, inject) => {
                     return right.id - left.id
                 }
 
-                github.latest = (() => {
-                    let release = filtered.sort(compareByReleaseIdDesc)[0]
-                    if (!release) return
+                let release = filtered.sort(compareByReleaseIdDesc)[0]
+                if (!release) return
 
-                    let asset = (release.assets || [])[0]
-                    if (!asset) return
+                let asset = (release.assets || [])[0]
+                if (!asset) return
 
-                    return {
-                        name: release.name,
-                        published: release.published_at,
-                        url: asset.browser_download_url,
-                    }
-                })()
+                return {
+                    name: release.name,
+                    published: release.published_at,
+                    url: asset.browser_download_url,
+                }
+            } else {
+                return null;
             }
         }
 
-        getGitHub().then(function () {
-            return github.latest.url
-        })
+        return getGitHub()
 
     })
 }

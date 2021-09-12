@@ -1,6 +1,6 @@
 <template>
   <div class="is-fluid firmware">
-    <section class="section introduction has-background-light">
+    <section class="section introduction mb-4 has-background-light">
       <h1 class="project__title">ER-301 sound computer</h1>
       <p class="is-size-5">Latest firmware release</p>
       <div class="gh-release">

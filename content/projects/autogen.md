@@ -13,48 +13,47 @@ latest version: v1.0 # name of the latest release for quick lookup in the index
 files: # A list of files that you have uploaded in /static/packages
   - Autogen301.pkg
 units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
-  - { name: Autogen301, category: Sequencer }
-  - { name: '1975', category: Generator }
-  - { name: '217 levels', category: Generator }
-  - { name: 'YOLO', category: Generator }
-  - { name: 'ambikarp', category: Generator }
-  - { name: 'auto Reels', category: Generator }
-  - { name: 'barbieri', category: Generator }
-  - { name: 'barton', category: Generator }
-  - { name: 'belle reid', category: Generator }
-  - { name: 'bent 808', category: Generator }
-  - { name: 'broken memory', category: Generator }
-  - { name: 'cave', category: Generator }
-  - { name: 'clangers', category: Generator }
-  - { name: 'don', category: Generator }
-  - { name: 'drone', category: Generator }
-  - { name: 'fdn', category: Generator }
-  - { name: 'feedback physics', category: Generator }
-  - { name: 'fields of mud', category: Generator }
-  - { name: 'fields sine', category: Generator }
-  - { name: 'fields', category: Generator }
-  - { name: 'finding jan', category: Generator }
-  - { name: 'flam drum', category: Generator }
-  - { name: 'for days', category: Generator }
-  - { name: 'gas', category: Generator }
-  - { name: 'gritch', category: Generator }
-  - { name: 'harm osc', category: Generator }
-  - { name: 'ikeda', category: Generator }
-  - { name: 'in theory', category: Generator }
-  - { name: 'indo chine', category: Generator }
-  - { name: 'newdon', category: Generator }
-  - { name: 'noodles', category: Generator }
-  - { name: 'pause', category: Generator }
-  - { name: 'pop', category: Generator }
-  - { name: 'r+r', category: Generator }
-  - { name: 'reaper', category: Generator }
-  - { name: 'recur', category: Generator }
-  - { name: 'sand grains', category: Generator }
-  - { name: 'splat', category: Generator }
-  - { name: 'sway', category: Generator }
-  - { name: 'tek', category: Generator }
-  - { name: 'tippy tap', category: Generator }
-  - { name: 'zola budd', category: Generator }
+  - { name: '1975', category: Generators }
+  - { name: '217 levels', category: Generators }
+  - { name: 'YOLO', category: Generators }
+  - { name: 'ambikarp', category: Generators }
+  - { name: 'auto Reels', category: Generators }
+  - { name: 'barbieri', category: Generators }
+  - { name: 'barton', category: Generators }
+  - { name: 'belle reid', category: Generators }
+  - { name: 'bent 808', category: Generators }
+  - { name: 'broken memory', category: Generators }
+  - { name: 'cave', category: Generators }
+  - { name: 'clangers', category: Generators }
+  - { name: 'don', category: Generators }
+  - { name: 'drone', category: Generators }
+  - { name: 'fdn', category: Generators }
+  - { name: 'feedback physics', category: Generators }
+  - { name: 'fields of mud', category: Generators }
+  - { name: 'fields sine', category: Generators }
+  - { name: 'fields', category: Generators }
+  - { name: 'finding jan', category: Generators }
+  - { name: 'flam drum', category: Generators }
+  - { name: 'for days', category: Generators }
+  - { name: 'gas', category: Generators }
+  - { name: 'gritch', category: Generators }
+  - { name: 'harm osc', category: Generators }
+  - { name: 'ikeda', category: Generators }
+  - { name: 'in theory', category: Generators }
+  - { name: 'indo chine', category: Generators }
+  - { name: 'newdon', category: Generators }
+  - { name: 'noodles', category: Generators }
+  - { name: 'pause', category: Generators }
+  - { name: 'pop', category: Generators }
+  - { name: 'r+r', category: Generators }
+  - { name: 'reaper', category: Generators }
+  - { name: 'recur', category: Generators }
+  - { name: 'sand grains', category: Generators }
+  - { name: 'splat', category: Generators }
+  - { name: 'sway', category: Generators }
+  - { name: 'tek', category: Generators }
+  - { name: 'tippy tap', category: Generators }
+  - { name: 'zola budd', category: Generators }
 ---
 
 ## Autogen301
