@@ -7,7 +7,7 @@ link: https://github.com/SuperNiCd
 github:
   path: SuperNiCd/Accents
   tagRegex: ^Accents.*$
-latest version: v0.6.14
+latest version: v0.6.16
 compatibility: { v05: true, v06: true }
 files:
   - Accents-0.6.14.pkg

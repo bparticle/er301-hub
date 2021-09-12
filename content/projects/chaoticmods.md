@@ -7,7 +7,7 @@ contact: https://forum.orthogonaldevices.com/u/ljw/summary
 link: https://github.com/ljwall/er-301-units
 github:
   path: ljwall/er-301-units
-  tagRegex: ^chaoticmods-*$
+  tagRegex: ^chaoticmods.*$
 latest version: v0.0.1
 files:
   - chaoticmods-0.0.1.pkg
