@@ -15,9 +15,9 @@
         </p>
       </div>
     </section>
-    <section class="section units pt-0">
-      <h2>Previous releases</h2>
-      <table class="table">
+    <section class="units pt-0">
+      <h3>Previous releases</h3>
+      <table class="table is-fullwidth">
         <thead>
           <tr>
             <th>Release</th>

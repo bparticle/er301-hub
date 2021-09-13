@@ -11,10 +11,14 @@
         border-bottom: 0;
       }
 
-      &.table__td {
-        &--narrow {
-          max-width: 100%;
-        }
+      &.table__td--narrow {
+        max-width: 100%;
+      }
+    }
+
+    th {
+      &.table__td--narrow {
+        max-width: 100%;
       }
     }
   }

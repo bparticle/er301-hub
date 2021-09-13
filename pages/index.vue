@@ -1,57 +1,60 @@
 <template>
   <div class="is-fluid">
     <div>
-      <h3>Search projects</h3>
-      <div class="tile">
-        <input
-          class="input"
-          v-model="filterValue"
-          type="search"
-          autocomplete="off"
-        />
-      </div>
-      <div class="search-project__results">
-        <transition-group
-          tag="ul"
-          name="slide"
-          class="search-project__list"
-          v-if="searchProject.length != projects.length"
-        >
-          <li v-for="project of searchProject" :key="project.slug">
-            <nuxt-link
-              :to="{
-                name: 'projects-slug',
-                params: { slug: project.slug },
-              }"
-              >{{ project.title }}</nuxt-link
+      <div class="columns">
+        <div class="column is-half">
+          <h3>Search projects</h3>
+          <input
+            class="input"
+            v-model="filterValue"
+            type="search"
+            autocomplete="off"
+            placeholder="Start typing to search"
+          />
+          <div class="search-project__results">
+            <transition-group
+              tag="ul"
+              name="slide"
+              class="search-project__list"
+              v-if="searchProject.length != projects.length"
             >
-          </li>
-        </transition-group>
-      </div>
-      <h3>Filters</h3>
-      <div class="tile">
-        <div class="field is-grouped is-grouped-multiline">
-          <div
-            class="control"
-            v-for="(category, index) in cats"
-            :key="category.category + index + category.color"
-          >
-            <div class="tags has-addons">
-              <a
-                class="tag"
-                v-bind:style="[
-                  category.active
-                    ? { backgroundColor: category.color }
-                    : { backgroundColor: category.colorPassive },
-                ]"
-                @click="enableCat(category)"
-                >{{ category.category | upperCased }}</a
-              >
-              <a
-                v-if="category.active"
-                class="tag is-delete"
-                @click="disableCat(category)"
-              ></a>
+              <li v-for="project of searchProject" :key="project.slug">
+                <nuxt-link
+                  :to="{
+                    name: 'projects-slug',
+                    params: { slug: project.slug },
+                  }"
+                  >{{ project.title }}</nuxt-link
+                >
+              </li>
+            </transition-group>
+          </div>
+        </div>
+        <div class="column is-half">
+          <h3>Filters</h3>
+          <div class="field is-grouped is-grouped-multiline">
+            <div
+              class="control"
+              v-for="(category, index) in cats"
+              :key="category.category + index + category.color"
+            >
+              <div class="tags has-addons">
+                <a
+                  class="tag"
+                  v-bind:style="[
+                    category.active
+                      ? { backgroundColor: category.color }
+                      : { backgroundColor: category.colorPassive },
+                  ]"
+                  @click="enableCat(category)"
+                  >{{ category.category | upperCased }}</a
+                >
+                <a
+                  v-if="category.active"
+                  class="tag is-delete"
+                  @click="disableCat(category)"
+                ></a>
+              </div>
             </div>
           </div>
         </div>

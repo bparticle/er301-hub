@@ -44,7 +44,12 @@ main {
   padding-bottom: 6rem;
 }
 .footer {
-  background-color: $grey;
+  background: rgb(190, 190, 190);
+  background: linear-gradient(
+    0deg,
+    rgba(190, 190, 190, 1) 0%,
+    rgba(207, 207, 207, 1) 57%
+  );
 }
 .download {
   &__link {
@@ -119,7 +124,6 @@ p a {
   text-align: center;
   margin-top: 2rem;
   padding-bottom: 0;
-  border-bottom: 1px solid;
   padding-bottom: 1rem;
 }
 
