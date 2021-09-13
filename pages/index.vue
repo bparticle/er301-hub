@@ -75,7 +75,7 @@
           v-for="(project, index) of filteredProjects"
           :key="project + index + project.author"
         >
-          <td class="projects__td--narrow">
+          <td class="table__td--narrow">
             <div class="projects__author">
               <avatar :userName="project.author" />
             </div>

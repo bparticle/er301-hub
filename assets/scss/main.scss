@@ -20,14 +20,20 @@ h3 {
   margin-top: 1rem;
 }
 
-.table td {
-  border: dashed;
-  border-color: antiquewhite;
-}
-
 .table {
-  &__td {
-    &--narrow {
+  td {
+    border: dashed;
+    border-color: antiquewhite;
+
+    &.table__td--narrow {
+      max-width: 35px;
+      border: none;
+      padding: 0.8rem 0;
+    }
+  }
+
+  th {
+    &.table__td--narrow {
       max-width: 35px;
       border: none;
       padding: 0.8rem 0;
