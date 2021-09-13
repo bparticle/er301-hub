@@ -96,7 +96,7 @@
           <td>
             {{ project['latest version'] }}
           </td>
-          <td>
+          <td class="has-text-centered">
             <button
               class="button is-small is-rounded"
               v-if="project.github"
@@ -265,6 +265,7 @@ export default {
 
 .gh-dl {
   display: flex;
+  justify-content: center;
 
   &:before {
     margin-right: 1rem;
