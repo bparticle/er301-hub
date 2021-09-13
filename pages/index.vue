@@ -62,7 +62,7 @@
     <table class="projects table is-fullwidth">
       <thead>
         <tr>
-          <th class="projects__td--narrow"></th>
+          <th class="table__td--narrow"></th>
           <th>Project title</th>
           <th># units</th>
           <th>Latest version</th>
@@ -207,13 +207,6 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
-  &__td {
-    &--narrow {
-      max-width: 20px;
-      border: none;
-      padding: 0.8rem 0;
-    }
-  }
   &__author {
     display: flex;
     align-items: center;
