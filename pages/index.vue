@@ -2,7 +2,7 @@
   <div class="is-fluid">
     <div>
       <div class="columns">
-        <div class="column is-half">
+        <div class="column is-one-third">
           <h3>Search projects</h3>
           <input
             class="input"
@@ -30,7 +30,7 @@
             </transition-group>
           </div>
         </div>
-        <div class="column is-half">
+        <div class="column is-two-thirds">
           <h3>Filters</h3>
           <div class="field is-grouped is-grouped-multiline">
             <div
