@@ -15,7 +15,15 @@
       </main>
     </transition>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer-logos">
+          <img
+            class="pixel-anim"
+            src="/frontplate--pixelart_anim--slowerframe.gif"
+            alt=""
+          />
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -44,12 +52,8 @@ main {
   padding-bottom: 6rem;
 }
 .footer {
-  background: rgb(190, 190, 190);
-  background: linear-gradient(
-    0deg,
-    rgba(190, 190, 190, 1) 0%,
-    rgba(207, 207, 207, 1) 57%
-  );
+  background: rgba(135, 135, 135, 1) 0%;
+  padding: 2rem;
 }
 .download {
   &__link {
@@ -183,5 +187,14 @@ html {
     opacity: 1;
     max-height: 150px;
   }
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pixel-anim {
+  max-width: 180px;
 }
 </style>
