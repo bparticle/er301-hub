@@ -19,7 +19,13 @@
         <div class="footer-logos">
           <img
             class="pixel-anim"
-            src="/frontplate--pixelart_anim--slowerframe.gif"
+            src="/frontplate--pixelart_anim--green.gif"
+            alt=""
+          />
+          <img class="pixel-anim" src="/frontplate--pixelart_anim.gif" alt="" />
+          <img
+            class="pixel-anim"
+            src="/frontplate--pixelart_anim--dark.gif"
             alt=""
           />
         </div>
@@ -191,7 +197,8 @@ html {
 
 .footer-logos {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .pixel-anim {
