@@ -242,6 +242,13 @@ export const wantedList = [
             amount: 17.72,
             expenses: 0,
         }, {
+            method: "PayPal Big Cartel",
+            originalAmount: "€26,14EUR - 21.3EUR",
+            date: "2021-09-22T23:54:29.511Z",
+            id: "84G35048X67172919",
+            amount: 30.65,
+            expenses: 24.97,
+        }, {
             method: "donation",
             originalAmount: "€12.5EUR",
             id: "3WF254839F936914K",
