@@ -339,6 +339,13 @@ export const wantedList = [
             date: "2021-08-20T23:54:29.511Z",
             amount: 10,
             expenses: 0,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "89A91678BK988373L",
+            date: "2021-09-28T23:54:29.511Z",
+            originalAmount: "29.6EUR - 10.94EUR",
+            amount: 34.64,
+            expenses: 12.8,
         }],
         link: "https://forum.orthogonaldevices.com/t/wanted-two-way-teletype-integration-er-301-tt-tt-code-modification",
         requirements: [
