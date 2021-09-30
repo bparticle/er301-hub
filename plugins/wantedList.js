@@ -51,6 +51,12 @@ export const wantedList = [
             expenses: 0,
         }, {
             method: "donation",
+            id: "9N670638XJ236642M",
+            date: "2021-09-30T23:54:29.511Z",
+            amount: 10,
+            expenses: 0,
+        }, {
+            method: "donation",
             id: "29H42961UH9091925",
             originalAmount: "€15EUR",
             date: "2021-09-11T23:54:29.511Z",
