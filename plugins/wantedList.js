@@ -102,7 +102,7 @@ export const wantedList = [
         }, {
             method: "manual pledge Bruno",
             id: "manualrandomstring014354612021684",
-            amount: 4,
+            amount: 15,
             expenses: 0,
         }, {
             method: "donation",
