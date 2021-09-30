@@ -24,10 +24,17 @@ export const wantedList = [
         id: 1,
         name: "Polyphonic synth voices",
         backers: [{
+            method: "Stripe Big Cartel",
+            id: "pm_1JfEWZFOjjc1191vZ9J9ib8x",
+            date: "2021-09-30T23:54:29.511Z",
+            originalAmount: "€29.85EUR - €16.10EUR",
+            amount: 34.66,
+            expenses: 18.70,
+        }, {
             method: "PayPal Big Cartel",
             id: "49203999MU9379805",
             date: "2021-08-29T23:54:29.511Z",
-            originalAmount: "€28.98EUR - €17.13",
+            originalAmount: "€28.98EUR - €17.13 (correction: 17.39)",
             amount: 33.65,
             expenses: 19.89,
         }, {
@@ -304,6 +311,13 @@ export const wantedList = [
             originalAmount: "€28.98EUR - €22.16EUR",
             amount: 35,
             expenses: 25.96,
+        }, {
+            method: "PayPal Big Cartel",
+            id: "8DA7955027488311B",
+            date: "2021-09-30T23:54:29.511Z",
+            originalAmount: "€28.98EUR - 15.62EUR",
+            amount: 33.65,
+            expenses: 18.14,
         }, {
             method: "PayPal Big Cartel",
             id: "3HG38017B8838733R",
