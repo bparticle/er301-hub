@@ -244,6 +244,18 @@ export const wantedList = [
         ]
     },
     {
+        id: 10,
+        name: "Polyphonic Multisample player",
+        status: "open",
+        link: "https://forum.orthogonaldevices.com/t/polyphonic-multisample",
+        backers: [],
+        requirements: [
+            "8 voice polyphonic multisampler",
+            "support velocity switches",
+            "optional .sf2 support",
+        ]
+    },
+    {
         id: 7,
         name: "Karplus-strong / Modal Resonator VCO",
         status: "in development",
