@@ -117,6 +117,7 @@ export const wantedList = [
             expenses: 0,
         }],
         status: "completed",
+        hubPage: "/projects/polygon",
         link: "https://forum.orthogonaldevices.com/t/polyphonic-synthesizer-bespoke-unit",
         requirements: [
             "V/Oct inputs per voice",
