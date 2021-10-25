@@ -116,7 +116,7 @@ export const wantedList = [
             amount: 10,
             expenses: 0,
         }],
-        status: "in development",
+        status: "completed",
         link: "https://forum.orthogonaldevices.com/t/polyphonic-synthesizer-bespoke-unit",
         requirements: [
             "V/Oct inputs per voice",
