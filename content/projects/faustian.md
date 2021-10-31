@@ -12,7 +12,7 @@ latest version: v0.0.1
 files:
   - faustian-0.0.1.pkg
 units:
-  - { name: Dattorro Reverb, category: Reverb }
+  - { name: Dattorro Reverb, category: Delays and Reverb }
 ---
 
 ### Dattorro Reverb
