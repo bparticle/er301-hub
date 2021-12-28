@@ -4,23 +4,24 @@ description: Some filtered delays
 author: yrn1
 compatibility: { v05: false, v06: true }
 contact: https://forum.orthogonaldevices.com/u/yrn1/summary
-link: https://github.com/yrn1/er-301-units
+link: https://github.com/yrn1/er-301-custom-units
 github:
-  path: yrn1/er-301-units
-  tagRegex: ^FilterDelays.*$
+  path: yrn1/er-301-custom-units
+  tagRegex: ^fdelay.*$
 latest version: 0.6.05
 files:
-  - FilterDelays-0.6.03.pkg
-  - FilterDelays-0.6.04.pkg
-  - FilterDelays-0.6.05.pkg
+  - fdelay-v1.0.0.pkg
 units:
   - { name: Filter Delay, category: Delays and Reverb, docs: false }
   - { name: Tuned Filter Delay, category: Delays and Reverb, docs: false }
+  - { name: Manual Grain Delay, category: Delays and Reverb, docs: false }
   - { name: Feedback Delay Network, category: Delays and Reverb, docs: false }
   - { name: Simple Feedback Delay Network, category: Delays and Reverb, docs: false }
 ---
 
-FilterDelays contains a bunch of units based on -- you guessed it -- delays.
+fdelay contains a bunch of units based on -- you guessed it -- delays.
+
+This set is the next generation of the old FilterDelays package. Sorry, I renamed it. The old one is still available on [GitHub](https://github.com/yrn1/er-301-units).
 
 ## Filter Delay
 
@@ -40,6 +41,15 @@ The stereo verion uses 9%-10% CPU.
   <youtube :video-id="'nqHFELsciLc'"></youtube>
 </div>
 
+## Manual Grain Delay
+
+The Manual Grain Delay unit is the unholy child of Filter Delay and Manual Grains. It is a delay line with tone control in the feedback loop. But instead of just playing the delayed signal, you trigger grains, with all the usual controls you expect from grains: pitch, duration and squash (pan is coming in some next release). You can also freeze the delay loop and play with grains in the frozen buffer. It's a bit like part of Mutable Instruments Clouds, but without the auto-triggering and the reverb.
+
+The stereo version uses 10%-40% CPU, depending on how many grains are running concurrently.
+
+<div class="yt-embed">
+  <youtube :video-id="'1maXTPKAQGE'"></youtube>
+</div>
 
 ## FDN
 
