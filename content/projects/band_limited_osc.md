@@ -7,7 +7,7 @@ contact: https://forum.orthogonaldevices.com/u/ljw/summary
 link: https://github.com/ljwall/er-301-units
 github:
   path: ljwall/er-301-units
-  tagRegex: ^band_limited_osc-*$
+  tagRegex: ^band_limited_osc-.*$
 latest version: v0.0.2
 files:
   - band_limited_osc-0.0.2.pkg

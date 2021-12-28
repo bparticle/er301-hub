@@ -30,14 +30,15 @@ export default {
   ],
 
   styleResources: {
-    scss: ['./assets/scss/*.scss']
+    scss: ['./assets/scss/common.scss']
   },
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     '~/plugins/vueMoment.js',
     '~/plugins/lodash.js',
-    '~/plugins/youTubeEmbed.js'
+    '~/plugins/youTubeEmbed.js',
+    '~/plugins/fetchGitHub.js'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

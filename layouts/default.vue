@@ -15,7 +15,21 @@
       </main>
     </transition>
     <footer class="footer">
-      <div class="container"></div>
+      <div class="container">
+        <div class="footer-logos">
+          <img
+            class="pixel-anim"
+            src="/frontplate--pixelart_anim--green.gif"
+            alt=""
+          />
+          <img class="pixel-anim" src="/frontplate--pixelart_anim.gif" alt="" />
+          <img
+            class="pixel-anim"
+            src="/frontplate--pixelart_anim--dark.gif"
+            alt=""
+          />
+        </div>
+      </div>
     </footer>
   </div>
 </template>
@@ -44,7 +58,8 @@ main {
   padding-bottom: 6rem;
 }
 .footer {
-  background-color: $grey;
+  background: rgba(135, 135, 135, 1) 0%;
+  padding: 2rem;
 }
 .download {
   &__link {
@@ -119,7 +134,6 @@ p a {
   text-align: center;
   margin-top: 2rem;
   padding-bottom: 0;
-  border-bottom: 1px solid;
   padding-bottom: 1rem;
 }
 
@@ -179,5 +193,15 @@ html {
     opacity: 1;
     max-height: 150px;
   }
+}
+
+.footer-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pixel-anim {
+  max-width: 180px;
 }
 </style>

@@ -11,7 +11,6 @@ files: # A list of files that you have uploaded in /static/packages
 units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
   - { name: Splitt, category: Utilities }
   - { name: Hiverb, category: Utilities }
-  - { name: Compand, category: Utilities }
 ---
 
 ## Utensils
@@ -36,4 +35,4 @@ Hiverb is just a quick solution to split your signal into one dry version and on
 
 ## Compand
 
-A negative ratio upwards compressor, or a downwards expander, depending on the ratio setting. The Threshold parameter is not tuned at the moment, so the dB does not appropriately represent the threshold. For now, just use it by ear. When the ratio is negative, you get something similar to upwards compression, where the signal is boosted if it goes below the threshold. A positive ratio converts the compressor into an expander, where if the signal goes below the threshold, it is cut. A ratio of 0 leaves the signal unaffected.
+This unit is no longer supported

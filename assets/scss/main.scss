@@ -1,1 +1,59 @@
-@import 'colors.scss';
+@import 'mixins';
+
+.yt-embed {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+h3 {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border: dashed lightblue;
+  padding: 0.5rem 1rem;
+}
+
+.table {
+  td {
+    border: dashed;
+    border-color: antiquewhite;
+
+    &.table__td--narrow {
+      max-width: 35px;
+      border: none;
+      padding: 0.8rem 0;
+    }
+  }
+
+  th {
+    &.table__td--narrow {
+      max-width: 35px;
+      border: none;
+      padding: 0.8rem 0;
+    }
+  }
+}
+
+.table tbody tr:last-child td,
+.table tbody tr:last-child th {
+  border-bottom-width: 2px;
+}
+
+@media (max-width: 1215px) {
+  .is-two-thirds {
+    @include responsiveTable;
+  }
+}
+
+@media (max-width: 760px) {
+  @include responsiveTable;
+}

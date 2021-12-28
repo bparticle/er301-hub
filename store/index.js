@@ -39,7 +39,7 @@ const sortedProjects = wantedList.sort((a, b) =>
 )
 
 const openProjects = sortedProjects.filter(proj => {
-  return proj.status === "open"
+  return proj.status === "open" || proj.status === "in development"
 })
 
 const completedProjects = sortedProjects.filter(proj => {
@@ -47,6 +47,7 @@ const completedProjects = sortedProjects.filter(proj => {
 })
 
 export const state = () => ({
+  allProjects: [],
   openProjects: openProjects,
   completedProjects: completedProjects,
   pastels: pastels,
@@ -60,12 +61,20 @@ export const getters = {
   },
   completedProjects: state => {
     return state.completedProjects
+  },
+  totalAmountOpen: state => {
+    return Number(state.openProjects.map(proj => proj.award).reduce(function (a, b) {
+      return a + b;
+    }, 0))
   }
 }
 
 export const mutations = {
   addAward(state, payload) {
     state.wantedList[payload.index].award = payload.award
+  },
+  addAllProjects(state, payload) {
+    state.allProjects = payload.award
   },
   enableCat(state, payload) {
     state.cats.find(cat => cat === payload).active = true

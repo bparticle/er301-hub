@@ -1,0 +1,25 @@
+@mixin responsiveTable {
+  .table {
+    tr {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+    }
+
+    td {
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+
+      &.table__td--narrow {
+        max-width: 100%;
+      }
+    }
+
+    th {
+      &.table__td--narrow {
+        max-width: 100%;
+      }
+    }
+  }
+}

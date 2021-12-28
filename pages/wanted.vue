@@ -98,11 +98,25 @@
                   ><span v-else>-</span>
                 </td>
               </tr>
+              <tr>
+                <td colspan="4"></td>
+                <td>
+                  <span class="tag is-medium has-text-weight-bold">
+                    {{ totalAmountOpen }} $</span
+                  >
+                </td>
+                <td></td>
+              </tr>
             </tbody>
           </table>
           <p>
             (The current status may not be up to date while I'm processing
             orders.)
+          </p>
+          <p>
+            There a bunch of
+            <Nuxt-Link :to="'/unsorted'">unsorted projects</Nuxt-Link> that need
+            organizing
           </p>
         </section>
         <section class="section completed">
@@ -134,9 +148,7 @@
                   </ul>
                 </td>
                 <td>
-                  <Nuxt-Link
-                    v-if="project.hubPage"
-                    :to="project.hubPage"
+                  <Nuxt-Link v-if="project.hubPage" :to="project.hubPage"
                     >Project page</Nuxt-Link
                   >
                 </td>
@@ -248,24 +260,7 @@
         </section>
       </div>
       <div class="column">
-        <a
-          class="shop-now"
-          href="https://shop.modularmotel.com"
-          target="_blank"
-          title="Shop @ Modular Motel"
-        >
-          <span class="shop-now__cta">
-            <span class="shop-now__tagline">Put a hit on your target unit</span>
-            <span class="button shop-now__button is-medium">Shop Now</span>
-          </span>
-          <img
-            class="shop-now__img"
-            src="/images/wanted/shop-now.jpg"
-            alt="Modular Motel logo"
-          />
-        </a>
-        <p class="has-text-right has-text-weight-bold">Worldwide shipping</p>
-        <div class="bigcartel mt-4">
+        <div class="bigcartel">
           <div
             class="bigcartel__product"
             v-for="prod in er301Prod"
@@ -284,6 +279,7 @@
               <span class="bigcartel__product-title">{{ prod.name }}</span>
             </a>
           </div>
+          <p class="has-text-right has-text-weight-bold">Worldwide shipping</p>
         </div>
         <div class="paypal-donation">
           <a
@@ -335,6 +331,9 @@ export default {
     },
     completed() {
       return this.$store.getters.completedProjects
+    },
+    totalAmountOpen() {
+      return this.$store.getters.totalAmountOpen.toFixed(2)
     },
   },
   methods: {

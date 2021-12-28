@@ -7,7 +7,7 @@ contact: https://forum.orthogonaldevices.com/u/yrn1/summary
 link: https://github.com/yrn1/er-301-units
 github:
   path: yrn1/er-301-units
-  tagRegex: ^FilterDelays-.*$
+  tagRegex: ^FilterDelays.*$
 latest version: 0.6.05
 files:
   - FilterDelays-0.6.03.pkg
@@ -36,7 +36,10 @@ Note that due to the way the feedback loop is implemented, the maximum frequency
 
 The stereo verion uses 9%-10% CPU.
 
-<youtube :video-id="'nqHFELsciLc'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'nqHFELsciLc'"></youtube>
+</div>
+
 
 ## FDN
 
@@ -46,7 +49,9 @@ With small delay times, it sounds like a simple reverb with tone and feedback co
 
 The stereo version uses 20% CPU.
 
-<youtube :video-id="'cX_T2rWy1HM'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'cX_T2rWy1HM'"></youtube>
+</div>
 
 ## SFDN
 

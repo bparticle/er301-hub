@@ -7,7 +7,7 @@ link: https://github.com/SuperNiCd
 github:
   path: SuperNiCd/Accents
   tagRegex: ^Accents.*$
-latest version: v0.6.14
+latest version: v0.6.16
 compatibility: { v05: true, v06: true }
 files:
   - Accents-0.6.14.pkg
@@ -19,11 +19,12 @@ units:
   - { name: AB Switch, category: Experimental }
   - { name: Aliasing Pulse, category: Oscillators }
   - { name: Amie, category: Synthesizers }
+  - { name: Bitwise, category: Effects }
   - { name: Carousel Clock Divider, category: Timing }
   - { name: Clocked Random Gate, category: Mapping and Control }
   - { name: Compare, category: Mapping and Control }
-  - { name: Ensemble, category: Audio Effects }
-  - { name: Flanger, category: Audio Effects }
+  - { name: Ensemble, category: Effects }
+  - { name: Flanger, category: Effects }
   - { name: Ladder BPF, category: Filter }
   - { name: Ladder BPF2, category: Experimental }
   - { name: Linear Sampling VCA, category: Essentials }
@@ -31,13 +32,14 @@ units:
   - { name: Maths, category: Mapping and Control }
   - { name: Motion Sensor, category: Mapping and Control }
   - { name: Octave CV Shifter, category: Mapping and Control }
-  - { name: Phaser, category: Audio Effects }
+  - { name: Phaser, category: Effects }
   - { name: Points, category: Envelopes, docs: true }
   - { name: Pingable Scaled Random, category: Mapping and Control }
   - { name: Ring Modulator, category: Modulation }
-  - { name: Rotary Speaker Simulator, category: Audio Effects }
+  - { name: Rotary Speaker Simulator, category: Effects }
   - { name: Scorpio Vocoder, category: Filter }
   - { name: Timed Gate, category: Timing }
+  - { name: Tuner, category: Measurement and Control }
   - { name: Voltage Bank 2, category: Mapping and Control }
   - { name: Voltage Bank 4, category: Mapping and Control }
   - { name: Voltage Bank, category: Mapping and Control }
@@ -65,8 +67,8 @@ Unzip the Accents-0.5.04.zip file in your ER-301/libs folder. They should appear
 
 To install Accents (and other packaged mods) on firmware 0.6.x:
 
-1. Make sure you are running the required version of the firmware 11 (currently 0.6.03+)
-2. Download the attached file Accents-0.6.03.pkg
+1. Make sure you are running the required version of the firmware 11 (currently 0.6.14+)
+2. Download the attached file Accents-0.6.16.pkg
 3. Copy the .pkg file to your SD card into the folder /ER-301/packages
 4. Go to the admin area and select Package Manager
 5. You should see Accents as an available choice along with the core and teletype mods, which will most likely already be installed
@@ -75,8 +77,9 @@ To install Accents (and other packaged mods) on firmware 0.6.x:
 ## Documentation
 
 ### AB switch
+<md-img src="accents/ABSwitch.png" alt=""></md-img>
 
-Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.
+A simple A/B switch for switching between two signal chains. Connect signals to the a and b subchains. If the ab toggle is low, signal a will be output. If the ab toggle is high, signal b will be output.
 
 Pro tip: you can edit the ab control and change it to a gate control if you want this to be a momentary switch.
 
@@ -86,7 +89,9 @@ Ping it with a trigger and it spits out and holds a random value until the next 
 
 <md-img src="accents/pingable-scaled-random.png" alt=""></md-img>
 
-<youtube :video-id="'66MMMyfIy50'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'66MMMyfIy50'"></youtube>
+</div>
 
 ### Clocked Random Gate
 
@@ -94,7 +99,9 @@ Send it pulses or a clock. You control the probability that a gate will fire whe
 
 <md-img src="accents/clocked-random-gate.png" alt=""></md-img>
 
-<youtube :video-id="'2sSnTLD1nR8'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'2sSnTLD1nR8'"></youtube>
+</div>
 
 ### Weighted Coin Toss
 
@@ -102,7 +109,9 @@ Send a pulse and it outputs heads (1) or tails (0). You can weight it so that it
 
 <md-img src="accents/coin-toss.png" alt=""></md-img>
 
-<youtube :video-id="'GqVS3U53bWk'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'GqVS3U53bWk'"></youtube>
+</div>
 
 ### Motion Sensor
 
@@ -110,7 +119,9 @@ This one’s the most experimental. I didn’t think it could be done in the mid
 
 <md-img src="accents/motion-sensor" alt=""></md-img>
 
-<youtube :video-id="'8nTXRooI4fM'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'8nTXRooI4fM'"></youtube>
+</div>
 
 ### Voltage Vault
 
@@ -120,7 +131,9 @@ When you trigger the store parameter, Voltage Vault will sample whatever voltage
 
 So Voltage Vault is essentially a lookup table (LUT). You could potentially use it as a sequencer, or to do translations or arbitrary transfer functions of your own design. Here’s a video I made about it’s predecessor, Voltage Bank, that might give you some ideas.
 
-<youtube :video-id="'pqyuhNSQ7po'"></youtube>
+<div class="yt-embed">
+  <youtube :video-id="'pqyuhNSQ7po'"></youtube>
+</div>
 
 ### Maths
 

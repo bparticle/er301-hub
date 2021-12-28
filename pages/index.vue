@@ -1,68 +1,75 @@
 <template>
   <div class="is-fluid">
     <div>
-      <div class="tile is-parent">
-        <div class="tile is-child is-4">
-          <label class="label">Search projects</label>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3>Search projects</h3>
           <input
             class="input"
             v-model="filterValue"
             type="search"
             autocomplete="off"
+            placeholder="Start typing to search"
           />
-        </div>
-      </div>
-      <div class="search-project__results">
-        <ul
-          class="search-project__list"
-          v-if="searchProject.length != projects.length"
-        >
-          <li v-for="project of searchProject" :key="project.slug">
-            <nuxt-link
-              :to="{
-                name: 'projects-slug',
-                params: { slug: project.slug },
-              }"
-              >{{ project.title }}</nuxt-link
+          <div class="search-project__results">
+            <transition-group
+              tag="ul"
+              name="slide"
+              class="search-project__list"
+              v-if="searchProject.length != projects.length"
             >
-          </li>
-        </ul>
-      </div>
-      <div class="tile is-parent">
-        <div class="field is-grouped is-grouped-multiline">
-          <div
-            class="control"
-            v-for="(category, index) in cats"
-            :key="category.category + index + category.color"
-          >
-            <div class="tags has-addons">
-              <a
-                class="tag"
-                v-bind:style="[
-                  category.active
-                    ? { backgroundColor: category.color }
-                    : { backgroundColor: category.colorPassive },
-                ]"
-                @click="enableCat(category)"
-                >{{ category.category | upperCased }}</a
-              >
-              <a
-                v-if="category.active"
-                class="tag is-delete"
-                @click="disableCat(category)"
-              ></a>
+              <li v-for="project of searchProject" :key="project.slug">
+                <nuxt-link
+                  :to="{
+                    name: 'projects-slug',
+                    params: { slug: project.slug },
+                  }"
+                  >{{ project.title }}</nuxt-link
+                >
+              </li>
+            </transition-group>
+          </div>
+        </div>
+        <div class="column is-two-thirds">
+          <h3>Filters</h3>
+          <div class="field is-grouped is-grouped-multiline">
+            <div
+              class="control"
+              v-for="(category, index) in cats"
+              :key="category.category + index + category.color"
+            >
+              <div class="tags has-addons">
+                <a
+                  class="tag"
+                  v-bind:style="[
+                    category.active
+                      ? { backgroundColor: category.color }
+                      : { backgroundColor: category.colorPassive },
+                  ]"
+                  @click="enableCat(category)"
+                  >{{ category.category | upperCased }}</a
+                >
+                <a
+                  v-if="category.active"
+                  class="tag is-delete"
+                  @click="disableCat(category)"
+                ></a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <h3>Index</h3>
+
     <table class="projects table is-fullwidth">
       <thead>
         <tr>
-          <td>Project title</td>
-          <td># units</td>
-          <td>Author</td>
-          <td>Latest version</td>
+          <th class="table__td--narrow"></th>
+          <th>Project title</th>
+          <th># units</th>
+          <th>Latest version</th>
+          <th><span class="gh-dl"> GitHub </span></th>
         </tr>
       </thead>
       <tbody>
@@ -71,6 +78,11 @@
           v-for="(project, index) of filteredProjects"
           :key="project + index + project.author"
         >
+          <td class="table__td--narrow">
+            <div class="projects__author">
+              <avatar :userName="project.author" />
+            </div>
+          </td>
           <td>
             <nuxt-link
               :to="{ name: 'projects-slug', params: { slug: project.slug } }"
@@ -82,13 +94,16 @@
             {{ project.units.length }}
           </td>
           <td>
-            <div class="projects-table__author">
-              <avatar :userName="project.author" />
-              {{ project.author }}
-            </div>
-          </td>
-          <td>
             {{ project['latest version'] }}
+          </td>
+          <td class="has-text-centered">
+            <button
+              class="button is-small is-rounded"
+              v-if="project.github"
+              @click="fetchGitHub(project)"
+            >
+              Download
+            </button>
           </td>
         </tr>
       </tbody>
@@ -115,6 +130,9 @@ export default {
       .sortBy('title', 'asc')
       .fetch()
 
+    store.commit('addAllProjects', projects)
+
+    const isInit = store.state.allProjects === []
     store.commit('addUniqueCats', { projects: projects, force: true })
 
     return {
@@ -122,6 +140,16 @@ export default {
     }
   },
   methods: {
+    fetchGitHub: function (project) {
+      let gitHubData
+      this.$fetchGitHub(project).then((value) => {
+        gitHubData = value
+        if (gitHubData.url) {
+          window.open(gitHubData.url)
+          return false
+        }
+      })
+    },
     enableCat: function (cat) {
       this.$store.commit('enableCat', cat)
     },
@@ -146,7 +174,9 @@ export default {
           ...new Set(project.units.map((unit) => unit.category.toLowerCase())),
         ]
         for (let i = 0; i < activeCats.length; i++) {
-          testArr.push(projectCats.includes(activeCats[i].category.toLowerCase()))
+          testArr.push(
+            projectCats.includes(activeCats[i].category.toLowerCase())
+          )
         }
         return testArr.every((test) => test === true)
       }
@@ -179,13 +209,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projects-table {
+.projects {
   &__author {
     display: flex;
     align-items: center;
+    width: 100%;
+    justify-content: center;
   }
 }
 .search-project {
+  &__list {
+    list-style: circle;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
   &__result {
     transition: max-height 0.3s;
   }
@@ -223,6 +260,31 @@ export default {
 }
 
 .tags .tag {
+  transition: all 0.5s;
+}
+
+.gh-dl {
+  display: flex;
+  justify-content: center;
+
+  &:before {
+    margin-right: 1rem;
+    content: url('/GitHub-Mark-32px.png');
+  }
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.5s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translateX(1rem);
+  opacity: 0;
+}
+
+.slide-move {
   transition: all 0.5s;
 }
 </style>
