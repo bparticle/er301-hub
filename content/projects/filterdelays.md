@@ -8,9 +8,9 @@ link: https://github.com/yrn1/er-301-custom-units
 github:
   path: yrn1/er-301-custom-units
   tagRegex: ^fdelay.*$
-latest version: 0.6.05
+latest version: v1.1.0
 files:
-  - fdelay-v1.0.0.pkg
+  - fdelay-v1.1.0.pkg
 units:
   - { name: Filter Delay, category: Delays and Reverb, docs: false }
   - { name: Tuned Filter Delay, category: Delays and Reverb, docs: false }
