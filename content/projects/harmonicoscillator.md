@@ -12,7 +12,7 @@ latest version: v0.0.2
 files: # A list of files that you have uploaded in /static/packages
   - harmonic-0.0.2.pkg
 units: # A list of units with categories. If possible, use existing categories unless you have something that deserves its own
-  - { name: Scannable Harmonis Oscillator, category: Oscillators }
+  - { name: Scannable Harmonic Oscillator, category: Oscillators }
 ---
 
 ## Scannable Harmonic Oscillator
