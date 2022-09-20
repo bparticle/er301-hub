@@ -10,7 +10,6 @@
             it can do so by asking editing permissions to a Google sheet that is
             the data source of this list. Ask @bparticle on the forum.
           </p>
-          <Nuxt-Link :to="'/wanted'">Back to the WANTED page</Nuxt-Link>
         </section>
         <section class="section">
           <table class="table">
