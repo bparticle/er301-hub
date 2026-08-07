@@ -66,6 +66,10 @@ When asked to "add a project" or "add a unit", the shape to produce is: a `conte
 
 Minimal Vuex store: unit categories + a pastel color palette (`plugins/pastels.js`) randomly assigned per category for the filter tags on the index/project pages. Note: `pages/index.vue` calls `store.commit('addAllProjects', ...)` but no such mutation is defined in `store/index.js` — it's a silent no-op (Vuex just warns), not a real data path. Don't assume project data flows through the store; pages fetch directly via `$content` in `asyncData`.
 
+## Forum outage handling
+
+`forum.orthogonaldevices.com` (author avatars, `contact` links, and some projects' `link`) has been down; `utils/forum.js` exports `FORUM_ONLINE` (currently `false`) plus `isForumUrl()`. While it's `false`: `Avatar.vue` shows initials instead of fetching a forum-hosted image, `Nav.vue` tags the forum menu item "offline", and `pages/projects/_slug.vue`/`pages/docs/_.vue` render any `contact`/`author`/`link` field that points at the forum as plain text instead of a dead link. A banner (`components/ForumNotice.vue`, mounted in `layouts/default.vue`) explains this site-wide. None of this touches content files — flip `FORUM_ONLINE` back to `true` once the forum returns and everything resumes working as-is. (In the process, also fixed a pre-existing bug in `pages/docs/_.vue`: the author link used to point at the bare username as an href, e.g. `href="tomf"`, instead of a real forum URL.)
+
 ## Conventions
 
 - 2-space indent, no semicolons, single quotes (`.prettierrc`, `.editorconfig`) — not enforced by CI, just match the existing style.

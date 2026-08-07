@@ -38,6 +38,9 @@
                 class="navbar-item"
               >
                 O|D forum
+                <span v-if="!forumOnline" class="tag is-warning is-light is-small ml-2"
+                  >offline</span
+                >
               </a>
               <a
                 target="_blank"
@@ -70,7 +73,14 @@
 </template>
 
 <script>
+import { FORUM_ONLINE } from '~/utils/forum'
+
 export default {
+  data() {
+    return {
+      forumOnline: FORUM_ONLINE,
+    }
+  },
   methods: {
     toggleActive: function () {
       this.$refs.mainNav.classList.toggle('is-active')

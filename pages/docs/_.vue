@@ -8,10 +8,15 @@
             <section class="section introduction m-4 has-background-light">
               <h1 class="docs__title">{{ doc.title }}</h1>
               <div class="docs__author">
-                <a class="docs__author-link" target="_blank" :href="doc.author">
+                <component
+                  :is="showAuthorLink ? 'a' : 'span'"
+                  class="docs__author-link"
+                  target="_blank"
+                  :href="showAuthorLink ? authorUrl : null"
+                >
                   <avatar :userName="doc.author" />
                   <span class="docs__author-name">{{ doc.author }}</span>
-                </a>
+                </component>
               </div>
               <p class="description">
                 {{ doc.description }}
@@ -47,10 +52,20 @@
 </template>
 
 <script>
+import { FORUM_ONLINE } from '~/utils/forum'
+
 export default {
   async asyncData({ $content, params }) {
     const doc = await $content('docs', { deep: true }, params.pathMatch).fetch()
     return { doc }
+  },
+  computed: {
+    showAuthorLink() {
+      return FORUM_ONLINE
+    },
+    authorUrl() {
+      return `https://forum.orthogonaldevices.com/u/${this.doc.author}/summary`
+    },
   },
 }
 </script>

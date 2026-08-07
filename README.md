@@ -47,7 +47,11 @@ Categorizing units/packages and matching them against ER-301 firmware versions (
 
 ## Links
 
-- [O|D forum](https://forum.orthogonaldevices.com/)
+- [O|D forum](https://forum.orthogonaldevices.com/) — currently offline; see below
 - [Official ER-301 docs](https://docs.orthogonaldevices.com/er-301/)
 - [Project wiki](https://github.com/bparticle/er301-hub/wiki)
 - [Report an issue](https://github.com/bparticle/er301-hub/issues)
+
+### O|D forum outage
+
+The forum is currently down. While it is, author avatars and any `contact`/`link` field pointing at it are shown as plain text instead of dead links (a site-wide banner explains this), controlled by a single flag in `utils/forum.js` — no content files need editing, before or after it comes back. See [`CLAUDE.md`](CLAUDE.md#forum-outage-handling) for details.

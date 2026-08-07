@@ -8,18 +8,26 @@
             <section class="section introduction mb-4 has-background-light">
               <h1 class="project__title">{{ project.title }}</h1>
               <div class="project__author">
-                <a
+                <component
+                  :is="showContactLink ? 'a' : 'span'"
                   class="project__author-link"
                   target="_blank"
-                  :href="project.contact"
+                  :href="showContactLink ? project.contact : null"
                 >
                   <avatar :userName="project.author" />
                   <span class="project__author-name">{{ project.author }}</span>
-                </a>
+                </component>
               </div>
-              <a :href="project.link" class="project__link" target="_blank">{{
-                project.link
-              }}</a>
+              <component
+                :is="showProjectLink ? 'a' : 'span'"
+                :href="showProjectLink ? project.link : null"
+                class="project__link"
+                target="_blank"
+                >{{ project.link
+                }}<span v-if="!showProjectLink" class="tag is-warning is-light is-small ml-2"
+                  >forum offline</span
+                ></component
+              >
               <p class="description">
                 {{ project.description }}
               </p>
@@ -142,6 +150,8 @@
 </template>
 
 <script>
+import { FORUM_ONLINE, isForumUrl } from '~/utils/forum'
+
 export default {
   async asyncData({ $content, params, store, $axios }) {
     const project = await $content('projects', params.slug).fetch()
@@ -230,6 +240,12 @@ export default {
     },
   },
   computed: {
+    showContactLink() {
+      return FORUM_ONLINE || !isForumUrl(this.project.contact)
+    },
+    showProjectLink() {
+      return FORUM_ONLINE || !isForumUrl(this.project.link)
+    },
     cats() {
       const cats = this.$store.state.cats
       if (cats.length === 0) {

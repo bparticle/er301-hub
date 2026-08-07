@@ -9,6 +9,7 @@
       </div>
     </div>
     <Nav />
+    <ForumNotice />
     <transition name="fade">
       <main class="container mt-4">
         <Nuxt />
