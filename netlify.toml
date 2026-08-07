@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
   # Nuxt 2 / webpack 4 use MD4 hashing that Node's default OpenSSL 3
   # provider (Node >=17) no longer supports, which fails the build with
   # "error:0308010C:digital envelope routines::unsupported". This flag

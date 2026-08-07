@@ -23,7 +23,7 @@ npm run start        # serve a build (requires build, not generate)
 
 There is no test or lint command configured.
 
-**Node >=17 gotcha:** Nuxt 2's webpack 4 hashes with MD4, which Node's default OpenSSL 3 provider rejects (`error:0308010C:digital envelope routines::unsupported`). If `npm run dev`/`build`/`generate` fails with that error, prefix the command with `NODE_OPTIONS=--openssl-legacy-provider` (Netlify's build already sets this via `netlify.toml`; `.nvmrc`/`engines` pin Node 18-20 for reference, but the flag is what actually fixes it on Node >=17).
+**Node >=17 gotcha:** Nuxt 2's webpack 4 hashes with MD4, which Node's default OpenSSL 3 provider rejects (`error:0308010C:digital envelope routines::unsupported`). If `npm run dev`/`build`/`generate` fails with that error, prefix the command with `NODE_OPTIONS=--openssl-legacy-provider`. This is what actually fixes it, on any Node >=17 — Netlify's build already sets it via `netlify.toml`, which also pins `NODE_VERSION = "22"` (matched by `.nvmrc`/`engines`); this has been verified to build cleanly on Node 22, so there's no need to hold back the Node version for webpack's sake.
 
 ## The content model (the part that matters most here)
 
