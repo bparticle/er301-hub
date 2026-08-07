@@ -1,7 +1,8 @@
-# COMPONENTS
+# Components
 
-**This directory is not required, you can delete it if you don't want to use it.**
+- `Nav.vue` — site header/nav.
+- `Avatar.vue` — fetches a contributor's avatar from the O|D forum by username.
+- `MdImg.vue` — `<md-img src="<project-slug>/file.png" alt="">`, used inside content markdown bodies to resolve images from `static/images/`.
+- `Logo.vue` — site logo.
 
-The components directory contains your Vue.js Components.
-
-_Nuxt.js doesn't supercharge these components._
+See [`CLAUDE.md`](../CLAUDE.md) for how these fit into the content model.

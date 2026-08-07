@@ -1,10 +1,3 @@
-# STORE
+# Store
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-This directory contains your Vuex Store files.
-Vuex Store option is implemented in the Nuxt.js framework.
-
-Creating a file in this directory automatically activates the option in the framework.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/vuex-store).
+`index.js` is a small Vuex store used only for the category filter UI on the project index/project pages: it holds the pastel color palette (`plugins/pastels.js`) and the set of unit categories, randomly colored per session. It is not the source of project/unit data — pages fetch that directly from `@nuxt/content` in `asyncData`. See [`CLAUDE.md`](../CLAUDE.md).

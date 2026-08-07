@@ -1,7 +1,6 @@
-# PLUGINS
+# Plugins
 
-**This directory is not required, you can delete it if you don't want to use it.**
-
-This directory contains Javascript plugins that you want to run before mounting the root Vue.js application.
-
-More information about the usage of this directory in [the documentation](https://nuxtjs.org/guide/plugins).
+- `fetchGitHub.js` — injects `$fetchGitHub(project)`, used by the project index's "Download" button to resolve a project's latest GitHub release from its `github.path`/`tagRegex` frontmatter.
+- `vueMoment.js`, `lodash.js`, `youTubeEmbed.js` — third-party plugin registration (`vue-moment`, `lodash`, `vue-youtube-embed`).
+- `pastels.js` — the color palette used for category filter tags (imported directly by `store/index.js`, not registered as a Nuxt plugin).
+- `wantedList.js` — anonymized backer/donation data for the retired `pages/wanted.vue` page; not wired into `nuxt.config.js`, kept for historical record.
