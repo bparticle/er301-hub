@@ -1,0 +1,14 @@
+[build]
+  command = "npm run generate"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+  # Nuxt 2 / webpack 4 use MD4 hashing that Node's default OpenSSL 3
+  # provider (Node >=17) no longer supports, which fails the build with
+  # "error:0308010C:digital envelope routines::unsupported". This flag
+  # restores the legacy provider so the build completes.
+  NODE_OPTIONS = "--openssl-legacy-provider"
+
+# SPA fallback (needed for client-rendered dynamic routes like /projects/:slug
+# and /docs/*) is defined in static/_redirects, copied verbatim into dist/.

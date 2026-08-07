@@ -27,6 +27,8 @@ Runs at http://localhost:3000/ with live reload on both app code and `content/` 
 
 Other scripts: `npm run generate` (static build, what Netlify runs), `npm run build` / `npm run start` (SSR-style build/serve).
 
+> On Node 17+ you may hit `error:0308010C:digital envelope routines::unsupported` (a known Nuxt 2/webpack 4 vs. OpenSSL 3 issue). Prefix the command with `NODE_OPTIONS=--openssl-legacy-provider` if so.
+
 ## Project structure
 
 ```

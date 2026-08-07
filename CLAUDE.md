@@ -23,6 +23,8 @@ npm run start        # serve a build (requires build, not generate)
 
 There is no test or lint command configured.
 
+**Node >=17 gotcha:** Nuxt 2's webpack 4 hashes with MD4, which Node's default OpenSSL 3 provider rejects (`error:0308010C:digital envelope routines::unsupported`). If `npm run dev`/`build`/`generate` fails with that error, prefix the command with `NODE_OPTIONS=--openssl-legacy-provider` (Netlify's build already sets this via `netlify.toml`; `.nvmrc`/`engines` pin Node 18-20 for reference, but the flag is what actually fixes it on Node >=17).
+
 ## The content model (the part that matters most here)
 
 This repo exists to be filled in with community content. Two content collections, driven entirely by files:
